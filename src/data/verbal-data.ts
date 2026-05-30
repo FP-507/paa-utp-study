@@ -224,6 +224,68 @@ Sinónimos y antónimos, palabras con varios significados, vocabulario académic
           { id: "inf-10", question: "Un artículo menciona que una comunidad indígena logró detener un proyecto minero a través de protestas pacíficas y acciones legales. El autor presenta los hechos sin adjetivos valorativos. El propósito del autor es:", options: ["Informar sobre los hechos ocurridos", "Convencer al lector de apoyar a la comunidad", "Criticar a la empresa minera", "Entretener con una historia de conflicto"], correctAnswer: 0, explanation: "La ausencia de adjetivos valorativos y la presentación objetiva de hechos indican un propósito informativo." },
           { id: "inf-11", question: "Un texto dice: 'Mientras en algunos países se desperdicia un tercio de los alimentos producidos, en otros millones de personas padecen hambre.' Se puede inferir que:", options: ["Existe un problema de distribución de alimentos a nivel global", "Los países ricos producen demasiada comida", "Las personas en países pobres no saben cultivar", "El desperdicio de alimentos no tiene solución"], correctAnswer: 0, explanation: "El contraste entre desperdicio y hambre sugiere que el problema no es de producción sino de distribución." }
         ]
+      },
+      {
+        id: "proposito-tono",
+        title: "Propósito del Autor y Tono",
+        content: `Comprender un texto va más allá de entender las palabras: hay que identificar <strong>por qué</strong> el autor lo escribió y <strong>cómo</strong> lo dice.
+
+<strong>Propósitos del autor:</strong>
+<ul>
+<li><strong>Informar:</strong> presenta datos y hechos de forma objetiva, sin opinión. Ejemplo: noticias, reportes.</li>
+<li><strong>Persuadir:</strong> busca convencer al lector de algo. Usa argumentos, evidencia y apelaciones emocionales.</li>
+<li><strong>Entretener:</strong> busca el disfrute del lector. Cuentos, novelas, humor.</li>
+<li><strong>Explicar:</strong> hace comprensible un proceso o concepto. Manuales, textos didácticos.</li>
+<li><strong>Criticar:</strong> señala defectos o problemas. Editoriales, ensayos de opinión.</li>
+</ul>
+
+<strong>Tono del texto:</strong>
+El tono es la <em>actitud</em> del autor hacia el tema. Se identifica por las palabras que elige.
+<ul>
+<li><strong>Objetivo/Neutral:</strong> sin emociones ni opiniones ("Los datos muestran que...")</li>
+<li><strong>Irónico/Sarcástico:</strong> dice lo contrario de lo que quiere expresar</li>
+<li><strong>Nostálgico:</strong> añoranza del pasado ("En aquellos tiempos...")</li>
+<li><strong>Crítico:</strong> señala defectos con desaprobación</li>
+<li><strong>Optimista/Esperanzador:</strong> visión positiva del futuro</li>
+<li><strong>Pesimista:</strong> visión negativa, desesperanza</li>
+<li><strong>Formal:</strong> lenguaje técnico, serio, sin coloquialismos</li>
+</ul>
+
+<strong>¿Cómo identificar el tono?</strong>
+<ol>
+<li>Fíjate en los <strong>adjetivos</strong> que usa el autor (¿son positivos, negativos, neutros?)</li>
+<li>Observa si hay <strong>opiniones</strong> o solo hechos</li>
+<li>Busca <strong>palabras cargadas emocionalmente</strong></li>
+</ol>`,
+        examples: [
+          {
+            problem: "'La contaminación del río ha destruido un ecosistema que tardó siglos en formarse. Las autoridades, como siempre, miran para otro lado.' ¿Cuál es el tono?",
+            solution: "Crítico e indignado. 'Ha destruido' (negativo) + 'como siempre, miran para otro lado' (crítica directa a las autoridades)."
+          },
+          {
+            problem: "'La tasa de desempleo disminuyó un 2.3% en el último trimestre según datos del INEC.' ¿Cuál es el propósito?",
+            solution: "Informar. Presenta datos numéricos de una fuente oficial sin agregar opinión."
+          }
+        ],
+        tips: [
+          "El propósito responde a ¿PARA QUÉ escribe el autor? El tono responde a ¿CÓMO se siente respecto al tema?",
+          "Si el texto tiene muchos datos y cifras sin opinión → informar. Si tiene argumentos y trata de convencer → persuadir.",
+          "Cuidado con la ironía: el autor dice lo contrario de lo que piensa. Fíjate en el contexto para detectarla."
+        ],
+        exercises: [
+          { id: "pt-1", question: "'Los jóvenes de hoy no leen, no se esfuerzan y esperan que todo les llegue sin trabajar.' El tono del autor es:", options: ["Crítico y despectivo", "Objetivo y neutral", "Nostálgico y triste", "Optimista"], correctAnswer: 0, explanation: "Las generalizaciones negativas ('no leen, no se esfuerzan') muestran una actitud de reproche y desprecio." },
+          { id: "pt-2", question: "Un texto presenta estadísticas de accidentes viales con fuentes oficiales y sin adjetivos valorativos. El propósito es:", options: ["Informar", "Persuadir", "Criticar", "Entretener"], correctAnswer: 0, explanation: "Datos objetivos + fuentes oficiales + sin opinión = propósito informativo." },
+          { id: "pt-3", question: "'¡Qué maravilloso servicio! Solo tardaron tres horas en atenderme y ni siquiera resolvieron mi problema.' El tono es:", options: ["Irónico y sarcástico", "Alegre y agradecido", "Neutral", "Triste"], correctAnswer: 0, explanation: "Dice 'maravilloso' pero describe una mala experiencia. Está diciendo lo contrario de lo que siente = ironía/sarcasmo." },
+          { id: "pt-4", question: "Un editorial argumenta que se debe invertir más en educación pública y presenta evidencia de otros países. El propósito es:", options: ["Persuadir", "Informar", "Entretener", "Describir"], correctAnswer: 0, explanation: "Un editorial que presenta argumentos y evidencia para defender una postura busca persuadir al lector." },
+          { id: "pt-5", question: "'Las calles empedradas, los vendedores de raspados y el sonido de las campanas de la iglesia son recuerdos que guardo con cariño de mi infancia en el pueblo.' El tono es:", options: ["Nostálgico", "Crítico", "Indiferente", "Formal"], correctAnswer: 0, explanation: "El recuerdo positivo del pasado ('guardo con cariño', detalles de la infancia) indica nostalgia." },
+          { id: "pt-6", question: "'Según la OMS, lavarse las manos con jabón durante 20 segundos reduce el riesgo de infecciones respiratorias en un 23%.' El tono es:", options: ["Objetivo y neutral", "Alarmista", "Esperanzador", "Pesimista"], correctAnswer: 0, explanation: "Cita una fuente autorizada (OMS) y presenta un dato sin adjetivos emocionales = objetivo y neutral." },
+          { id: "pt-7", question: "Un anuncio dice: 'Con nuestro producto, tu vida cambiará para siempre. Miles ya lo han probado. ¿Y tú, qué esperas?' El propósito es:", options: ["Persuadir para comprar", "Informar sobre el producto", "Entretener al lector", "Explicar cómo funciona"], correctAnswer: 0, explanation: "Usa apelación emocional, testimonios implícitos y pregunta directa al lector = persuadir." },
+          { id: "pt-8", question: "'A pesar de los obstáculos, la comunidad logró reconstruir la escuela con sus propias manos. Hoy, 200 niños tienen un lugar digno para estudiar.' El tono es:", options: ["Esperanzador y admirativo", "Pesimista", "Irónico", "Indiferente"], correctAnswer: 0, explanation: "'A pesar de los obstáculos... logró' y 'lugar digno' transmiten admiración y esperanza." },
+          { id: "pt-9", question: "'La nueva reforma tributaria beneficiará enormemente a los ciudadanos, según afirma el gobierno.' La palabra 'enormemente' sugiere que el autor:", options: ["Podría estar siendo irónico o escéptico", "Está completamente de acuerdo", "Es neutral y objetivo", "Desconoce el tema"], correctAnswer: 0, explanation: "El uso de 'enormemente' junto con 'según afirma el gobierno' (atribuyendo la afirmación) puede sugerir escepticismo o ironía." },
+          { id: "pt-10", question: "Un manual explica paso a paso cómo instalar un programa. El propósito es:", options: ["Explicar un proceso", "Persuadir para usar el programa", "Criticar otros programas", "Entretener al usuario"], correctAnswer: 0, explanation: "Un manual con pasos secuenciales tiene como propósito explicar un proceso para que el lector lo reproduzca." },
+          { id: "pt-11", question: "'El cambio climático ya no es una predicción: es nuestra realidad. Los glaciares desaparecen, los mares suben y las tormentas se intensifican. Debemos actuar ahora.' El propósito es:", options: ["Persuadir para tomar acción", "Informar sobre el clima", "Entretener con datos curiosos", "Describir la naturaleza"], correctAnswer: 0, explanation: "Presenta evidencia alarmante y cierra con un llamado directo a la acción ('Debemos actuar ahora') = persuadir." },
+          { id: "pt-12", question: "'Érase una vez, en un reino muy lejano, un dragón que coleccionaba mariposas en lugar de tesoros.' El propósito y tono son:", options: ["Entretener / Fantasioso y lúdico", "Informar / Neutral", "Persuadir / Serio", "Criticar / Irónico"], correctAnswer: 0, explanation: "'Érase una vez' es fórmula de cuento. Un dragón con hobby inusual = entretener con tono fantasioso y lúdico." }
+        ]
       }
     ]
   },
@@ -293,6 +355,62 @@ Sinónimos y antónimos, palabras con varios significados, vocabulario académic
           { id: "an-10", question: "SONRISA : ALEGRÍA como LLANTO : ?", options: ["Tristeza", "Dolor", "Ojos", "Bebé"], correctAnswer: 0, explanation: "Relación: manifestación/expresión → emoción. La sonrisa expresa alegría, el llanto expresa tristeza." },
           { id: "an-11", question: "TIBIO : CALIENTE como BRISA : ?", options: ["Vendaval", "Aire", "Fresco", "Clima"], correctAnswer: 0, explanation: "Relación: grado de intensidad (menor → mayor). Tibio es menos intenso que caliente; brisa es menos intensa que vendaval." },
           { id: "an-12", question: "FRUTA : MANZANA como INSTRUMENTO MUSICAL : ?", options: ["Guitarra", "Melodía", "Canción", "Orquesta"], correctAnswer: 0, explanation: "Relación: categoría general → ejemplo específico. La manzana es un tipo de fruta; la guitarra es un tipo de instrumento musical." }
+        ]
+      },
+      {
+        id: "estrategias-analogias",
+        title: "Estrategias para Resolver Analogías",
+        content: `Resolver analogías requiere un método sistemático. Aquí tienes los pasos y estrategias clave.
+
+<strong>Método paso a paso:</strong>
+<ol>
+<li><strong>Identifica la relación</strong> entre las dos palabras del par base. Formúlala como una oración: "A es ___ de B".</li>
+<li><strong>Aplica esa misma relación</strong> a cada opción de respuesta.</li>
+<li><strong>Elimina las opciones</strong> que no mantienen la relación exacta.</li>
+<li>Si quedan varias, <strong>precisa la relación</strong> (hazla más específica).</li>
+</ol>
+
+<strong>Errores comunes:</strong>
+<ul>
+<li><strong>Relación invertida:</strong> confundir "A causa B" con "B causa A"</li>
+<li><strong>Asociación libre:</strong> elegir una opción porque "se relaciona" vagamente, sin mantener la misma relación lógica</li>
+<li><strong>Relación incompleta:</strong> identificar una relación demasiado general (ej: "se relacionan") en vez de la específica (ej: "uno es parte del otro")</li>
+</ul>
+
+<strong>Técnica de la oración puente:</strong>
+Crea una oración que conecte las dos palabras del par base. La respuesta correcta debe encajar en la misma oración.
+<ul>
+<li>MARTILLO : CLAVO → "El martillo sirve para introducir el clavo"</li>
+<li>DESTORNILLADOR : ? → "El destornillador sirve para introducir el tornillo" ✓</li>
+</ul>`,
+        examples: [
+          {
+            problem: "PINTOR : CUADRO como ESCRITOR : ?  Opciones: a) Libro  b) Tinta  c) Biblioteca  d) Leer",
+            solution: "Oración puente: 'El pintor CREA el cuadro'. ¿Quién crea qué? 'El escritor CREA el libro'. Respuesta: Libro. Tinta es herramienta, biblioteca es lugar, leer es acción."
+          },
+          {
+            problem: "HAMBRE : COMER como SED : ?  Opciones: a) Agua  b) Beber  c) Sed  d) Líquido",
+            solution: "El hambre se satisface al COMER. La sed se satisface al BEBER. La relación es necesidad → acción que la satisface. Agua sería el objeto, no la acción."
+          }
+        ],
+        tips: [
+          "Siempre formula la relación como oración antes de ver las opciones.",
+          "Si dos opciones parecen correctas, haz la relación más específica.",
+          "La dirección importa: 'parte de' no es lo mismo que 'contiene a'."
+        ],
+        exercises: [
+          { id: "ea-1", question: "SEMILLA : ÁRBOL como HUEVO : ?", options: ["Ave", "Nido", "Cáscara", "Comida"], correctAnswer: 0, explanation: "Relación: origen → resultado del desarrollo. La semilla se desarrolla en árbol; el huevo se desarrolla en ave." },
+          { id: "ea-2", question: "TELESCOPIO : ESTRELLAS como MICROSCOPIO : ?", options: ["Células", "Laboratorio", "Ciencia", "Lentes"], correctAnswer: 0, explanation: "Relación: instrumento → lo que permite observar. El telescopio observa estrellas; el microscopio observa células." },
+          { id: "ea-3", question: "PACIENTE : HOSPITAL como ESTUDIANTE : ?", options: ["Escuela", "Libro", "Profesor", "Examen"], correctAnswer: 0, explanation: "Relación: persona → lugar donde recibe un servicio. El paciente va al hospital; el estudiante va a la escuela." },
+          { id: "ea-4", question: "ABOGADO : LEYES como MÉDICO : ?", options: ["Enfermedades", "Hospital", "Paciente", "Bata"], correctAnswer: 0, explanation: "Relación: profesional → materia de su especialidad. El abogado se especializa en leyes; el médico en enfermedades." },
+          { id: "ea-5", question: "LLAVE : CERRADURA como CONTRASEÑA : ?", options: ["Cuenta", "Computadora", "Teclado", "Internet"], correctAnswer: 0, explanation: "Relación: medio de acceso → lo que abre/desbloquea. La llave abre la cerradura; la contraseña abre la cuenta." },
+          { id: "ea-6", question: "PROLOGO : LIBRO como APERTURA : ?", options: ["Concierto", "Música", "Orquesta", "Nota"], correctAnswer: 0, explanation: "Relación: parte inicial → obra completa. El prólogo es la parte inicial del libro; la apertura es la parte inicial del concierto." },
+          { id: "ea-7", question: "TERMÓMETRO : TEMPERATURA como BALANZA : ?", options: ["Peso", "Metal", "Farmacia", "Equilibrio"], correctAnswer: 0, explanation: "Relación: instrumento → lo que mide. El termómetro mide la temperatura; la balanza mide el peso." },
+          { id: "ea-8", question: "ANCIANO : JOVEN como ANTIGUO : ?", options: ["Moderno", "Viejo", "Clásico", "Histórico"], correctAnswer: 0, explanation: "Relación: antónimos. Anciano es lo opuesto de joven; antiguo es lo opuesto de moderno." },
+          { id: "ea-9", question: "REBAÑO : OVEJAS como CARDUMEN : ?", options: ["Peces", "Mar", "Pescador", "Red"], correctAnswer: 0, explanation: "Relación: nombre colectivo → individuos que lo componen. Un rebaño es un grupo de ovejas; un cardumen es un grupo de peces." },
+          { id: "ea-10", question: "SUSURRO : GRITO como LLOVIZNA : ?", options: ["Tormenta", "Agua", "Paraguas", "Nube"], correctAnswer: 0, explanation: "Relación: intensidad menor → intensidad mayor. Susurro es un sonido suave, grito es fuerte; llovizna es lluvia suave, tormenta es intensa." },
+          { id: "ea-11", question: "MAPA : TERRITORIO como PLANO : ?", options: ["Edificio", "Arquitecto", "Papel", "Línea"], correctAnswer: 0, explanation: "Relación: representación → lo que representa. El mapa representa el territorio; el plano representa el edificio." },
+          { id: "ea-12", question: "HAMBRIENTO : COMIDA como SEDIENTO : ?", options: ["Bebida", "Sed", "Desierto", "Calor"], correctAnswer: 0, explanation: "Relación: el que tiene necesidad → lo que necesita. El hambriento necesita comida; el sediento necesita bebida." }
         ]
       }
     ]
@@ -478,6 +596,124 @@ La oración simple tiene: Sujeto + Verbo + Complemento.
           { id: "coh-9", question: "¿Cuál de estas oraciones rompe la coherencia del párrafo? 'El Canal de Panamá es una obra de ingeniería impresionante. (A) Conecta el océano Atlántico con el Pacífico. (B) Miles de barcos lo transitan cada año. (C) La gastronomía panameña incluye el sancocho. (D) Su construcción tomó más de diez años.'", options: ["C — La gastronomía panameña incluye el sancocho", "A — Conecta el océano Atlántico con el Pacífico", "B — Miles de barcos lo transitan cada año", "D — Su construcción tomó más de diez años"], correctAnswer: 0, explanation: "El párrafo habla del Canal de Panamá. La oración sobre gastronomía no tiene relación con el tema → rompe la coherencia." },
           { id: "coh-10", question: "'No solo aprobó el examen, ______ obtuvo la mejor calificación de la clase.' Elige el conector:", options: ["sino que también", "pero", "aunque", "sin embargo"], correctAnswer: 0, explanation: "'No solo... sino que también' es una estructura de adición que intensifica la idea: aprobó Y ADEMÁS fue el mejor." },
           { id: "coh-11", question: "'La deforestación destruye hábitats naturales. ______, provoca la erosión del suelo y altera el ciclo del agua.' Elige el conector:", options: ["Además", "Sin embargo", "Por el contrario", "Aunque"], correctAnswer: 0, explanation: "Se añade más información negativa sobre la deforestación → conector de adición: 'además'." }
+        ]
+      },
+      {
+        id: "ordenamiento-oraciones",
+        title: "Ordenamiento de Oraciones",
+        content: `En la PAA, te presentan un conjunto de oraciones desordenadas y debes organizarlas para formar un texto coherente.
+
+<strong>Estrategia para ordenar:</strong>
+<ol>
+<li><strong>Identifica la oración introductoria:</strong> presenta el tema general, define un concepto o da contexto. Suele NO tener conectores como "además", "sin embargo", "por lo tanto".</li>
+<li><strong>Busca la secuencia lógica:</strong> causa → efecto, general → particular, cronológico, problema → solución.</li>
+<li><strong>Fíjate en los conectores:</strong> "sin embargo" indica contraste (va después de algo positivo/negativo opuesto). "Por lo tanto" indica conclusión (va al final o casi al final).</li>
+<li><strong>Identifica referencias:</strong> pronombres (él, esta, dicho, aquella) señalan que una oración va DESPUÉS de la que presenta el referente.</li>
+<li><strong>La oración final:</strong> suele ser una conclusión, consecuencia o resumen.</li>
+</ol>
+
+<strong>Pistas clave:</strong>
+<ul>
+<li><strong>"Este/Esta/Dicho/Tal"</strong> → hace referencia a algo ya mencionado (va después)</li>
+<li><strong>"Por ejemplo"</strong> → va después de una afirmación general</li>
+<li><strong>"En conclusión / Por lo tanto"</strong> → va al final</li>
+<li><strong>"Primero / En primer lugar"</strong> → va al inicio de una secuencia</li>
+<li><strong>"Finalmente / Por último"</strong> → cierra la secuencia</li>
+</ul>`,
+        examples: [
+          {
+            problem: "Ordena: I. Por lo tanto, es esencial cuidar nuestras fuentes de agua. II. El agua es el recurso más importante para la vida. III. Sin embargo, la contaminación amenaza este recurso.",
+            solution: "Orden: II → III → I. Primero se presenta el tema (II), luego el contraste/problema (III con 'sin embargo'), y finalmente la conclusión (I con 'por lo tanto')."
+          }
+        ],
+        tips: [
+          "Lee todas las oraciones primero antes de intentar ordenar.",
+          "La oración sin conectores suele ser la primera.",
+          "Si una oración dice 'este problema' o 'dicha situación', busca cuál oración menciona ese problema primero."
+        ],
+        exercises: [
+          { id: "ord-1", question: "I. Por eso, debemos reciclar. II. La basura contamina los océanos. III. Cada año, millones de toneladas de plástico llegan al mar. El orden correcto es:", options: ["II, III, I", "III, II, I", "I, II, III", "III, I, II"], correctAnswer: 0, explanation: "II introduce el tema general. III da un dato específico. I concluye con 'por eso' (consecuencia)." },
+          { id: "ord-2", question: "I. Sin embargo, también presenta riesgos para la privacidad. II. La tecnología ha mejorado la comunicación global. III. Por lo tanto, es necesario legislar su uso responsable. El orden es:", options: ["II, I, III", "I, II, III", "III, I, II", "II, III, I"], correctAnswer: 0, explanation: "II presenta el tema (positivo). I contrasta con 'sin embargo'. III concluye con 'por lo tanto'." },
+          { id: "ord-3", question: "I. Esta vitamina fortalece el sistema inmunológico. II. Las naranjas son ricas en vitamina C. III. Por ello, consumir cítricos ayuda a prevenir resfriados. El orden es:", options: ["II, I, III", "I, II, III", "III, II, I", "I, III, II"], correctAnswer: 0, explanation: "II introduce el tema. I explica con 'esta vitamina' (referencia a vitamina C). III concluye con 'por ello'." },
+          { id: "ord-4", question: "I. Finalmente, se sirve acompañado de arroz. II. Primero, se marinan las carnes con especias. III. Luego, se cocinan a fuego lento durante dos horas. El orden es:", options: ["II, III, I", "I, II, III", "III, I, II", "II, I, III"], correctAnswer: 0, explanation: "Secuencia cronológica marcada por: Primero (II) → Luego (III) → Finalmente (I)." },
+          { id: "ord-5", question: "I. En consecuencia, muchas especies están en peligro de extinción. II. La deforestación destruye el hábitat natural de miles de animales. III. Además, altera los ciclos del agua y del suelo. El orden es:", options: ["II, III, I", "I, II, III", "III, II, I", "II, I, III"], correctAnswer: 0, explanation: "II presenta el problema. III añade información con 'además'. I concluye con 'en consecuencia'." },
+          { id: "ord-6", question: "I. Tal descubrimiento revolucionó la medicina moderna. II. En 1928, Alexander Fleming descubrió la penicilina por accidente. III. Gracias a ella, enfermedades antes mortales pudieron ser tratadas. El orden es:", options: ["II, I, III", "I, II, III", "II, III, I", "III, II, I"], correctAnswer: 0, explanation: "II introduce el hecho histórico. I dice 'tal descubrimiento' (referencia a II). III amplía la consecuencia." },
+          { id: "ord-7", question: "I. No obstante, su uso excesivo puede generar dependencia. II. Las redes sociales permiten conectar con personas de todo el mundo. III. Por esta razón, los expertos recomiendan limitar el tiempo en pantalla. El orden es:", options: ["II, I, III", "I, II, III", "III, I, II", "II, III, I"], correctAnswer: 0, explanation: "II presenta el aspecto positivo. I contrasta con 'no obstante'. III concluye con 'por esta razón'." },
+          { id: "ord-8", question: "I. Por ejemplo, el salmón recorre miles de kilómetros para desovar. II. Muchos animales realizan migraciones sorprendentes. III. Estas travesías son esenciales para la supervivencia de sus especies. El orden es:", options: ["II, I, III", "I, II, III", "III, I, II", "II, III, I"], correctAnswer: 0, explanation: "II presenta la idea general. I da un ejemplo con 'por ejemplo'. III concluye sobre 'estas travesías'." },
+          { id: "ord-9", question: "I. Posteriormente, se analiza la información recopilada. II. El método científico comienza con la observación de un fenómeno. III. A partir de los resultados, se formulan conclusiones. El orden es:", options: ["II, I, III", "I, II, III", "III, II, I", "I, III, II"], correctAnswer: 0, explanation: "Secuencia del método: comienza (II) → posteriormente (I) → a partir de los resultados (III)." },
+          { id: "ord-10", question: "I. Dicha contaminación afecta la salud de millones de personas. II. Las fábricas emiten grandes cantidades de gases tóxicos a la atmósfera. III. Es urgente implementar regulaciones más estrictas. El orden es:", options: ["II, I, III", "I, II, III", "III, II, I", "II, III, I"], correctAnswer: 0, explanation: "II presenta el problema. I dice 'dicha contaminación' (referencia). III propone solución urgente." },
+          { id: "ord-11", question: "I. En resumen, aprender un idioma requiere constancia y práctica. II. Además, es útil practicar con hablantes nativos. III. Para aprender un idioma, es fundamental estudiar vocabulario y gramática. El orden es:", options: ["III, II, I", "I, II, III", "II, III, I", "III, I, II"], correctAnswer: 0, explanation: "III introduce el tema. II añade con 'además'. I cierra con 'en resumen'." },
+          { id: "ord-12", question: "I. Así, logró convertirse en uno de los científicos más importantes de la historia. II. A pesar de sus dificultades iniciales, Einstein no se rindió. III. Sus teorías transformaron nuestra comprensión del universo. El orden es:", options: ["II, III, I", "I, II, III", "III, II, I", "II, I, III"], correctAnswer: 0, explanation: "II presenta la adversidad superada. III describe el logro concreto. I concluye con 'así' (resultado final)." }
+        ]
+      },
+      {
+        id: "vicios-lenguaje",
+        title: "Vicios del Lenguaje",
+        content: `Los <strong>vicios del lenguaje</strong> son errores comunes al hablar o escribir que afectan la claridad y corrección del mensaje. En la PAA, debes identificarlos y corregirlos.
+
+<strong>Principales vicios:</strong>
+
+<strong>1. Redundancia (Pleonasmo):</strong> repetir una idea innecesariamente.
+<ul>
+<li>❌ "Subir arriba" → ✅ "Subir" (subir ya implica arriba)</li>
+<li>❌ "Vuelvo a repetir" → ✅ "Repito" (repetir ya implica volver a decir)</li>
+<li>❌ "Lapso de tiempo" → ✅ "Lapso" (lapso ya significa período de tiempo)</li>
+</ul>
+
+<strong>2. Barbarismo:</strong> uso incorrecto de palabras o formas gramaticales.
+<ul>
+<li>❌ "Hubieron muchos problemas" → ✅ "Hubo muchos problemas" (haber impersonal es singular)</li>
+<li>❌ "Dijistes" → ✅ "Dijiste" (no se agrega -s a la segunda persona del pretérito)</li>
+<li>❌ "Más mejor" → ✅ "Mejor" (mejor ya es comparativo)</li>
+</ul>
+
+<strong>3. Solecismo:</strong> error de sintaxis o concordancia.
+<ul>
+<li>❌ "Habemos muchos estudiantes" → ✅ "Somos muchos estudiantes"</li>
+<li>❌ "Le dije a ellos" → ✅ "Les dije a ellos" (concordancia de número)</li>
+<li>❌ "La gente piensan" → ✅ "La gente piensa" (sujeto colectivo singular)</li>
+</ul>
+
+<strong>4. Dequeísmo y Queísmo:</strong>
+<ul>
+<li>❌ "Pienso de que es correcto" → ✅ "Pienso que es correcto" (dequeísmo: sobra "de")</li>
+<li>❌ "Estoy seguro que vendrá" → ✅ "Estoy seguro de que vendrá" (queísmo: falta "de")</li>
+<li><strong>Truco:</strong> sustituye por "eso". "Pienso eso" ✓ (no "pienso de eso") → no lleva "de".</li>
+</ul>
+
+<strong>5. Anfibología:</strong> ambigüedad; la oración se puede interpretar de más de una forma.
+<ul>
+<li>❌ "Vi a tu hermano con el telescopio" (¿quién tiene el telescopio?)</li>
+<li>✅ "Con el telescopio, vi a tu hermano" o "Vi a tu hermano, quien tenía el telescopio"</li>
+</ul>`,
+        examples: [
+          {
+            problem: "Identifica el vicio: 'Hubieron muchas personas en la fiesta.'",
+            solution: "Barbarismo. El verbo 'haber' en sentido impersonal siempre va en singular: 'Hubo muchas personas en la fiesta.'"
+          },
+          {
+            problem: "Identifica el vicio: 'Salir afuera a tomar el sol.'",
+            solution: "Redundancia/Pleonasmo. 'Salir' ya implica ir hacia afuera. Lo correcto es: 'Salir a tomar el sol.'"
+          }
+        ],
+        tips: [
+          "Para detectar redundancia, pregúntate: ¿esta palabra añade información nueva o repite algo ya dicho?",
+          "Para dequeísmo/queísmo: sustituye la frase por 'eso'. Si 'de eso' suena mal, no lleva 'de'.",
+          "En la PAA, busca la oración que esté CORRECTAMENTE escrita — descarta las que tengan vicios."
+        ],
+        exercises: [
+          { id: "vl-1", question: "¿Cuál oración tiene redundancia?", options: ["Salir afuera de la casa", "Salir de la casa rápidamente", "Salir de la casa por la puerta", "Salir temprano de la casa"], correctAnswer: 0, explanation: "'Salir afuera' es redundante porque 'salir' ya implica ir hacia afuera." },
+          { id: "vl-2", question: "¿Cuál es la forma correcta?", options: ["Hubo muchos asistentes", "Hubieron muchos asistentes", "Habían muchos asistentes", "Han habido muchos asistentes"], correctAnswer: 0, explanation: "El verbo 'haber' impersonal siempre va en singular, sin importar el complemento: 'Hubo muchos asistentes'." },
+          { id: "vl-3", question: "¿Cuál oración tiene dequeísmo?", options: ["Creo de que va a llover", "Estoy seguro de que vendrá", "Me alegro de que estés bien", "Confío en que todo saldrá bien"], correctAnswer: 0, explanation: "'Creo de que' es dequeísmo. Lo correcto es 'Creo que' (prueba: 'Creo eso', no 'Creo de eso')." },
+          { id: "vl-4", question: "¿Cuál oración es correcta?", options: ["La gente piensa diferente", "La gente piensan diferente", "Las gentes piensan diferente", "La gente piensen diferente"], correctAnswer: 0, explanation: "'La gente' es un sustantivo colectivo singular, por lo que el verbo va en singular: 'piensa'." },
+          { id: "vl-5", question: "Identifica el vicio en 'Vuelvo a repetir que la tarea es para mañana':", options: ["Redundancia", "Barbarismo", "Solecismo", "Anfibología"], correctAnswer: 0, explanation: "'Vuelvo a repetir' es redundante: 'repetir' ya significa 'volver a decir'. Basta con 'Repito que...'." },
+          { id: "vl-6", question: "¿Cuál oración tiene queísmo?", options: ["Me enteré que ganamos", "Me enteré de que ganamos", "Creo que ganamos", "Sé que ganamos"], correctAnswer: 0, explanation: "'Enterarse' requiere 'de': 'Me enteré DE que ganamos'. Sin el 'de' es queísmo (prueba: 'Me enteré de eso')." },
+          { id: "vl-7", question: "¿Cuál forma verbal es incorrecta?", options: ["Dijistes la verdad", "Dijiste la verdad", "Dijo la verdad", "Dijimos la verdad"], correctAnswer: 0, explanation: "'Dijistes' es un barbarismo. La forma correcta del pretérito en segunda persona es 'dijiste' (sin -s final)." },
+          { id: "vl-8", question: "¿Cuál oración es anfibológica (ambigua)?", options: ["Pedro le dijo a Juan que su auto estaba dañado", "El auto de Pedro está dañado", "Juan reparó su propio auto", "Pedro llevó su auto al mecánico"], correctAnswer: 0, explanation: "'Su auto' puede referirse al auto de Pedro o al de Juan. Es ambiguo = anfibología." },
+          { id: "vl-9", question: "¿Cuál expresión es correcta?", options: ["Mejor dicho", "Más mejor dicho", "Más peor", "Menos inferior"], correctAnswer: 0, explanation: "'Mejor' y 'peor' ya son comparativos. 'Más mejor' y 'más peor' son barbarismos (doble comparativo)." },
+          { id: "vl-10", question: "Identifica el vicio: 'Le pedí a los niños que se calmaran.'", options: ["Solecismo (falta concordancia)", "Redundancia", "Barbarismo", "No tiene vicio"], correctAnswer: 0, explanation: "'Le' es singular pero 'a los niños' es plural. Debe ser 'Les pedí a los niños'. Es un solecismo de concordancia." },
+          { id: "vl-11", question: "¿Cuál oración tiene redundancia?", options: ["Lo vi con mis propios ojos", "Lo vi desde la ventana", "Lo vi claramente", "Lo vi ayer"], correctAnswer: 0, explanation: "'Con mis propios ojos' es redundante: ver ya se hace con los ojos, y por supuesto que son los propios." },
+          { id: "vl-12", question: "¿Cuál es la forma correcta?", options: ["Es necesario de que estudies", "Es necesario que estudies", "Es necesario que estudias", "Es necesario de que estudias"], correctAnswer: 1, explanation: "'Es necesario QUE estudies' es correcto. 'Es necesario DE que' es dequeísmo (prueba: 'Es necesario eso', no 'de eso'). Además el verbo debe ir en subjuntivo: 'estudies'." }
         ]
       }
     ]
