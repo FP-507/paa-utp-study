@@ -11,24 +11,72 @@ export const verbalTopics: Topic[] = [
       {
         id: "claves-contextuales",
         title: "Claves Contextuales",
-        content: `En este tipo de ejercicio se presenta una oración con una o dos palabras omitidas. Debes elegir la opción que complete el sentido lógico y gramatical.
+        content: `En este tipo de ejercicio se presenta una oración con una o dos palabras omitidas. Tu tarea es elegir la opcion que complete el sentido logico y gramatical de la oracion. Estos ejercicios evaluan tu capacidad de comprender relaciones entre ideas y de usar el vocabulario en contexto, dos habilidades fundamentales que la PAA mide de forma recurrente.
 
 <strong>Estrategia paso a paso:</strong>
 <ol>
-<li><strong>Lee toda la oración</strong> antes de ver las opciones</li>
-<li><strong>Identifica claves contextuales:</strong> palabras que te dan pistas sobre la respuesta</li>
-<li><strong>Predice</strong> qué tipo de palabra necesitas (positiva/negativa, causa/efecto)</li>
-<li><strong>Busca conectores:</strong> "pero", "sin embargo", "por lo tanto", "porque", "aunque"</li>
-<li><strong>Elimina opciones</strong> que no encajan gramatical o semánticamente</li>
+<li><strong>Lee toda la oración completa</strong> antes de ver las opciones. Entiende la estructura general: cual es el sujeto, cual es la accion, y que tipo de informacion falta.</li>
+<li><strong>Identifica las claves contextuales:</strong> son palabras o frases dentro de la oracion que te dan pistas directas sobre la respuesta. Pueden ser sinonimos, antonimos, definiciones implicitas o relaciones logicas.</li>
+<li><strong>Predice mentalmente la respuesta</strong> antes de ver las opciones. Preguntate: la palabra que falta, debe ser positiva o negativa? Debe indicar causa o consecuencia? Es un sinonimo o un antonimo de algo que ya aparece?</li>
+<li><strong>Busca conectores y palabras clave:</strong> los conectores son la herramienta mas poderosa para resolver estos ejercicios. Cada conector te dice exactamente que tipo de relacion hay entre las partes de la oracion.</li>
+<li><strong>Elimina opciones</strong> que no encajan gramatical o semanticamente. Si una opcion suena bien pero rompe la concordancia de genero o numero, es incorrecta.</li>
+<li><strong>Verifica tu respuesta</strong> releyendo la oracion completa con la opcion elegida. Debe sonar natural y logica.</li>
 </ol>
 
-<strong>Tipos de relaciones en la oración:</strong>
+<strong>Los 4 tipos de claves contextuales en detalle:</strong>
+
+<strong>1. Claves de continuidad (la idea se mantiene):</strong>
 <ul>
-<li><strong>Continuidad:</strong> la palabra sigue la misma idea (y, también, además, igualmente)</li>
-<li><strong>Contraste:</strong> la palabra contradice o cambia la idea (pero, sin embargo, aunque, no obstante)</li>
-<li><strong>Causa-efecto:</strong> la palabra explica un resultado (porque, por lo tanto, así que, entonces)</li>
-<li><strong>Definición:</strong> la oración define o explica la palabra faltante</li>
-</ul>`,
+<li>Conectores: <em>y, tambien, ademas, igualmente, asimismo, incluso, del mismo modo</em></li>
+<li>La palabra que falta sigue la misma direccion que el resto de la oracion</li>
+<li>Ejemplo: "El atleta era disciplinado y ______." - La respuesta debe ser algo positivo que complemente "disciplinado", como "perseverante" o "dedicado"</li>
+<li>Ejemplo: "La ciudad es moderna y ______; sus edificios reflejan las ultimas tendencias." - Busca un adjetivo positivo coherente: "vanguardista"</li>
+</ul>
+
+<strong>2. Claves de contraste (la idea cambia de direccion):</strong>
+<ul>
+<li>Conectores: <em>pero, sin embargo, aunque, no obstante, a pesar de, en cambio, por el contrario, mientras que</em></li>
+<li>La palabra que falta tiene sentido OPUESTO a lo que dice la otra parte de la oracion</li>
+<li>Este es el tipo mas frecuente en la PAA porque requiere razonamiento de dos pasos</li>
+<li>Ejemplo: "Aunque el camino era ______, los excursionistas decidieron continuar." - "Aunque" indica que lo que sigue contrasta. Si continuaron (positivo), el camino era algo negativo: "peligroso", "dificil", "escarpado"</li>
+<li>Ejemplo: "A pesar de su ______ apariencia, el animal era en realidad bastante ______." - "A pesar de" establece un contraste entre apariencia y realidad. Si la apariencia es "feroz", la realidad es "docil". Si la apariencia es "inofensiva", la realidad es "peligroso"</li>
+<li><strong>Patron clave:</strong> "aunque A, B" significa que A y B van en direcciones opuestas. "A pesar de A, B" funciona igual</li>
+</ul>
+
+<strong>3. Claves de causa-efecto (una parte explica la otra):</strong>
+<ul>
+<li>Conectores de causa: <em>porque, ya que, puesto que, debido a que, dado que</em></li>
+<li>Conectores de efecto: <em>por lo tanto, por consiguiente, asi que, entonces, en consecuencia, de modo que</em></li>
+<li>Una parte de la oracion explica POR QUE ocurre la otra</li>
+<li>Ejemplo: "El discurso fue tan ______ que muchos asistentes se quedaron dormidos." - La consecuencia (dormirse) se explica por la causa (el discurso fue "tedioso" o "soporifero")</li>
+<li>Ejemplo: "Debido a su ______, la empresa tuvo que cerrar." - La causa debe ser algo negativo que justifique el cierre: "quiebra", "insolvencia", "mala administracion"</li>
+<li><strong>Patron clave:</strong> "tan ______ que [resultado]" - El adjetivo que falta debe causar logicamente ese resultado</li>
+</ul>
+
+<strong>4. Claves de definicion (la oracion explica la palabra):</strong>
+<ul>
+<li>La propia oracion contiene una definicion o descripcion de la palabra que falta</li>
+<li>Palabras clave: <em>es decir, o sea, esto es, lo que significa, se refiere a</em></li>
+<li>Ejemplo: "El doctor recomendo ______, es decir, no comer antes de la cirugia." - La definicion "no comer" apunta a: "ayuno"</li>
+<li>Ejemplo: "Su ______ era evidente: nunca dejaba nada al azar y revisaba cada detalle tres veces." - La descripcion define a alguien meticuloso: "meticulosidad"</li>
+</ul>
+
+<strong>Cuando hay DOS espacios en blanco:</strong>
+<ul>
+<li>Ambas palabras deben ser coherentes entre si Y con el resto de la oracion</li>
+<li>Primero determina la relacion entre los dos espacios: son sinonimos? antonimos? causa-efecto?</li>
+<li>Verifica que AMBAS palabras funcionen, no solo una</li>
+<li>Ejemplo: "El publico aplaudio con ______ al finalizar la obra, pues la actuacion habia sido ______." - Si aplaudieron con "entusiasmo" (positivo), la actuacion fue "magistral" (positivo). Ambas van en la misma direccion</li>
+<li>Truco: si una de las dos opciones no encaja, descarta toda la pareja, aunque la otra palabra funcione</li>
+</ul>
+
+<strong>Tecnica de eliminacion sistematica:</strong>
+<ol>
+<li>Descarta opciones que tengan errores gramaticales (genero, numero, conjugacion)</li>
+<li>Descarta opciones que contradigan la logica de la oracion</li>
+<li>Descarta opciones con palabras demasiado extremas si el contexto es moderado</li>
+<li>Si quedan dos opciones, relee con cada una y elige la que suene mas natural y precisa</li>
+</ol>`,
         examples: [
           {
             problem: "A pesar de su ______ apariencia, el animal era en realidad bastante ______.",
@@ -62,27 +110,114 @@ export const verbalTopics: Topic[] = [
       {
         id: "vocabulario-contexto",
         title: "Vocabulario en Contexto",
-        content: `Muchas palabras tienen múltiples significados. En la PAA, debes identificar el significado correcto según el contexto.
+        content: `Muchas palabras en espanol tienen multiples significados dependiendo del contexto en que se usen. En la PAA, este tipo de ejercicios evalua tu capacidad de identificar el significado correcto de una palabra segun la oracion o el texto que la rodea. No basta con conocer una definicion; debes reconocer cual de las posibles acepciones aplica en cada situacion.
 
-<strong>Estrategia:</strong>
+<strong>Estrategia paso a paso:</strong>
 <ol>
-<li>Lee la oración completa</li>
-<li>Sustituye la palabra por cada opción</li>
-<li>Elige la que mantenga el sentido original</li>
+<li><strong>Lee la oracion completa</strong> para captar el sentido general. No te detengas en la palabra en cuestion; entiende primero de que habla toda la oracion.</li>
+<li><strong>Identifica el campo semantico:</strong> el tema de la oracion te dice en que area de significado se usa la palabra. Por ejemplo, "banco" en una oracion sobre finanzas significa algo muy diferente que en una oracion sobre un parque.</li>
+<li><strong>Sustituye la palabra</strong> por cada opcion disponible y lee la oracion completa con cada una. La correcta debe mantener el sentido original sin alterar la logica.</li>
+<li><strong>Descarta por incoherencia:</strong> si una opcion cambia el significado de la oracion o crea una contradiccion, eliminala.</li>
+<li><strong>Verifica la categoria gramatical:</strong> si la palabra original es un verbo, la respuesta debe funcionar como verbo. Si es adjetivo, igual.</li>
 </ol>
 
-<strong>Prefijos y sufijos útiles:</strong>
+<strong>Palabras polisemicas comunes en la PAA:</strong>
 <ul>
-<li><strong>in-, im-, des-, a-:</strong> negación (inútil, imposible, deshacer, amoral)</li>
-<li><strong>re-:</strong> repetición (rehacer, releer)</li>
-<li><strong>pre-:</strong> antes (predecir, prever)</li>
-<li><strong>-ción, -sión:</strong> acción (educación, comprensión)</li>
-<li><strong>-mente:</strong> modo (rápidamente, claramente)</li>
-<li><strong>-oso/a:</strong> cualidad (hermoso, peligroso)</li>
+<li><strong>Banco:</strong> asiento / institucion financiera / grupo de peces / banco de datos</li>
+<li><strong>Planta:</strong> vegetal / piso de edificio / fabrica o instalacion / parte del pie</li>
+<li><strong>Cabo:</strong> rango militar / extremo de cuerda / accidente geografico / final ("al cabo de")</li>
+<li><strong>Capital:</strong> ciudad principal / dinero o recursos / letra mayuscula / importancia ("de capital importancia")</li>
+<li><strong>Obra:</strong> creacion artistica / construccion en proceso / accion o acto ("buena obra") / libro</li>
+<li><strong>Gato:</strong> animal / herramienta para levantar autos / juego (gato o tres en raya)</li>
+<li><strong>Hoja:</strong> de un arbol / de papel / de una puerta / de un cuchillo (filo)</li>
+<li><strong>Carta:</strong> mensaje escrito / documento formal / naipe / menu de restaurante</li>
 </ul>
 
-<strong>Palabras que la PAA suele evaluar:</strong>
-Sinónimos y antónimos, palabras con varios significados, vocabulario académico.`,
+<strong>Prefijos: herramientas para descifrar palabras desconocidas</strong>
+Cuando encuentres una palabra que no conoces, descomponla en sus partes. Los prefijos te dan pistas valiosas sobre el significado:
+
+<ul>
+<li><strong>Prefijos de negacion:</strong>
+  <ul>
+  <li><em>in-, im-, i-:</em> inutil (no util), imposible (no posible), irresponsable (no responsable), ilegal (no legal)</li>
+  <li><em>des-:</em> deshacer (anular lo hecho), desacuerdo (falta de acuerdo), desconfianza, desventaja</li>
+  <li><em>a-, an-:</em> amoral (sin moral), anonimo (sin nombre), analfabeto (sin alfabeto/lectura)</li>
+  </ul>
+</li>
+<li><strong>Prefijos de repeticion o movimiento:</strong>
+  <ul>
+  <li><em>re-:</em> rehacer (hacer otra vez), releer, reconstruir, reforestar</li>
+  <li><em>retro-:</em> retroceder (ir hacia atras), retrospectiva</li>
+  </ul>
+</li>
+<li><strong>Prefijos de tiempo:</strong>
+  <ul>
+  <li><em>pre-:</em> predecir (decir antes), prever, prehistoria, prenatal</li>
+  <li><em>pos-, post-:</em> posguerra (despues de la guerra), posponer, postoperatorio</li>
+  <li><em>ante-:</em> anteayer, antecedente, anteproyecto</li>
+  </ul>
+</li>
+<li><strong>Prefijos de cantidad o grado:</strong>
+  <ul>
+  <li><em>super-, sobre-:</em> superpoblacion, sobrenatural, sobresalir</li>
+  <li><em>sub-, infra-:</em> subterraneo (debajo de tierra), infraestructura, subdesarrollo</li>
+  <li><em>multi-, poli-:</em> multicultural, poliglota (muchas lenguas)</li>
+  <li><em>mono-, uni-:</em> monologo (un solo hablante), uniforme, unicelular</li>
+  <li><em>bi-, di-:</em> bilingue (dos lenguas), dicotomia (division en dos)</li>
+  </ul>
+</li>
+<li><strong>Prefijos de relacion:</strong>
+  <ul>
+  <li><em>inter-:</em> internacional (entre naciones), interactuar</li>
+  <li><em>contra-, anti-:</em> contradecir, antibiotico (contra las bacterias)</li>
+  <li><em>co-, con-:</em> cooperar (trabajar juntos), convivir</li>
+  </ul>
+</li>
+</ul>
+
+<strong>Sufijos: pistas sobre la funcion de la palabra</strong>
+<ul>
+<li><strong>-cion, -sion:</strong> indican accion o resultado: educacion, comprension, decision, produccion</li>
+<li><strong>-mente:</strong> convierte adjetivo en adverbio (indica modo): rapidamente, claramente, facilmente</li>
+<li><strong>-oso/a:</strong> indica cualidad abundante: hermoso, peligroso, generoso, caudaloso</li>
+<li><strong>-ble:</strong> indica posibilidad: posible, probable, increible, admirable</li>
+<li><strong>-ista:</strong> indica profesion, creencia o actitud: periodista, optimista, pianista</li>
+<li><strong>-idad, -dad:</strong> convierten adjetivo en sustantivo abstracto: felicidad (de feliz), bondad (de bueno), capacidad</li>
+<li><strong>-izar, -ificar:</strong> convierten sustantivo/adjetivo en verbo: modernizar, simplificar, clasificar</li>
+</ul>
+
+<strong>Raices latinas y griegas frecuentes:</strong>
+<ul>
+<li><em>bio-:</em> vida (biologia, biografia, biodiversidad)</li>
+<li><em>geo-:</em> tierra (geografia, geologia)</li>
+<li><em>-logia:</em> estudio de (psicologia, sociologia, tecnologia)</li>
+<li><em>-grafia:</em> escritura o descripcion (ortografia, fotografia, biografia)</li>
+<li><em>-fobia:</em> miedo (claustrofobia, aracnofobia)</li>
+<li><em>-filia:</em> amor o afinidad (bibliofilia, cinefilia)</li>
+<li><em>crono-:</em> tiempo (cronologia, cronico, cronometro)</li>
+</ul>
+
+<strong>Sinonimos y antonimos: otra forma de evaluar vocabulario</strong>
+<ul>
+<li>La PAA puede pedirte directamente el sinonimo o antonimo de una palabra</li>
+<li>Para sinonimos: busca la palabra que podria reemplazar a la otra SIN cambiar el significado de la oracion</li>
+<li>Para antonimos: busca la palabra de significado OPUESTO</li>
+<li>Cuidado con los "falsos sinonimos": palabras que suenan parecido pero significan cosas diferentes (ej: "actitud" no es sinonimo de "aptitud")</li>
+</ul>
+
+<strong>Vocabulario academico frecuente en la PAA:</strong>
+<ul>
+<li><em>Efimero:</em> de corta duracion, pasajero (antonimo: permanente, duradero)</li>
+<li><em>Prolijo:</em> meticuloso, detallado, cuidadoso</li>
+<li><em>Elocuencia:</em> habilidad para hablar de forma persuasiva y expresiva</li>
+<li><em>Ecuanimidad:</em> serenidad, imparcialidad, equilibrio emocional</li>
+<li><em>Austero:</em> sobrio, sencillo, sin lujos</li>
+<li><em>Prolifico:</em> que produce mucho, abundante en creaciones (antonimo: improductivo)</li>
+<li><em>Insolito:</em> extraordinario, poco comun, sorprendente</li>
+<li><em>Imperturbable:</em> que no se altera, sereno ante cualquier situacion</li>
+<li><em>Tenacidad:</em> persistencia, firmeza, constancia</li>
+<li><em>Meticulosidad:</em> cuidado extremo en los detalles</li>
+</ul>`,
         examples: [
           {
             problem: "En 'el banco del parque estaba ocupado', ¿qué significa 'banco'?",
@@ -125,25 +260,63 @@ Sinónimos y antónimos, palabras con varios significados, vocabulario académic
       {
         id: "idea-principal",
         title: "Idea Principal e Ideas Secundarias",
-        content: `La <strong>idea principal</strong> es el mensaje central del texto — lo que el autor quiere comunicar.
+        content: `La <strong>idea principal</strong> es el mensaje central que el autor quiere comunicar en un texto o parrafo. Es la columna vertebral del texto: todo lo demas (datos, ejemplos, argumentos) existe para apoyarla, explicarla o demostrarla. Identificar la idea principal es la habilidad mas evaluada en la seccion de comprension lectora de la PAA.
 
-<strong>Cómo identificarla:</strong>
-<ol>
-<li>Lee todo el texto rápidamente (lectura global)</li>
-<li>Pregúntate: ¿De qué trata el texto? ¿Qué quiere decir el autor?</li>
-<li>Busca la oración que resume todo el párrafo/texto</li>
-<li>Generalmente está al inicio o al final del texto</li>
-</ol>
-
-<strong>Ideas secundarias:</strong> apoyan, explican o ejemplifican la idea principal. Incluyen datos, ejemplos, argumentos.
-
-<strong>Diferencia clave:</strong>
+<strong>Diferencia fundamental entre TEMA e IDEA PRINCIPAL:</strong>
 <ul>
-<li>Si eliminas la idea principal, el texto pierde sentido</li>
-<li>Si eliminas una idea secundaria, el texto sigue teniendo sentido general</li>
+<li><strong>El tema</strong> responde a: "De que habla el texto?" - Es un concepto general, expresado en una o dos palabras. Ejemplo: "la contaminacion", "la educacion", "el Canal de Panama".</li>
+<li><strong>La idea principal</strong> responde a: "Que dice el autor SOBRE ese tema?" - Es una afirmacion completa que se puede expresar en una oracion. Ejemplo: "La contaminacion del agua amenaza la salud publica en America Latina".</li>
+<li><strong>Error tipico en la PAA:</strong> confundir el tema con la idea principal. Si la pregunta dice "Cual es la idea principal?", una respuesta como "la contaminacion" es INCORRECTA porque es solo el tema. La respuesta debe ser una oracion completa que diga algo sobre el tema.</li>
 </ul>
 
-<strong>El título del texto</strong> a menudo refleja la idea principal. Cuando te pregunten "¿Cuál es el mejor título?", busca el que capture la idea principal.`,
+<strong>Estrategia paso a paso para identificar la idea principal:</strong>
+<ol>
+<li><strong>Lee las preguntas ANTES del texto.</strong> Esto te permite saber que buscar mientras lees: idea principal? un detalle? una inferencia? Asi tu lectura se vuelve mas eficiente y dirigida.</li>
+<li><strong>Haz una lectura rapida (skimming)</strong> para captar el sentido general. No te detengas en cada palabra; busca entender de que habla el texto en su conjunto.</li>
+<li><strong>Preguntate:</strong> Si tuviera que resumir todo este texto en UNA sola oracion, cual seria? Esa oracion es la idea principal.</li>
+<li><strong>Busca la oracion tematica del parrafo.</strong> La mayoria de los parrafos tienen una oracion que resume la idea central. Las demas oraciones la apoyan.</li>
+<li><strong>Verifica tu eleccion:</strong> Todas las demas oraciones del texto, se relacionan con la idea que identificaste? Si alguna no tiene relacion, quiza elegiste una idea secundaria en vez de la principal.</li>
+</ol>
+
+<strong>Donde suele estar la idea principal?</strong>
+<ul>
+<li><strong>Al INICIO del parrafo (metodo deductivo):</strong> Es la ubicacion mas comun. El autor presenta la idea y luego la desarrolla con detalles. Ejemplo: "La contaminacion del agua es un problema grave. [Datos, ejemplos, estadisticas que apoyan esta idea]."</li>
+<li><strong>Al FINAL del parrafo (metodo inductivo):</strong> El autor presenta datos y ejemplos primero, y al final llega a la conclusion. Ejemplo: "[Datos, ejemplos]... Por todo esto, la contaminacion del agua es un problema grave."</li>
+<li><strong>Al INICIO Y FINAL (metodo enmarcado):</strong> El autor presenta la idea, la desarrolla y la reafirma al final con otras palabras.</li>
+<li><strong>Idea principal IMPLICITA:</strong> A veces la idea principal no esta escrita textualmente en ninguna oracion. Debes deducirla del conjunto de ideas secundarias. Es el caso mas dificil.</li>
+</ul>
+
+<strong>Ideas secundarias: como distinguirlas</strong>
+Las ideas secundarias apoyan, explican, ejemplifican o demuestran la idea principal. Se clasifican en:
+<ul>
+<li><strong>Datos y estadisticas:</strong> "El 70% del agua del planeta esta contaminada" - son detalles especificos.</li>
+<li><strong>Ejemplos:</strong> "Por ejemplo, el rio X tiene niveles toxicos tres veces superiores al limite" - ilustran la idea.</li>
+<li><strong>Argumentos:</strong> razones que justifican o respaldan la idea principal.</li>
+<li><strong>Descripciones:</strong> detalles que amplian o enriquecen la idea pero no la definen.</li>
+</ul>
+
+<strong>La prueba de eliminacion:</strong>
+<ul>
+<li>Si eliminas la idea principal, el texto pierde sentido porque le falta el eje central.</li>
+<li>Si eliminas una idea secundaria, el texto sigue teniendo sentido general, aunque pierde un detalle.</li>
+<li>Ejemplo: En un texto sobre beneficios del ejercicio que menciona reducir estres, mejorar salud cardiaca y fortalecer huesos, si eliminas "fortalecer huesos", el texto sigue hablando de los beneficios del ejercicio. Pero si eliminas "el ejercicio tiene multiples beneficios", el texto pierde su sentido central.</li>
+</ul>
+
+<strong>Preguntas sobre el mejor titulo:</strong>
+<ul>
+<li>El titulo correcto refleja la idea principal, no solo el tema.</li>
+<li>Un buen titulo no es ni demasiado general (solo el tema) ni demasiado especifico (un detalle).</li>
+<li>Ejemplo: Si un texto habla sobre como el turismo genera empleo, promueve cultura y a veces dana el medio ambiente, "El turismo" es demasiado general. "El dano ambiental del turismo" es demasiado especifico. "El turismo: beneficios y desafios" abarca la idea principal completa.</li>
+<li><strong>Truco:</strong> descarta titulos que solo mencionen UNO de los aspectos del texto cuando este habla de varios.</li>
+</ul>
+
+<strong>Errores comunes en la PAA y como evitarlos:</strong>
+<ul>
+<li><strong>Elegir un detalle en vez de la idea principal:</strong> Si la respuesta se refiere a un dato especifico mencionado en el texto, probablemente es una idea secundaria.</li>
+<li><strong>Elegir una idea demasiado amplia:</strong> Si la respuesta podria aplicarse a muchos textos diferentes y no es especifica del texto que leiste, es demasiado general.</li>
+<li><strong>Confundir la opinion del lector con la del autor:</strong> La idea principal es lo que el AUTOR dice, no lo que tu piensas sobre el tema.</li>
+<li><strong>No leer todas las opciones:</strong> A veces la primera opcion parece correcta, pero una posterior es mas completa y precisa.</li>
+</ul>`,
         examples: [
           {
             problem: "¿Cómo distinguir idea principal de secundaria?",
@@ -172,34 +345,77 @@ Sinónimos y antónimos, palabras con varios significados, vocabulario académic
       {
         id: "inferencias",
         title: "Inferencias y Lectura Crítica",
-        content: `Una <strong>inferencia</strong> es una conclusión que sacas a partir de la información del texto, aunque no se diga explícitamente.
+        content: `Una <strong>inferencia</strong> es una conclusion logica que se extrae a partir de la informacion del texto, aunque no este expresada de forma explicita. Inferir es "leer entre lineas": el texto te da pistas y tu debes conectarlas para llegar a una conclusion que el autor sugiere pero no dice directamente. Esta es una de las habilidades de pensamiento critico mas importantes que evalua la PAA.
 
-<strong>Tipos de preguntas de inferencia:</strong>
+<strong>Diferencia clave: informacion explicita vs. inferencia</strong>
 <ul>
-<li>"Se puede inferir que..."</li>
-<li>"El autor sugiere que..."</li>
-<li>"¿Qué se puede concluir...?"</li>
-<li>"El texto implica que..."</li>
+<li><strong>Informacion explicita:</strong> esta escrita directamente en el texto. Ejemplo: "Las ventas crecieron un 200%" - es un dato literal.</li>
+<li><strong>Inferencia:</strong> se deduce logicamente de lo que esta escrito. Ejemplo: si el texto dice que las ventas de libros electronicos crecieron 200% mientras las librerias fisicas cerraron un 30%, puedes INFERIR que la tecnologia digital esta cambiando los habitos de lectura. Esto no esta dicho textualmente, pero es una conclusion logica.</li>
+<li><strong>Opinion personal:</strong> lo que TU piensas sobre el tema, sin base en el texto. Esto NO es una inferencia valida. Ejemplo: "Los libros electronicos son mejores" es una opinion, no una inferencia.</li>
 </ul>
 
-<strong>Estrategia para inferir:</strong>
+<strong>Tipos de preguntas de inferencia en la PAA:</strong>
+<ul>
+<li>"Se puede inferir que..." / "Se puede deducir que..."</li>
+<li>"El autor sugiere que..." / "El autor implica que..."</li>
+<li>"Que se puede concluir del texto?"</li>
+<li>"El texto da a entender que..."</li>
+<li>"A partir del texto, es valido afirmar que..."</li>
+<li>"Cual de las siguientes afirmaciones es compatible con el texto?"</li>
+</ul>
+
+<strong>Estrategia sistematica para inferir:</strong>
 <ol>
-<li>Identifica lo que el texto dice directamente</li>
-<li>Busca qué se puede deducir lógicamente de esos datos</li>
-<li>La inferencia debe tener base en el texto (no inventes)</li>
-<li>Elimina opciones que contradigan el texto</li>
-<li>Elimina opciones que vayan más allá de lo que el texto permite concluir</li>
+<li><strong>Identifica los hechos explicitos del texto.</strong> Que dice textualmente? Subraya los datos concretos, las afirmaciones directas y las relaciones que el autor establece.</li>
+<li><strong>Busca conexiones logicas.</strong> Que se puede deducir de esos datos combinados? Si A causa B, y el texto menciona A, puedes inferir que B ocurrira o esta ocurriendo.</li>
+<li><strong>Verifica que tu inferencia tenga BASE EN EL TEXTO.</strong> Preguntate: puedo senalar exactamente que parte del texto apoya esta conclusion? Si no puedes, es una suposicion, no una inferencia.</li>
+<li><strong>Aplica la "prueba de lo razonable":</strong> Una buena inferencia es la conclusion mas logica y directa. Si necesitas dar muchos saltos logicos o asumir cosas que el texto no menciona, probablemente no es la respuesta correcta.</li>
+<li><strong>Elimina opciones extremas.</strong> Las inferencias validas suelen ser moderadas. Desconfia de opciones con palabras absolutas como "siempre", "nunca", "todos", "ningun", "completamente", "eliminar por completo". El mundo real rara vez es absoluto.</li>
+<li><strong>Elimina opciones que contradigan el texto.</strong> Si el texto dice algo positivo sobre un tema, una inferencia negativa probablemente es incorrecta (a menos que haya ironia).</li>
+<li><strong>Elimina opciones que vayan MAS ALLA del texto.</strong> Una inferencia debe ser un paso logico, no un salto enorme. Si la opcion dice algo que el texto no permite concluir, es incorrecta.</li>
 </ol>
 
-<strong>Propósito del autor:</strong>
+<strong>Tipos de inferencia que evalua la PAA:</strong>
+
+<strong>1. Inferencia de causa-efecto:</strong>
 <ul>
-<li><strong>Informar:</strong> presenta datos objetivos sin opinión</li>
-<li><strong>Persuadir:</strong> busca convencerte de algo</li>
-<li><strong>Entretener:</strong> busca generar placer o diversión</li>
-<li><strong>Explicar:</strong> desglosa un proceso o concepto</li>
+<li>El texto presenta una situacion y tu debes inferir la causa o el efecto.</li>
+<li>Ejemplo: "Desde que instalaron camaras de seguridad, los robos disminuyeron un 60%." Inferencia valida: Las camaras son efectivas para disuadir robos. Inferencia invalida: Los robos se eliminaron completamente (el texto dice 60%, no 100%).</li>
 </ul>
 
-<strong>Tono del texto:</strong> objetivo, crítico, irónico, optimista, nostálgico, formal, informal...`,
+<strong>2. Inferencia de actitud o posicion del autor:</strong>
+<ul>
+<li>Debes deducir que piensa o siente el autor sobre el tema a partir de las palabras que elige.</li>
+<li>Ejemplo: "El candidato prometio reducir impuestos, crear empleos y eliminar la corrupcion - las mismas promesas de los ultimos 20 anos." Inferencia: El autor es esceptico. Las palabras "las mismas promesas de los ultimos 20 anos" sugieren incredulidad.</li>
+</ul>
+
+<strong>3. Inferencia de comparacion o relacion:</strong>
+<ul>
+<li>El texto compara dos cosas y tu debes inferir que implica esa comparacion.</li>
+<li>Ejemplo: "Mientras en algunos paises se desperdicia un tercio de los alimentos, en otros millones padecen hambre." Inferencia: Existe un problema de distribucion de alimentos, no de produccion.</li>
+</ul>
+
+<strong>4. Inferencia predictiva:</strong>
+<ul>
+<li>A partir de los datos del texto, debes predecir que podria ocurrir despues.</li>
+<li>Ejemplo: Si un texto menciona que una empresa de reciclaje triplico ganancias, puedes inferir que el reciclaje puede ser rentable como negocio (no que TODAS las empresas deberan reciclar).</li>
+</ul>
+
+<strong>Trampas comunes en preguntas de inferencia:</strong>
+<ul>
+<li><strong>La generalizacion excesiva:</strong> El texto habla de UN caso y la opcion dice "TODOS los casos". Ejemplo: "Una empresa de reciclaje gano mucho" no permite concluir que "todas las empresas deberian reciclar".</li>
+<li><strong>La conclusion que suena bien pero no tiene apoyo:</strong> Algunas opciones son afirmaciones verdaderas en la vida real pero que el texto no permite concluir.</li>
+<li><strong>Confundir correlacion con causalidad:</strong> Si dos cosas ocurren juntas, no significa que una cause la otra. El texto puede mostrar correlacion; ten cuidado con opciones que afirmen causalidad directa sin evidencia.</li>
+<li><strong>La opcion parcialmente correcta:</strong> Una opcion puede empezar bien pero terminar con una exageracion. Lee TODA la opcion antes de elegirla.</li>
+</ul>
+
+<strong>Lectura critica: evaluar argumentos del texto</strong>
+<ul>
+<li><strong>Distingue hechos de opiniones:</strong> "La temperatura aumento 1.1 grados" es un hecho. "Debemos actuar ahora" es una opinion.</li>
+<li><strong>Identifica la evidencia:</strong> El autor presenta datos, estudios, testimonios o ejemplos para apoyar su argumento?</li>
+<li><strong>Detecta sesgos:</strong> El texto solo presenta un lado del argumento? Omite informacion relevante?</li>
+<li><strong>Evalua la logica:</strong> Las conclusiones del autor se derivan realmente de los datos que presenta?</li>
+</ul>`,
         examples: [
           {
             problem: "Un texto dice: 'Desde que instalaron cámaras de seguridad, los robos en el vecindario disminuyeron un 60%.' ¿Qué se puede inferir?",
@@ -228,35 +444,106 @@ Sinónimos y antónimos, palabras con varios significados, vocabulario académic
       {
         id: "proposito-tono",
         title: "Propósito del Autor y Tono",
-        content: `Comprender un texto va más allá de entender las palabras: hay que identificar <strong>por qué</strong> el autor lo escribió y <strong>cómo</strong> lo dice.
+        content: `Comprender un texto de forma profunda va mas alla de entender el significado literal de las palabras. Implica identificar <strong>por que</strong> el autor lo escribio (proposito) y <strong>como</strong> se posiciona ante el tema (tono). Estas dos dimensiones son evaluadas constantemente en la PAA porque revelan si el estudiante realmente comprende el texto o solo reconoce informacion superficial.
 
-<strong>Propósitos del autor:</strong>
+<strong>PROPOSITO DEL AUTOR: Por que escribe?</strong>
+
+El proposito es la intencion o el objetivo que tiene el autor al crear el texto. Todo texto se escribe con una razon, y reconocerla te ayuda a entender que tipo de informacion buscar.
+
+<strong>1. Informar:</strong>
 <ul>
-<li><strong>Informar:</strong> presenta datos y hechos de forma objetiva, sin opinión. Ejemplo: noticias, reportes.</li>
-<li><strong>Persuadir:</strong> busca convencer al lector de algo. Usa argumentos, evidencia y apelaciones emocionales.</li>
-<li><strong>Entretener:</strong> busca el disfrute del lector. Cuentos, novelas, humor.</li>
-<li><strong>Explicar:</strong> hace comprensible un proceso o concepto. Manuales, textos didácticos.</li>
-<li><strong>Criticar:</strong> señala defectos o problemas. Editoriales, ensayos de opinión.</li>
+<li>Presenta datos, hechos y cifras de forma objetiva, sin expresar opinion personal.</li>
+<li>Usa fuentes verificables: "Segun la OMS...", "Los datos del INEC muestran..."</li>
+<li>Lenguaje neutral, sin adjetivos valorativos (no dice "excelente" ni "terrible").</li>
+<li>Tipos de texto: noticias, reportes cientificos, articulos enciclopedicos, informes oficiales.</li>
+<li>Ejemplo: "La tasa de desempleo disminuyo un 2.3% en el ultimo trimestre segun datos del INEC." - Solo datos, sin opinion.</li>
 </ul>
 
-<strong>Tono del texto:</strong>
-El tono es la <em>actitud</em> del autor hacia el tema. Se identifica por las palabras que elige.
+<strong>2. Persuadir:</strong>
 <ul>
-<li><strong>Objetivo/Neutral:</strong> sin emociones ni opiniones ("Los datos muestran que...")</li>
-<li><strong>Irónico/Sarcástico:</strong> dice lo contrario de lo que quiere expresar</li>
-<li><strong>Nostálgico:</strong> añoranza del pasado ("En aquellos tiempos...")</li>
-<li><strong>Crítico:</strong> señala defectos con desaprobación</li>
-<li><strong>Optimista/Esperanzador:</strong> visión positiva del futuro</li>
-<li><strong>Pesimista:</strong> visión negativa, desesperanza</li>
-<li><strong>Formal:</strong> lenguaje técnico, serio, sin coloquialismos</li>
+<li>Busca convencer al lector de adoptar una posicion, opinion o accion.</li>
+<li>Usa argumentos logicos, evidencia seleccionada, y a veces apelaciones emocionales.</li>
+<li>Suele tener un "llamado a la accion": "Debemos actuar ahora", "Es necesario que...", "Y tu, que esperas?"</li>
+<li>Tipos de texto: editoriales, ensayos de opinion, publicidad, discursos politicos, campanas sociales.</li>
+<li>Ejemplo: "El cambio climatico ya no es una prediccion: es nuestra realidad. Debemos actuar ahora." - Presenta evidencia y llama a la accion.</li>
+<li><strong>Como distinguir informar de persuadir:</strong> Si el texto solo presenta datos = informar. Si presenta datos PARA defender una posicion o convencer = persuadir.</li>
 </ul>
 
-<strong>¿Cómo identificar el tono?</strong>
+<strong>3. Entretener:</strong>
+<ul>
+<li>Busca generar placer, emocion, diversion o interes en el lector.</li>
+<li>Usa lenguaje literario: metaforas, descripciones vividas, dialogo, humor, narrativa.</li>
+<li>Tipos de texto: cuentos, novelas, cronicas narrativas, humor, fabulas.</li>
+<li>Ejemplo: "Erase una vez, en un reino muy lejano, un dragon que coleccionaba mariposas." - Narrativa fantasiosa con finalidad ludica.</li>
+</ul>
+
+<strong>4. Explicar:</strong>
+<ul>
+<li>Hace comprensible un proceso, concepto o fenomeno paso a paso.</li>
+<li>Usa lenguaje claro, secuencial: "primero", "luego", "finalmente".</li>
+<li>Tipos de texto: manuales, tutoriales, textos didacticos, guias de instruccion.</li>
+<li>Ejemplo: Un manual que explica paso a paso como instalar un programa.</li>
+</ul>
+
+<strong>5. Criticar:</strong>
+<ul>
+<li>Senala defectos, problemas o aspectos negativos de algo.</li>
+<li>Usa adjetivos valorativos negativos, contrasta lo ideal con lo real.</li>
+<li>Tipos de texto: criticas literarias, resenas, editoriales de denuncia.</li>
+<li>Ejemplo: "Las autoridades, como siempre, miran para otro lado." - Critica directa.</li>
+</ul>
+
+<strong>TONO DEL TEXTO: Como se siente el autor?</strong>
+
+El tono es la <em>actitud emocional</em> del autor hacia el tema. Se revela a traves de las palabras que elige, los adjetivos que usa y la forma en que presenta la informacion. Identificar el tono es como "escuchar" la voz del autor detras de las palabras.
+
+<strong>Tonos mas frecuentes en la PAA:</strong>
+
+<ul>
+<li><strong>Objetivo / Neutral:</strong> Sin emociones ni opiniones personales. Datos puros. Palabras clave: "segun estudios", "los datos indican", "se registraron". No hay adjetivos valorativos.</li>
+
+<li><strong>Ironico / Sarcastico:</strong> El autor dice lo CONTRARIO de lo que realmente piensa. Es el tono mas dificil de detectar. Ejemplo: "Que maravilloso servicio! Solo tardaron tres horas en atenderme y ni siquiera resolvieron mi problema." - Dice "maravilloso" pero la experiencia fue pesima. La ironia usa el contraste entre lo que se dice y lo que se describe.</li>
+
+<li><strong>Nostalgico:</strong> Anoranza por el pasado, recuerdos con carino. Palabras clave: "en aquellos tiempos", "guardo con carino", "solia ser", "recuerdo cuando". Ejemplo: "Las calles empedradas, los vendedores de raspados y el sonido de las campanas... recuerdos que guardo con carino de mi infancia."</li>
+
+<li><strong>Critico:</strong> Desaprobacion, senalamiento de defectos o problemas. El autor no solo informa, sino que juzga negativamente. Palabras clave: "lamentablemente", "es inaceptable", "como siempre" (con ironia), "destruir", "amenazar".</li>
+
+<li><strong>Optimista / Esperanzador:</strong> Vision positiva del futuro, confianza en que las cosas mejoraran. Palabras clave: "lograr", "superar", "construir", "futuro prometedor", "a pesar de los obstaculos".</li>
+
+<li><strong>Pesimista:</strong> Vision negativa, desesperanza, fatalismo. Palabras clave: "no hay solucion", "es inevitable", "estamos condenados", "cada vez peor".</li>
+
+<li><strong>Formal / Academico:</strong> Lenguaje tecnico, serio, preciso. Sin coloquialismos, sin emociones. Tipico de textos cientificos, juridicos o institucionales.</li>
+
+<li><strong>Informal / Coloquial:</strong> Lenguaje cotidiano, cercano, a veces con humor. Tipico de blogs, conversaciones, textos juveniles.</li>
+
+<li><strong>Alarmista:</strong> Busca generar preocupacion o urgencia. Palabras clave: "crisis", "emergencia", "amenaza", "urgente", "catastrofico".</li>
+
+<li><strong>Admirativo:</strong> Expresa admiracion o respeto hacia algo o alguien. Palabras clave: "extraordinario", "impresionante", "logro historico", "admirable".</li>
+</ul>
+
+<strong>Estrategia para identificar el tono:</strong>
 <ol>
-<li>Fíjate en los <strong>adjetivos</strong> que usa el autor (¿son positivos, negativos, neutros?)</li>
-<li>Observa si hay <strong>opiniones</strong> o solo hechos</li>
-<li>Busca <strong>palabras cargadas emocionalmente</strong></li>
-</ol>`,
+<li><strong>Subraya los adjetivos:</strong> Son positivos (excelente, admirable)? Negativos (terrible, lamentable)? Neutros (registrado, observado)? Los adjetivos revelan la actitud del autor.</li>
+<li><strong>Busca opiniones vs. hechos:</strong> Si solo hay hechos, el tono es objetivo. Si hay juicios de valor ("es lamentable que..."), el tono es subjetivo.</li>
+<li><strong>Detecta palabras con carga emocional:</strong> "Destruir" tiene mas carga que "modificar". "Lograr" tiene mas carga positiva que "hacer". Estas elecciones revelan la posicion del autor.</li>
+<li><strong>Presta atencion a la estructura:</strong> Exclamaciones indican emocion. Preguntas retoricas pueden indicar ironia o critica. El uso de comillas puede indicar distanciamiento o sarcasmo.</li>
+<li><strong>Compara lo que se dice con lo que se describe:</strong> Si alguien dice "excelente" pero describe algo malo, es ironia.</li>
+</ol>
+
+<strong>La trampa de la ironia en la PAA:</strong>
+<ul>
+<li>La ironia es el tono mas dificil de detectar porque dice lo contrario de lo que significa.</li>
+<li>Pistas de ironia: elogios exagerados sobre algo claramente negativo, uso de "por supuesto" o "naturalmente" antes de algo absurdo, contraste entre lo que se dice y la realidad descrita.</li>
+<li>Ejemplo: "Naturalmente, el gobierno respondio con su habitual eficiencia: tres meses despues, todavia no habia respuesta." - "Habitual eficiencia" es ironico porque describe ineficiencia.</li>
+</ul>
+
+<strong>Relacion entre proposito y tono:</strong>
+<ul>
+<li>Un texto informativo suele tener tono objetivo.</li>
+<li>Un texto persuasivo puede tener tono apasionado, critico o esperanzador.</li>
+<li>Un texto de entretenimiento puede tener tono humoristico, fantasioso o dramatico.</li>
+<li>Sin embargo, no siempre coinciden: un texto informativo puede tener un tono ligeramente critico, o un texto persuasivo puede usar un tono aparentemente objetivo para dar mas credibilidad a su argumento.</li>
+</ul>`,
         examples: [
           {
             problem: "'La contaminación del río ha destruido un ecosistema que tardó siglos en formarse. Las autoridades, como siempre, miran para otro lado.' ¿Cuál es el tono?",
@@ -299,33 +586,120 @@ El tono es la <em>actitud</em> del autor hacia el tema. Se identifica por las pa
       {
         id: "tipos-analogias",
         title: "Tipos de Relaciones Analógicas",
-        content: `Una analogía establece una relación entre dos palabras y te pide encontrar otro par con la misma relación.
+        content: `Una <strong>analogia</strong> es una relacion de semejanza entre dos pares de palabras. Se presenta un par de palabras con una relacion definida, y tu tarea es encontrar otro par que mantenga EXACTAMENTE la misma relacion. Las analogias evaluan tu capacidad de razonamiento logico y tu comprension de como se relacionan los conceptos entre si.
 
-<strong>Formato:</strong> A es a B como C es a D.
+<strong>Formato en la PAA:</strong> A : B :: C : D (se lee "A es a B como C es a D"). Te dan A:B y debes encontrar el par C:D correcto entre las opciones.
 
-<strong>Tipos de relaciones más comunes:</strong>
+<strong>Los 15 tipos de relaciones analogicas mas comunes en la PAA:</strong>
 
+<strong>1. Sinonimia (palabras con significado similar):</strong>
 <ul>
-<li><strong>Sinónimos:</strong> feliz : contento (significan lo mismo)</li>
-<li><strong>Antónimos:</strong> frío : caliente (significados opuestos)</li>
-<li><strong>Parte - Todo:</strong> rueda : automóvil (la rueda es parte del auto)</li>
-<li><strong>Todo - Parte:</strong> árbol : rama</li>
-<li><strong>Causa - Efecto:</strong> fuego : humo (el fuego causa humo)</li>
-<li><strong>Objeto - Función:</strong> martillo : clavar (el martillo sirve para clavar)</li>
-<li><strong>Trabajador - Herramienta:</strong> pintor : pincel</li>
-<li><strong>Trabajador - Lugar:</strong> maestro : escuela</li>
-<li><strong>General - Específico:</strong> fruta : manzana</li>
-<li><strong>Materia prima - Producto:</strong> madera : mesa</li>
-<li><strong>Grado o Intensidad:</strong> tibio : caliente : hirviendo</li>
-<li><strong>Elemento - Conjunto:</strong> abeja : enjambre</li>
+<li>feliz : contento / rapido : veloz / valiente : audaz</li>
+<li>La relacion es que ambas palabras significan lo mismo o algo muy parecido.</li>
 </ul>
 
-<strong>Estrategia:</strong>
+<strong>2. Antonimia (significados opuestos):</strong>
+<ul>
+<li>frio : caliente / alto : bajo / antiguo : moderno / anciano : joven</li>
+<li>Cuidado: la antonimia debe ser del mismo tipo. "Bueno:malo" es antonimia absoluta. "Tibio:caliente" NO es antonimia, es grado de intensidad.</li>
+</ul>
+
+<strong>3. Parte - Todo (un elemento que pertenece a un conjunto mayor):</strong>
+<ul>
+<li>rueda : automovil / dedo : mano / petalo : flor / capitulo : libro</li>
+<li>La primera palabra es una PARTE de la segunda.</li>
+<li>No confundir con Todo-Parte, donde el orden se invierte.</li>
+</ul>
+
+<strong>4. Todo - Parte (el conjunto mayor seguido de su componente):</strong>
+<ul>
+<li>arbol : rama / casa : habitacion / orquesta : violin</li>
+<li>La primera palabra CONTIENE a la segunda.</li>
+</ul>
+
+<strong>5. Causa - Efecto:</strong>
+<ul>
+<li>fuego : humo / lluvia : inundacion / virus : enfermedad / calor : dilatacion</li>
+<li>La primera palabra PRODUCE o PROVOCA la segunda.</li>
+<li>Cuidado con el orden: "fuego:humo" (causa-efecto) NO es lo mismo que "humo:fuego" (efecto-causa).</li>
+</ul>
+
+<strong>6. Objeto - Funcion (para que sirve algo):</strong>
+<ul>
+<li>martillo : clavar / cuchillo : cortar / lapiz : escribir / telescopio : observar</li>
+<li>El primer elemento es una herramienta y el segundo es la accion que realiza.</li>
+</ul>
+
+<strong>7. Trabajador - Herramienta (quien usa que):</strong>
+<ul>
+<li>pintor : pincel / cirujano : bisturi / astronomo : telescopio / fotografo : camara</li>
+<li>El primer elemento es un profesional y el segundo es su instrumento de trabajo.</li>
+</ul>
+
+<strong>8. Trabajador - Lugar de trabajo:</strong>
+<ul>
+<li>maestro : escuela / medico : hospital / juez : tribunal / sacerdote : iglesia</li>
+<li>El profesional trabaja en ese lugar especifico.</li>
+</ul>
+
+<strong>9. Persona - Lugar donde recibe un servicio:</strong>
+<ul>
+<li>paciente : hospital / estudiante : escuela / reo : prision / huesped : hotel</li>
+<li>Similar al anterior pero desde la perspectiva de quien RECIBE el servicio.</li>
+</ul>
+
+<strong>10. General - Especifico (categoria - ejemplo):</strong>
+<ul>
+<li>fruta : manzana / instrumento musical : guitarra / deporte : futbol / mamifero : perro</li>
+<li>La primera palabra es la CATEGORIA y la segunda es un EJEMPLO de esa categoria.</li>
+</ul>
+
+<strong>11. Materia prima - Producto elaborado:</strong>
+<ul>
+<li>madera : mesa / leche : queso / uva : vino / trigo : pan / arena : vidrio</li>
+<li>El primer elemento se TRANSFORMA para crear el segundo.</li>
+</ul>
+
+<strong>12. Grado o Intensidad (de menor a mayor o viceversa):</strong>
+<ul>
+<li>tibio : caliente / brisa : vendaval / susurro : grito / llovizna : tormenta / molestia : furia</li>
+<li>Ambas palabras describen lo mismo pero en diferente intensidad.</li>
+<li>El orden importa: el primero es menor intensidad, el segundo es mayor (o viceversa, pero el par respuesta debe mantener el mismo orden).</li>
+</ul>
+
+<strong>13. Elemento - Conjunto (individuo - nombre colectivo):</strong>
+<ul>
+<li>abeja : enjambre / lobo : manada / pez : cardumen / oveja : rebano / soldado : ejercito / estrella : constelacion</li>
+<li>El primer elemento es un individuo y el segundo es el nombre del grupo que forman.</li>
+</ul>
+
+<strong>14. Cria - Adulto (etapa de desarrollo):</strong>
+<ul>
+<li>cachorro : perro / renacuajo : rana / potrillo : caballo / larva : mariposa / semilla : arbol</li>
+<li>El primer elemento es la fase inicial y el segundo es la fase adulta o final.</li>
+</ul>
+
+<strong>15. Representacion - Realidad:</strong>
+<ul>
+<li>mapa : territorio / plano : edificio / retrato : persona / maqueta : construccion</li>
+<li>El primer elemento REPRESENTA al segundo.</li>
+</ul>
+
+<strong>Otras relaciones menos frecuentes pero posibles:</strong>
+<ul>
+<li><strong>Simbolo - Lo que simboliza:</strong> paloma : paz / balanza : justicia / corazon : amor</li>
+<li><strong>Instrumento - Lo que mide:</strong> termometro : temperatura / balanza : peso / reloj : tiempo</li>
+<li><strong>Expresion - Emocion:</strong> sonrisa : alegria / llanto : tristeza / temblor : miedo</li>
+<li><strong>Objeto - Ciencia que lo estudia:</strong> estrella : astronomia / fosil : paleontologia / mente : psicologia</li>
+<li><strong>Profesional - Materia de estudio:</strong> abogado : leyes / medico : enfermedades / biologo : seres vivos</li>
+</ul>
+
+<strong>Estrategia fundamental:</strong>
 <ol>
-<li>Identifica la relación exacta entre las dos primeras palabras</li>
-<li>Formula la relación como una oración: "A es/tiene/hace ___ con B"</li>
-<li>Busca el par que tenga EXACTAMENTE la misma relación</li>
-<li>Verifica que el orden de la relación sea el mismo</li>
+<li><strong>Identifica la relacion EXACTA</strong> entre las dos primeras palabras. No te conformes con "se relacionan"; define la relacion con precision: "A es PARTE de B", "A CAUSA B", "A es lo OPUESTO de B".</li>
+<li><strong>Formula la relacion como una oracion</strong> clara: "El martillo sirve para clavar." "El medico trabaja en el hospital." "La abeja pertenece al enjambre."</li>
+<li><strong>Aplica esa MISMA oracion</strong> a cada opcion de respuesta. La correcta encajara perfectamente.</li>
+<li><strong>Verifica el ORDEN</strong> de la relacion. Si el par original es parte:todo, la respuesta tambien debe ser parte:todo, NO todo:parte.</li>
 </ol>`,
         examples: [
           {
@@ -360,29 +734,96 @@ El tono es la <em>actitud</em> del autor hacia el tema. Se identifica por las pa
       {
         id: "estrategias-analogias",
         title: "Estrategias para Resolver Analogías",
-        content: `Resolver analogías requiere un método sistemático. Aquí tienes los pasos y estrategias clave.
+        content: `Resolver analogias requiere un metodo sistematico y riguroso. No basta con encontrar una relacion vaga entre las palabras; debes identificar la relacion EXACTA y verificar que se mantenga en la respuesta. Aqui tienes las estrategias y tecnicas mas efectivas, asi como los errores que debes evitar.
 
-<strong>Método paso a paso:</strong>
+<strong>Metodo paso a paso detallado:</strong>
 <ol>
-<li><strong>Identifica la relación</strong> entre las dos palabras del par base. Formúlala como una oración: "A es ___ de B".</li>
-<li><strong>Aplica esa misma relación</strong> a cada opción de respuesta.</li>
-<li><strong>Elimina las opciones</strong> que no mantienen la relación exacta.</li>
-<li>Si quedan varias, <strong>precisa la relación</strong> (hazla más específica).</li>
+<li><strong>Lee el par base con atencion.</strong> Antes de ver las opciones, dedica unos segundos a entender las dos palabras. Conoces su significado? Si una palabra es ambigua (tiene varios significados), considera todas las posibilidades.</li>
+<li><strong>Identifica la relacion y formulala como oracion.</strong> Crea una "oracion puente" que conecte las dos palabras de forma precisa. No digas solo "se relacionan"; di COMO se relacionan: "A es parte de B", "A sirve para B", "A es la cria de B", "A mide B".</li>
+<li><strong>Aplica la misma oracion a cada opcion.</strong> Sustituye las palabras del par base por las de cada opcion. La respuesta correcta debe encajar perfectamente en la misma estructura.</li>
+<li><strong>Elimina opciones que no encajen.</strong> Si la oracion no funciona con una opcion, descartala inmediatamente.</li>
+<li><strong>Si quedan varias opciones, PRECISA la relacion.</strong> Haz la oracion puente mas especifica. Por ejemplo, si "se relacionan con el trabajo" es demasiado vago, cambialo por "X es la herramienta principal de Y".</li>
+<li><strong>Verifica el orden.</strong> Asegurate de que la direccion de la relacion sea la misma. Si en el par base A es la causa y B el efecto, en la respuesta tambien debe ser causa:efecto, no efecto:causa.</li>
 </ol>
 
-<strong>Errores comunes:</strong>
+<strong>LA TECNICA DE LA ORACION PUENTE (la mas importante):</strong>
+
+Esta es la tecnica mas poderosa para resolver analogias. Consiste en crear una oracion corta y clara que exprese la relacion entre las dos palabras del par base, y luego verificar que la misma oracion funcione con la respuesta.
+
+<strong>Ejemplos detallados de la oracion puente:</strong>
 <ul>
-<li><strong>Relación invertida:</strong> confundir "A causa B" con "B causa A"</li>
-<li><strong>Asociación libre:</strong> elegir una opción porque "se relaciona" vagamente, sin mantener la misma relación lógica</li>
-<li><strong>Relación incompleta:</strong> identificar una relación demasiado general (ej: "se relacionan") en vez de la específica (ej: "uno es parte del otro")</li>
+<li>MARTILLO : CLAVO -> "El MARTILLO sirve para introducir el CLAVO"
+  Entonces: DESTORNILLADOR : ? -> "El DESTORNILLADOR sirve para introducir el ?" -> TORNILLO</li>
+<li>PINTOR : CUADRO -> "El PINTOR crea el CUADRO"
+  Entonces: ESCRITOR : ? -> "El ESCRITOR crea el ?" -> LIBRO (no "tinta", que es herramienta; no "biblioteca", que es lugar)</li>
+<li>HAMBRE : COMER -> "El HAMBRE se satisface al COMER"
+  Entonces: SED : ? -> "La SED se satisface al ?" -> BEBER (no "agua", que es el objeto, no la accion)</li>
+<li>CACHORRO : PERRO -> "El CACHORRO es la cria del PERRO"
+  Entonces: RENACUAJO : ? -> "El RENACUAJO es la cria de la ?" -> RANA</li>
+<li>TERMOMETRO : TEMPERATURA -> "El TERMOMETRO mide la TEMPERATURA"
+  Entonces: BALANZA : ? -> "La BALANZA mide el ?" -> PESO</li>
 </ul>
 
-<strong>Técnica de la oración puente:</strong>
-Crea una oración que conecte las dos palabras del par base. La respuesta correcta debe encajar en la misma oración.
+<strong>ERRORES COMUNES Y COMO EVITARLOS:</strong>
+
+<strong>1. Relacion invertida:</strong>
 <ul>
-<li>MARTILLO : CLAVO → "El martillo sirve para introducir el clavo"</li>
-<li>DESTORNILLADOR : ? → "El destornillador sirve para introducir el tornillo" ✓</li>
-</ul>`,
+<li>Confundir el orden de la relacion es uno de los errores mas frecuentes.</li>
+<li>PERRO : CACHORRO (adulto:cria) NO es lo mismo que CACHORRO : PERRO (cria:adulto).</li>
+<li>MANO : DEDO (todo:parte) NO es lo mismo que DEDO : MANO (parte:todo).</li>
+<li><strong>Como evitarlo:</strong> Antes de elegir, verifica que el primer elemento de tu respuesta tenga el mismo ROL que el primer elemento del par base.</li>
+</ul>
+
+<strong>2. Asociacion libre (la trampa mas comun):</strong>
+<ul>
+<li>Elegir una opcion simplemente porque las palabras "se relacionan" de alguna manera, sin que la relacion sea la MISMA que la del par base.</li>
+<li>Ejemplo: TELESCOPIO : ESTRELLAS -> MICROSCOPIO : ?
+  Error: elegir "laboratorio" porque el microscopio "se usa en un laboratorio". Pero la relacion correcta es instrumento:lo que permite observar -> CELULAS.</li>
+<li><strong>Como evitarlo:</strong> Usa la oracion puente. "El telescopio permite observar las estrellas." "El microscopio permite observar las celulas." No encajaria "El microscopio permite observar el laboratorio."</li>
+</ul>
+
+<strong>3. Relacion demasiado general:</strong>
+<ul>
+<li>Identificar una relacion tan amplia que varias opciones parecen correctas.</li>
+<li>Ejemplo: MEDICO : HOSPITAL. Si solo dices "se relacionan con la salud", varias opciones podrian funcionar.</li>
+<li><strong>Como evitarlo:</strong> Precisa la relacion: "El medico TRABAJA en el hospital". Esto descarta opciones como "paciente" (que no trabaja ahi) o "medicina" (que no es un lugar).</li>
+</ul>
+
+<strong>4. Confundir la relacion con una caracteristica:</strong>
+<ul>
+<li>Ejemplo: LECHE : QUESO. La relacion NO es que "ambos son lacteos" (eso seria una caracteristica en comun). La relacion es materia prima -> producto elaborado.</li>
+<li>Entonces: UVA : ? -> VINO (materia prima -> producto), NO "fruta" (categoria).</li>
+</ul>
+
+<strong>5. No verificar con TODAS las opciones:</strong>
+<ul>
+<li>A veces la primera opcion que parece correcta no es la mejor. Verifica todas antes de elegir.</li>
+<li>La respuesta correcta es la que tiene la relacion MAS PRECISA y EXACTA, no solo una relacion vaga.</li>
+</ul>
+
+<strong>ESTRATEGIA PARA PREGUNTAS DIFICILES:</strong>
+
+Cuando dos opciones parecen funcionar:
+<ol>
+<li>Haz la oracion puente mas ESPECIFICA. Anade detalles que limiten la relacion.</li>
+<li>Considera la NATURALEZA de las palabras: son del mismo campo semantico? Tienen la misma categoria gramatical (sustantivo-sustantivo, adjetivo-adjetivo)?</li>
+<li>Verifica si una opcion mantiene un GRADO DE ESPECIFICIDAD similar. Si el par base usa palabras concretas, la respuesta tambien deberia usarlas.</li>
+<li>En caso de duda, elige la opcion cuya relacion sea MAS PARALELA al par base en todos los aspectos.</li>
+</ol>
+
+<strong>EJERCICIO MENTAL: practica con este patron</strong>
+Ante cualquier par de palabras, entrena preguntandote:
+<ul>
+<li>Son sinonimos o antonimos?</li>
+<li>Uno es parte del otro?</li>
+<li>Uno causa al otro?</li>
+<li>Uno es herramienta del otro?</li>
+<li>Uno es el lugar del otro?</li>
+<li>Uno es una categoria y el otro un ejemplo?</li>
+<li>Representan diferentes grados de intensidad?</li>
+<li>Uno se transforma en el otro?</li>
+</ul>
+Con esta lista mental de preguntas, podras clasificar rapidamente cualquier relacion analogica.`,
         examples: [
           {
             problem: "PINTOR : CUADRO como ESCRITOR : ?  Opciones: a) Libro  b) Tinta  c) Biblioteca  d) Leer",
@@ -425,33 +866,141 @@ Crea una oración que conecte las dos palabras del par base. La respuesta correc
       {
         id: "concordancia",
         title: "Concordancia y Estructura Gramatical",
-        content: `<strong>Concordancia</strong> es que las partes de la oración coincidan en género, número y persona.
+        content: `La <strong>concordancia</strong> es la correspondencia obligatoria que debe existir entre las partes de la oracion en genero, numero y persona. Es uno de los pilares de la gramatica espanola y la PAA la evalua extensamente porque los errores de concordancia son muy comunes en el habla cotidiana. Dominar la concordancia te permite no solo responder correctamente en el examen, sino escribir y hablar con precision.
 
-<strong>Concordancia sujeto-verbo:</strong>
+<strong>I. CONCORDANCIA SUJETO - VERBO (numero y persona)</strong>
+
+La regla basica es simple: el verbo debe coincidir en numero (singular/plural) y persona (primera/segunda/tercera) con el sujeto de la oracion.
+
+<strong>Regla basica:</strong>
 <ul>
-<li>"Los estudiantes <strong>estudian</strong>" (plural + plural) ✓</li>
-<li>"Los estudiantes <strong>estudia</strong>" ✗</li>
+<li>"Los estudiantes <strong>estudian</strong>" (sujeto plural -> verbo plural) CORRECTO</li>
+<li>"Los estudiantes <strong>estudia</strong>" (sujeto plural -> verbo singular) INCORRECTO</li>
+<li>"El estudiante <strong>estudia</strong>" (sujeto singular -> verbo singular) CORRECTO</li>
 </ul>
 
-<strong>Concordancia sustantivo-adjetivo:</strong>
+<strong>Casos problematicos que la PAA evalua:</strong>
+
+<strong>a) Sustantivos colectivos (grupo, equipo, mayoria, gente, pueblo, multitud):</strong>
 <ul>
-<li>"Las casas <strong>blancas</strong>" (femenino plural) ✓</li>
-<li>"Las casas <strong>blanco</strong>" ✗</li>
+<li>Los sustantivos colectivos son SINGULARES aunque se refieran a muchas personas.</li>
+<li>"La <strong>gente</strong> piensa" CORRECTO (no "la gente piensan")</li>
+<li>"El <strong>equipo</strong> gano el partido" CORRECTO (no "el equipo ganaron")</li>
+<li>"La <strong>mayoria</strong> de los alumnos aprobo" CORRECTO (el sujeto es "la mayoria", singular)</li>
+<li>"Un <strong>grupo</strong> de estudiantes llego tarde" CORRECTO (el sujeto es "un grupo", singular)</li>
+<li><strong>Trampa frecuente:</strong> "La mayoria de los alumnos aprobaron" suena natural en el habla, pero gramaticalmente el verbo debe concordar con "la mayoria" (singular), no con "los alumnos".</li>
 </ul>
 
-<strong>Errores comunes:</strong>
+<strong>b) Sujeto compuesto (dos o mas sujetos unidos por "y"):</strong>
 <ul>
-<li><strong>Dequeísmo:</strong> "Pienso <em>de que</em> es correcto" ✗ → "Pienso <em>que</em> es correcto" ✓</li>
-<li><strong>Queísmo:</strong> "Estoy seguro <em>que</em> vendrá" ✗ → "Estoy seguro <em>de que</em> vendrá" ✓</li>
-<li><strong>Laísmo/Leísmo:</strong> Uso incorrecto de la/le como pronombres</li>
+<li>"Juan <strong>y</strong> Maria <strong>fueron</strong> al cine" CORRECTO (sujeto compuesto = plural)</li>
+<li>"Juan y Maria <strong>fue</strong> al cine" INCORRECTO</li>
+<li>"Ni tu ni yo <strong>sabemos</strong> la respuesta" CORRECTO (ni...ni con yo incluido = nosotros = primera persona plural)</li>
+<li>"Tu y el <strong>vendran</strong> manana" CORRECTO (tu + el = ustedes/ellos = tercera persona plural)</li>
 </ul>
 
-<strong>Estructura de la oración:</strong>
-La oración simple tiene: Sujeto + Verbo + Complemento.
+<strong>c) Sujeto pospuesto (el sujeto va despues del verbo):</strong>
 <ul>
-<li>Sujeto: quien realiza la acción</li>
-<li>Verbo: la acción</li>
-<li>Complemento: información adicional (directo, indirecto, circunstancial)</li>
+<li>"En la mesa <strong>estaban</strong> las llaves" CORRECTO (el sujeto es "las llaves", no "la mesa")</li>
+<li>"Llegaron los invitados" CORRECTO (el sujeto es "los invitados")</li>
+<li><strong>Truco:</strong> Para encontrar el sujeto real, pregunta QUIEN realiza la accion del verbo. "Que estaban? Las llaves." "Quienes llegaron? Los invitados."</li>
+</ul>
+
+<strong>d) El verbo HABER impersonal:</strong>
+<ul>
+<li>Cuando "haber" se usa en sentido impersonal (= existir), SIEMPRE va en singular, sin importar lo que le siga.</li>
+<li>"<strong>Habia</strong> muchas personas en la fiesta" CORRECTO</li>
+<li>"<strong>Habian</strong> muchas personas en la fiesta" INCORRECTO (este es uno de los errores mas comunes)</li>
+<li>"<strong>Hubo</strong> problemas" CORRECTO / "<strong>Hubieron</strong> problemas" INCORRECTO</li>
+<li>"<strong>Hay</strong> tres opciones" CORRECTO / "<strong>Han habido</strong> quejas" INCORRECTO -> "Ha habido quejas"</li>
+<li><strong>Atencion:</strong> "Habemos muchos estudiantes" es INCORRECTO. Lo correcto es "Somos muchos estudiantes" o "Hay muchos estudiantes".</li>
+</ul>
+
+<strong>II. CONCORDANCIA SUSTANTIVO - ADJETIVO (genero y numero)</strong>
+
+El adjetivo debe concordar en genero (masculino/femenino) y numero (singular/plural) con el sustantivo al que modifica.
+
+<ul>
+<li>"Las casas <strong>blancas</strong>" CORRECTO (femenino plural + femenino plural)</li>
+<li>"Las casas <strong>blanco</strong>" INCORRECTO</li>
+<li>"Las <strong>primeras</strong> ministras <strong>europeas</strong>" CORRECTO (todo en femenino plural)</li>
+<li>"Los ninos <strong>inteligentes</strong>" CORRECTO (masculino plural + plural)</li>
+</ul>
+
+<strong>Casos especiales:</strong>
+<ul>
+<li>Si el adjetivo modifica a dos sustantivos de diferente genero, va en MASCULINO PLURAL: "La mesa y el sillon eran <strong>nuevos</strong>".</li>
+<li>Adjetivos invariables en genero: "inteligente", "grande", "fuerte", "util" se usan igual para masculino y femenino.</li>
+</ul>
+
+<strong>III. CONCORDANCIA DE PRONOMBRES</strong>
+
+<strong>a) Pronombres de complemento indirecto (le/les):</strong>
+<ul>
+<li>"<strong>Le</strong> dije a Pedro que viniera" CORRECTO ("le" = singular, "a Pedro" = singular)</li>
+<li>"<strong>Les</strong> dije a los ninos que se calmaran" CORRECTO ("les" = plural, "a los ninos" = plural)</li>
+<li>"<strong>Le</strong> dije a los ninos..." INCORRECTO (solecismo: "le" es singular pero "los ninos" es plural)</li>
+</ul>
+
+<strong>b) Leismo, laismo, loismo:</strong>
+<ul>
+<li><strong>Leismo:</strong> usar "le" en lugar de "lo/la" como complemento directo. "Le vi en la calle" en vez de "Lo vi en la calle".</li>
+<li><strong>Laismo:</strong> usar "la" en lugar de "le" como complemento indirecto. "La dije la verdad" en vez de "Le dije la verdad".</li>
+<li><strong>Loismo:</strong> usar "lo" en lugar de "le" como complemento indirecto. "Lo dije que viniera" en vez de "Le dije que viniera".</li>
+<li><strong>Truco para distinguirlos:</strong> Si puedes reemplazar por "a el/ella" = complemento indirecto = LE/LES. Si puedes reemplazar por "eso" o "a esa persona directamente" = complemento directo = LO/LA/LOS/LAS.</li>
+</ul>
+
+<strong>IV. DEQUEISMO Y QUEISMO</strong>
+
+Estos son dos de los errores mas evaluados en la PAA. Entenderlos bien te garantiza puntos.
+
+<strong>Dequeismo (usar "de que" cuando solo debe ir "que"):</strong>
+<ul>
+<li>"Pienso <strong>de que</strong> es correcto" INCORRECTO -> "Pienso <strong>que</strong> es correcto"</li>
+<li>"Creo <strong>de que</strong> va a llover" INCORRECTO -> "Creo <strong>que</strong> va a llover"</li>
+<li>"Dice <strong>de que</strong> vendran" INCORRECTO -> "Dice <strong>que</strong> vendran"</li>
+<li>Verbos que NUNCA llevan "de": pensar, creer, decir, opinar, considerar, afirmar, asegurar, negar</li>
+</ul>
+
+<strong>Queismo (omitir "de" cuando debe ir "de que"):</strong>
+<ul>
+<li>"Estoy seguro <strong>que</strong> vendra" INCORRECTO -> "Estoy seguro <strong>de que</strong> vendra"</li>
+<li>"Me alegro <strong>que</strong> estes bien" INCORRECTO -> "Me alegro <strong>de que</strong> estes bien"</li>
+<li>"Me entere <strong>que</strong> ganamos" INCORRECTO -> "Me entere <strong>de que</strong> ganamos"</li>
+<li>Expresiones que SI llevan "de que": estar seguro de que, alegrarse de que, enterarse de que, convencerse de que, acordarse de que, darse cuenta de que, insistir en que, confiar en que</li>
+</ul>
+
+<strong>EL TRUCO DEL "ESO" (metodo infalible):</strong>
+<ol>
+<li>Reemplaza toda la clausula subordinada (desde "que" hasta el final) por la palabra "eso".</li>
+<li>Si suena bien SIN "de", no lleva "de": "Pienso eso" (correcto) -> "Pienso que..."</li>
+<li>Si suena bien CON "de", lleva "de": "Estoy seguro de eso" (correcto) -> "Estoy seguro de que..."</li>
+<li>Ejemplos:
+  <ul>
+  <li>"Creo eso" (correcto, no "creo de eso") -> "Creo que..." (sin "de")</li>
+  <li>"Me entere de eso" (correcto, no "me entere eso") -> "Me entere de que..." (con "de")</li>
+  <li>"Dice eso" (correcto) -> "Dice que..."</li>
+  <li>"Se alegro de eso" (correcto) -> "Se alegro de que..."</li>
+  </ul>
+</li>
+</ol>
+
+<strong>V. ESTRUCTURA DE LA ORACION</strong>
+
+La oracion simple se compone de:
+<ul>
+<li><strong>Sujeto:</strong> quien realiza la accion o de quien se habla. Responde a "quien?" o "que cosa?"</li>
+<li><strong>Verbo (predicado):</strong> la accion o estado. Es el nucleo de la oracion.</li>
+<li><strong>Complemento directo (CD):</strong> recibe directamente la accion. Responde a "que?" o "a quien?" Se sustituye por lo/la/los/las. "Compre <strong>un libro</strong>" -> "Lo compre".</li>
+<li><strong>Complemento indirecto (CI):</strong> recibe el beneficio o perjuicio de la accion. Responde a "a quien?" o "para quien?" Se sustituye por le/les. "Di el libro <strong>a Maria</strong>" -> "Le di el libro".</li>
+<li><strong>Complemento circunstancial (CC):</strong> indica las circunstancias (lugar, tiempo, modo, causa). "Estudio <strong>en la biblioteca</strong>" (CC de lugar). "Llego <strong>ayer</strong>" (CC de tiempo).</li>
+</ul>
+
+<strong>Errores de estructura que evalua la PAA:</strong>
+<ul>
+<li>Sujeto y verbo separados por coma incorrectamente: "Los alumnos, estudiaron" es INCORRECTO (la coma no va entre sujeto y verbo directo).</li>
+<li>Complemento directo con "a" innecesario: "Tiene a muchos libros" INCORRECTO -> "Tiene muchos libros" (la "a" solo se usa con CD de persona).</li>
+<li>Frases ambiguas donde no queda claro cual es el sujeto ni cual es el complemento.</li>
 </ul>`,
         examples: [
           {
@@ -485,34 +1034,180 @@ La oración simple tiene: Sujeto + Verbo + Complemento.
       {
         id: "puntuacion-ortografia",
         title: "Puntuación y Ortografía",
-        content: `<strong>Signos de puntuación esenciales:</strong>
+        content: `La puntuacion y la ortografia son fundamentales para la comunicacion escrita. En la PAA, se evalua tu conocimiento de las reglas de acentuacion, el uso correcto de signos de puntuacion y la escritura adecuada de palabras. Estos temas parecen simples pero tienen muchas reglas y excepciones que debes dominar.
 
-<strong>Coma (,):</strong>
+<strong>I. LA COMA (,) - Reglas detalladas</strong>
+
+La coma es el signo de puntuacion mas complejo porque tiene muchos usos diferentes. Conocerlos te permite tanto puntuar bien como identificar errores en la PAA.
+
+<strong>a) Coma enumerativa:</strong>
 <ul>
-<li>Separar elementos de una lista: "compré pan, leche, huevos y arroz"</li>
-<li>Antes de conectores: "sin embargo, además, por lo tanto"</li>
-<li>Para intercalar información: "Panamá, la capital, es una ciudad moderna"</li>
-<li>Después de una frase introductoria: "Después de la reunión, fuimos a almorzar"</li>
+<li>Separa elementos de una lista. Antes del ultimo elemento se pone "y" (o "e", "o", "u") en vez de coma.</li>
+<li>"Compre pan, leche, huevos y arroz." CORRECTO</li>
+<li>"Compre pan, leche, huevos, y arroz." INCORRECTO en espanol (a diferencia del ingles, no se usa coma antes de "y" en una lista simple)</li>
 </ul>
 
-<strong>Punto y coma (;):</strong>
+<strong>b) Coma vocativa (para llamar a alguien):</strong>
 <ul>
-<li>Separa oraciones relacionadas: "Estudió mucho; aprobó el examen"</li>
-<li>Antes de "sin embargo", "no obstante", "por lo tanto" cuando unen dos oraciones independientes</li>
+<li>Cuando te diriges a alguien por su nombre o titulo, se separa con coma.</li>
+<li>"Maria, ven aqui." / "Ven aqui, Maria." / "Dime, Maria, que piensas."</li>
+<li>Sin coma cambia el significado: "Vamos a comer, ninos" (les habla a los ninos) vs. "Vamos a comer ninos" (significado literal muy diferente).</li>
 </ul>
 
-<strong>Dos puntos (:):</strong>
+<strong>c) Coma de inciso explicativo:</strong>
 <ul>
-<li>Antes de una lista: "Los colores son: rojo, azul y verde"</li>
-<li>Antes de una explicación o conclusión</li>
+<li>Encierra informacion adicional que se puede eliminar sin alterar el sentido basico de la oracion.</li>
+<li>"Panama, la capital, es una ciudad moderna." - "La capital" es un inciso explicativo.</li>
+<li>"Maria, mi mejor amiga, viajo a Colombia." - "Mi mejor amiga" es el inciso.</li>
+<li>"Pedro, que es mi vecino, trabaja en el banco." - La clausula explicativa va entre comas.</li>
+<li><strong>Truco:</strong> Si puedes quitar la frase entre comas y la oracion sigue teniendo sentido, las comas estan bien usadas.</li>
 </ul>
 
-<strong>Reglas de acentuación:</strong>
+<strong>d) Coma despues de frase introductoria:</strong>
 <ul>
-<li><strong>Agudas:</strong> acento en la última sílaba. Llevan tilde si terminan en N, S o vocal</li>
-<li><strong>Graves:</strong> acento en la penúltima. Llevan tilde si NO terminan en N, S o vocal</li>
-<li><strong>Esdrújulas:</strong> acento en la antepenúltima. SIEMPRE llevan tilde</li>
-<li><strong>Sobreesdrújulas:</strong> SIEMPRE llevan tilde</li>
+<li>Cuando la oracion comienza con una frase subordinada, adverbio o complemento circunstancial, se pone coma antes de la clausula principal.</li>
+<li>"Despues de la reunion, fuimos a almorzar."</li>
+<li>"Aunque llovia, salimos a caminar."</li>
+<li>"Desafortunadamente, el proyecto fracaso."</li>
+<li>"En la ciudad de Panama, hay muchos rascacielos."</li>
+</ul>
+
+<strong>e) Coma antes de conectores:</strong>
+<ul>
+<li>Los conectores como "sin embargo", "ademas", "por lo tanto", "es decir", "no obstante", "en cambio" van precedidos de coma (o punto y coma) y seguidos de coma.</li>
+<li>"Estudio mucho; sin embargo, no aprobo."</li>
+<li>"Es inteligente, ademas, es muy trabajador."</li>
+</ul>
+
+<strong>f) LA REGLA DE ORO - La coma NUNCA va entre sujeto y verbo:</strong>
+<ul>
+<li>"Los alumnos estudiaron para el examen." CORRECTO</li>
+<li>"Los alumnos, estudiaron para el examen." INCORRECTO</li>
+<li>"La mayoria de los jovenes de esta generacion piensa diferente." CORRECTO (no hay coma antes de "piensa" aunque el sujeto sea largo)</li>
+<li>Esta regla es una de las mas evaluadas en la PAA.</li>
+</ul>
+
+<strong>II. PUNTO Y COMA (;)</strong>
+<ul>
+<li><strong>Separa oraciones independientes pero relacionadas:</strong> "Estudio mucho; aprobo el examen." (Ambas son oraciones completas que podrian llevar punto, pero estan muy relacionadas.)</li>
+<li><strong>Va antes de conectores adversativos o consecutivos cuando unen oraciones independientes:</strong> "Llego tarde; sin embargo, completo el trabajo." / "Llovio toda la noche; por consiguiente, las calles amanecieron inundadas."</li>
+<li><strong>Separa elementos de una lista que ya contienen comas:</strong> "Vinieron Juan, de Panama; Maria, de Colombia; y Pedro, de Costa Rica."</li>
+<li><strong>Diferencia entre punto y coma vs. coma:</strong> La coma separa elementos dentro de una oracion. El punto y coma separa oraciones completas que estan muy relacionadas.</li>
+</ul>
+
+<strong>III. DOS PUNTOS (:)</strong>
+<ul>
+<li><strong>Antes de una enumeracion anunciada:</strong> "Necesito tres cosas: paciencia, dedicacion y esfuerzo."</li>
+<li><strong>Antes de una explicacion o consecuencia:</strong> "No pudo asistir: estaba enfermo."</li>
+<li><strong>Despues de un saludo en cartas:</strong> "Estimado profesor:"</li>
+<li><strong>Para introducir una cita textual:</strong> "El autor afirmo: [cita]"</li>
+<li><strong>Error comun:</strong> No se ponen dos puntos entre un verbo y su complemento directo. "Los colores son: rojo, azul y verde" es debatido; muchos gramaticos prefieren "Los colores son rojo, azul y verde" (sin dos puntos).</li>
+</ul>
+
+<strong>IV. REGLAS DE ACENTUACION</strong>
+
+Las reglas de acentuacion en espanol son sistematicas y predecibles. Si las dominas, nunca dudaras donde va la tilde.
+
+<strong>Clasificacion de palabras segun la silaba tonica:</strong>
+
+<strong>a) Palabras AGUDAS (acento en la ULTIMA silaba):</strong>
+<ul>
+<li>Llevan tilde si terminan en <strong>N, S o vocal</strong>.</li>
+<li>CON tilde: cancion (can-CION, termina en N), cafe (ca-FE, termina en vocal), compas (com-PAS, termina en S), ademas, despues, razon</li>
+<li>SIN tilde: papel (pa-PEL, termina en L), reloj (re-LOJ, termina en J), ciudad, pared, actriz</li>
+<li>Regla mnemotecnica: agudas con N, S o vocal -> SI tilde</li>
+</ul>
+
+<strong>b) Palabras GRAVES o LLANAS (acento en la PENULTIMA silaba):</strong>
+<ul>
+<li>Llevan tilde si <strong>NO terminan en N, S o vocal</strong> (regla opuesta a las agudas).</li>
+<li>CON tilde: arbol (AR-bol, termina en L), dificil (di-FI-cil, termina en L), carcel, azucar, lapiz, facil, angel</li>
+<li>SIN tilde: casa (CA-sa, termina en vocal), examen (e-XA-men, termina en N), libro, mesa, joven, martes</li>
+<li>La mayoria de las palabras en espanol son graves terminadas en vocal, N o S, por eso no llevan tilde (libro, mesa, dicen, lunes).</li>
+</ul>
+
+<strong>c) Palabras ESDRUJULAS (acento en la ANTEPENULTIMA silaba):</strong>
+<ul>
+<li><strong>SIEMPRE</strong> llevan tilde. Sin excepciones.</li>
+<li>Ejemplos: telefono (te-LE-fo-no), matematicas, musica, examenes, logica, comodo, pajaro, medico, gramatica, silaba, esdrujula</li>
+<li>Esta es la regla mas facil: si es esdrujula, lleva tilde SIEMPRE.</li>
+</ul>
+
+<strong>d) Palabras SOBREESDRUJULAS (acento antes de la antepenultima):</strong>
+<ul>
+<li><strong>SIEMPRE</strong> llevan tilde.</li>
+<li>Generalmente son verbos con pronombres enclticos: diciendoselo, entregamelo, preparandomelo</li>
+</ul>
+
+<strong>V. CASOS ESPECIALES DE ACENTUACION</strong>
+
+<strong>a) Tilde diacritica (para distinguir palabras que se escriben igual):</strong>
+<ul>
+<li><strong>el</strong> (articulo: "el libro") vs. <strong>el</strong> (pronombre: "el dijo que si")</li>
+<li><strong>tu</strong> (posesivo: "tu casa") vs. <strong>tu</strong> (pronombre: "tu eres inteligente")</li>
+<li><strong>mi</strong> (posesivo: "mi perro") vs. <strong>mi</strong> (pronombre: "para mi")</li>
+<li><strong>si</strong> (condicional: "si llueve") vs. <strong>si</strong> (afirmacion: "dijo que si")</li>
+<li><strong>se</strong> (pronombre: "se fue") vs. <strong>se</strong> (verbo saber/ser: "yo se la respuesta")</li>
+<li><strong>te</strong> (pronombre: "te quiero") vs. <strong>te</strong> (sustantivo: "una taza de te")</li>
+<li><strong>mas</strong> (conjuncion = pero: "lo intento, mas no pudo") vs. <strong>mas</strong> (adverbio de cantidad: "quiero mas")</li>
+<li><strong>de</strong> (preposicion) vs. <strong>de</strong> (verbo dar: "quiero que me de")</li>
+</ul>
+
+<strong>b) Hiato (dos vocales que se pronuncian en silabas separadas):</strong>
+<ul>
+<li>Cuando una vocal cerrada (i, u) tonica esta junto a una vocal abierta (a, e, o), se forma hiato y la vocal cerrada SIEMPRE lleva tilde, sin importar las reglas generales.</li>
+<li>Ejemplos: dia (di-a), rio (ri-o), raiz (ra-iz), pais (pa-is), maiz, oir, baul, reir</li>
+<li>Esto rompe las reglas normales: "dia" termina en vocal y es aguda, pero lleva tilde por hiato.</li>
+</ul>
+
+<strong>c) Diptongo (dos vocales en la MISMA silaba):</strong>
+<ul>
+<li>Se forma con vocal abierta + vocal cerrada atona, o dos vocales cerradas: "ciudad" (ciu-dad), "bueno" (bue-no), "viaje" (via-je)</li>
+<li>Los diptongos siguen las reglas generales de acentuacion. Si necesitan tilde, se pone sobre la vocal abierta: "cancion" (can-cion), "despues" (des-pues).</li>
+</ul>
+
+<strong>VI. REGLAS ORTOGRAFICAS FRECUENTES EN LA PAA</strong>
+
+<strong>a) Uso de B y V:</strong>
+<ul>
+<li>Se escribe B despues de M: "cambio", "tambien", "hambre"</li>
+<li>Se escribe V despues de N: "enviar", "invierno", "convencer"</li>
+<li>Se escribe B en las terminaciones -aba, -abas (preterito imperfecto): "cantaba", "jugabas"</li>
+<li>Se escribe B antes de consonante: "obtener", "objeto", "abstracto"</li>
+</ul>
+
+<strong>b) Uso de S, C y Z:</strong>
+<ul>
+<li>Los diminutivos en -cito, -cita: "cochecito", "florecita"</li>
+<li>Las terminaciones -cion corresponden a palabras con T en su familia: "cancion" (de "canto"), "produccion" (de "producto")</li>
+<li>Las terminaciones -sion corresponden a palabras con S en su familia: "comprension" (de "compresa"), "decision" (de "deciso" - latin)</li>
+<li>Se escribe Z antes de A, O, U: "zapato", "zona", "azucar"</li>
+<li>Se escribe C antes de E, I: "cielo", "cena"</li>
+</ul>
+
+<strong>c) Uso de G y J:</strong>
+<ul>
+<li>Se escribe G en las terminaciones -ger, -gir: "proteger", "dirigir" (excepciones: tejer, crujir)</li>
+<li>Se escribe J en las terminaciones -jero, -jera, -jeria: "cajero", "relojeria", "extranjero"</li>
+<li>Se escribe G en las terminaciones -logia, -logico: "tecnologia", "biologico"</li>
+</ul>
+
+<strong>d) Uso de la H:</strong>
+<ul>
+<li>Se escribe H en las formas del verbo "haber": "he", "ha", "han", "hay", "habia"</li>
+<li>Se escribe H en las formas del verbo "hacer": "hago", "hice", "hecho"</li>
+<li>Diferencia clave: "hecho" (del verbo hacer) vs. "echo" (del verbo echar)</li>
+<li>Se escribe H antes de los diptongos "ue", "ie": "huevo", "hielo", "hueso", "hierba"</li>
+</ul>
+
+<strong>e) Palabras que generan confusion frecuente:</strong>
+<ul>
+<li>"haber" (verbo) vs. "a ver" (preposicion + verbo ver)</li>
+<li>"hay" (verbo haber) vs. "ahi" (lugar) vs. "ay" (exclamacion)</li>
+<li>"haya" (verbo haber) vs. "halla" (verbo hallar = encontrar) vs. "alla" (lugar)</li>
+<li>"a" (preposicion) vs. "ha" (verbo haber): "ha llegado" vs. "a casa"</li>
+<li>"vaya" (verbo ir) vs. "valla" (cerca/barrera) vs. "baya" (fruto)</li>
+<li>"sino" (conjuncion adversativa: "no es rojo sino azul") vs. "si no" (condicional + negacion: "si no vienes, ire solo")</li>
 </ul>`,
         examples: [
           {
@@ -547,28 +1242,131 @@ La oración simple tiene: Sujeto + Verbo + Complemento.
       {
         id: "coherencia-cohesion",
         title: "Coherencia y Cohesión Textual",
-        content: `<strong>Coherencia:</strong> que las ideas del texto tengan sentido y orden lógico.
-<strong>Cohesión:</strong> que las oraciones estén bien conectadas entre sí.
+        content: `La <strong>coherencia</strong> y la <strong>cohesion</strong> son dos propiedades fundamentales de todo texto bien escrito. Aunque se mencionan juntas, son conceptos diferentes que debes entender por separado. La PAA evalua ambos aspectos a traves de ejercicios de seleccion de conectores, ordenamiento de oraciones e identificacion de elementos que rompen la unidad del texto.
 
-<strong>Conectores textuales:</strong>
+<strong>COHERENCIA: el sentido logico del texto</strong>
 
-<strong>Adición:</strong> además, también, asimismo, igualmente, incluso
-<strong>Contraste:</strong> pero, sin embargo, no obstante, aunque, por el contrario, en cambio
-<strong>Causa:</strong> porque, ya que, puesto que, debido a que
-<strong>Consecuencia:</strong> por lo tanto, por consiguiente, en consecuencia, así que, entonces
-<strong>Orden:</strong> primero, luego, después, finalmente, por último
-<strong>Ejemplo:</strong> por ejemplo, es decir, como, tal como
-<strong>Conclusión:</strong> en conclusión, en resumen, en síntesis, para concluir
+La coherencia se refiere a que las ideas del texto tengan sentido, orden logico y unidad tematica. Un texto coherente:
+<ul>
+<li>Tiene un tema central claro y todas las oraciones se relacionan con el.</li>
+<li>Las ideas siguen un orden logico (cronologico, de lo general a lo particular, causa-efecto, problema-solucion).</li>
+<li>No hay contradicciones internas.</li>
+<li>No hay oraciones fuera de tema que rompan la unidad.</li>
+</ul>
 
-<strong>Orden lógico de un párrafo:</strong>
+<strong>Ejemplo de texto INCOHERENTE:</strong>
+"El Canal de Panama es una obra de ingenieria impresionante. Conecta el Atlantico con el Pacifico. La gastronomia panamena incluye el sancocho. Su construccion tomo mas de diez anos."
+La oracion sobre gastronomia ROMPE la coherencia porque no tiene relacion con el tema del Canal.
+
+<strong>Como detectar incoherencia en la PAA:</strong>
+<ul>
+<li>Busca la oracion que NO se relaciona con el tema principal del parrafo.</li>
+<li>Preguntate: esta oracion apoya, ejemplifica o desarrolla la idea principal? Si la respuesta es no, esa es la oracion incoherente.</li>
+<li>A veces la oracion incoherente puede tener una relacion MUY lejana con el tema (ambas hablan de Panama, por ejemplo), pero no con la idea especifica del parrafo.</li>
+</ul>
+
+<strong>COHESION: las conexiones entre oraciones</strong>
+
+La cohesion se refiere a los mecanismos linguisticos que conectan las oraciones entre si para que el texto fluya de manera natural. Sin cohesion, el texto seria una lista de oraciones aisladas.
+
+<strong>Mecanismos de cohesion:</strong>
+
+<strong>1. Conectores textuales (nexos)</strong>
+
+Los conectores son palabras o frases que establecen una relacion logica entre oraciones. Son la herramienta de cohesion mas evaluada en la PAA.
+
+<strong>a) Conectores de ADICION (anaden informacion):</strong>
+<ul>
+<li>ademas, tambien, asimismo, igualmente, incluso, del mismo modo, no solo... sino que tambien, a su vez, por otro lado</li>
+<li>Uso: "La deforestacion destruye habitats. <strong>Ademas</strong>, provoca erosion del suelo."</li>
+<li>"No solo aprobo el examen, <strong>sino que tambien</strong> obtuvo la mejor calificacion."</li>
+</ul>
+
+<strong>b) Conectores de CONTRASTE (oponen o matizan ideas):</strong>
+<ul>
+<li>pero, sin embargo, no obstante, aunque, a pesar de, por el contrario, en cambio, mientras que, a diferencia de, con todo</li>
+<li>Uso: "El equipo jugo muy bien, <strong>pero</strong> no logro ganar."</li>
+<li>"El proyecto fue exitoso <strong>a pesar de</strong> la falta de recursos."</li>
+<li><strong>Muy importante en la PAA:</strong> Los conectores de contraste son los mas frecuentes porque requieren entender que dos ideas van en direcciones opuestas.</li>
+</ul>
+
+<strong>c) Conectores de CAUSA (explican por que):</strong>
+<ul>
+<li>porque, ya que, puesto que, debido a que, dado que, pues, a causa de</li>
+<li>Uso: "No pudo asistir <strong>porque</strong> estaba enfermo."</li>
+<li>"<strong>Debido a</strong> la lluvia, el evento fue cancelado."</li>
+</ul>
+
+<strong>d) Conectores de CONSECUENCIA (expresan el resultado):</strong>
+<ul>
+<li>por lo tanto, por consiguiente, en consecuencia, asi que, entonces, de modo que, de ahi que, como resultado, por eso, por esta razon</li>
+<li>Uso: "No tenemos presupuesto; <strong>por lo tanto</strong>, debemos buscar alternativas."</li>
+<li>"Llovio toda la noche; <strong>por consiguiente</strong>, las calles amanecieron inundadas."</li>
+<li><strong>Clave:</strong> Si una oracion presenta un PROBLEMA y la siguiente una CONSECUENCIA o SOLUCION, necesitas un conector de consecuencia.</li>
+</ul>
+
+<strong>e) Conectores de ORDEN o SECUENCIA:</strong>
+<ul>
+<li>primero, en primer lugar, luego, despues, posteriormente, a continuacion, mas tarde, finalmente, por ultimo, para concluir</li>
+<li>Uso: "<strong>Primero</strong>, se marinan las carnes. <strong>Luego</strong>, se cocinan a fuego lento. <strong>Finalmente</strong>, se sirven con arroz."</li>
+<li>Son muy utiles para identificar el orden correcto cuando te piden ordenar oraciones.</li>
+</ul>
+
+<strong>f) Conectores de EJEMPLIFICACION:</strong>
+<ul>
+<li>por ejemplo, es decir, o sea, en otras palabras, como, tal como, a saber</li>
+<li>Uso: "Muchos animales migran. <strong>Por ejemplo</strong>, el salmon recorre miles de kilometros."</li>
+<li><strong>Clave:</strong> "Por ejemplo" SIEMPRE va despues de una afirmacion general, nunca al inicio de un texto.</li>
+</ul>
+
+<strong>g) Conectores de CONCLUSION:</strong>
+<ul>
+<li>en conclusion, en resumen, en sintesis, para concluir, en definitiva, en suma</li>
+<li>Estos conectores SIEMPRE van al final del texto o parrafo porque cierran la argumentacion.</li>
+</ul>
+
+<strong>2. Referentes (sustitucion para evitar repeticion)</strong>
+
+Los referentes son palabras que sustituyen a otras ya mencionadas para evitar la repeticion. Son clave para la cohesion y la PAA los evalua especialmente en ejercicios de completar con pronombres demostrativos.
+
+<ul>
+<li><strong>Pronombres personales:</strong> "Maria estudia mucho. <strong>Ella</strong> quiere entrar a la UTP." (Ella = Maria)</li>
+<li><strong>Pronombres demostrativos:</strong> "Los estudiantes presentaron el proyecto. <strong>Este</strong> fue aprobado." (Este = el proyecto)</li>
+<li><strong>Sinonimos:</strong> "El perro corria. El <strong>animal</strong> parecia asustado." (Animal = perro)</li>
+<li><strong>Expresiones resuntivas:</strong> "Hubo inundaciones, incendios y terremotos. <strong>Estos desastres</strong> afectaron a miles." (Estos desastres = inundaciones, incendios y terremotos)</li>
+</ul>
+
+<strong>Reglas para usar referentes correctamente:</strong>
+<ul>
+<li>"Este/esta/esto" se refiere a lo MAS CERCANO o lo mencionado mas recientemente.</li>
+<li>"Aquel/aquella/aquello" se refiere a lo MAS LEJANO o mencionado antes.</li>
+<li>"Dicho/dicha" y "tal" se refieren a algo mencionado previamente: "Dicha decision fue controversial" = la decision que acabo de mencionar.</li>
+<li><strong>Trampa en la PAA:</strong> Si una oracion dice "este problema" o "dicha situacion", esa oracion necesariamente va DESPUES de otra que presente el problema o la situacion.</li>
+</ul>
+
+<strong>ORDEN LOGICO DE UN PARRAFO</strong>
+
+La estructura clasica de un parrafo es:
 <ol>
-<li>Oración principal (idea central)</li>
-<li>Desarrollo (explicación, datos, ejemplos)</li>
-<li>Cierre (conclusión o transición)</li>
+<li><strong>Oracion principal (tematica):</strong> presenta la idea central. Generalmente no tiene conectores como "sin embargo", "por lo tanto" o "ademas" porque es la primera idea.</li>
+<li><strong>Desarrollo:</strong> oraciones que explican, ejemplifican, contrastan o apoyan la idea principal. Usan conectores de adicion, ejemplo, contraste, etc.</li>
+<li><strong>Cierre:</strong> conclusion, consecuencia o resumen. Usa conectores como "por lo tanto", "en conclusion", "finalmente", "asi".</li>
 </ol>
 
-<strong>Referentes:</strong> pronombres y palabras que sustituyen a otras para evitar repetición.
-"María estudia mucho. <strong>Ella</strong> quiere entrar a la UTP." (Ella = María)`,
+<strong>Como elegir el conector correcto en la PAA:</strong>
+<ol>
+<li>Lee las dos oraciones que el conector debe unir.</li>
+<li>Determina la relacion logica: las ideas van en la misma direccion (adicion)? Se oponen (contraste)? Una causa la otra (causa-efecto)?</li>
+<li>Elige el conector que exprese esa relacion.</li>
+<li>Relee con el conector puesto. Suena natural y logico?</li>
+</ol>
+
+<strong>Errores frecuentes en cohesion:</strong>
+<ul>
+<li>Usar "sin embargo" cuando no hay contraste: "Estudio mucho; sin embargo, aprobo." INCORRECTO (estudiar y aprobar no se oponen; deberia ser "por lo tanto").</li>
+<li>Usar "ademas" cuando hay contraste: "Jugo bien, ademas, perdio." INCORRECTO (deberia ser "pero" o "sin embargo").</li>
+<li>Usar "porque" cuando hay consecuencia: "Llovio porque las calles se inundaron." INCORRECTO (la causa es la lluvia, no la inundacion; deberia ser "asi que" o "por lo tanto").</li>
+</ul>`,
         examples: [
           {
             problem: "Elige el conector: 'Estudié mucho ______ no aprobé el examen.'",
@@ -601,25 +1399,115 @@ La oración simple tiene: Sujeto + Verbo + Complemento.
       {
         id: "ordenamiento-oraciones",
         title: "Ordenamiento de Oraciones",
-        content: `En la PAA, te presentan un conjunto de oraciones desordenadas y debes organizarlas para formar un texto coherente.
+        content: `En la PAA, un tipo de ejercicio muy frecuente te presenta un conjunto de oraciones desordenadas y debes organizarlas para formar un texto coherente y logico. Estos ejercicios evaluan tu comprension de la estructura textual, tu capacidad para identificar relaciones logicas entre ideas y tu manejo de conectores y referentes.
 
-<strong>Estrategia para ordenar:</strong>
-<ol>
-<li><strong>Identifica la oración introductoria:</strong> presenta el tema general, define un concepto o da contexto. Suele NO tener conectores como "además", "sin embargo", "por lo tanto".</li>
-<li><strong>Busca la secuencia lógica:</strong> causa → efecto, general → particular, cronológico, problema → solución.</li>
-<li><strong>Fíjate en los conectores:</strong> "sin embargo" indica contraste (va después de algo positivo/negativo opuesto). "Por lo tanto" indica conclusión (va al final o casi al final).</li>
-<li><strong>Identifica referencias:</strong> pronombres (él, esta, dicho, aquella) señalan que una oración va DESPUÉS de la que presenta el referente.</li>
-<li><strong>La oración final:</strong> suele ser una conclusión, consecuencia o resumen.</li>
-</ol>
+<strong>ESTRATEGIA PASO A PASO PARA ORDENAR ORACIONES:</strong>
 
-<strong>Pistas clave:</strong>
+<strong>Paso 1: Lee TODAS las oraciones antes de ordenar.</strong>
 <ul>
-<li><strong>"Este/Esta/Dicho/Tal"</strong> → hace referencia a algo ya mencionado (va después)</li>
-<li><strong>"Por ejemplo"</strong> → va después de una afirmación general</li>
-<li><strong>"En conclusión / Por lo tanto"</strong> → va al final</li>
-<li><strong>"Primero / En primer lugar"</strong> → va al inicio de una secuencia</li>
-<li><strong>"Finalmente / Por último"</strong> → cierra la secuencia</li>
-</ul>`,
+<li>No empieces a ordenar despues de leer solo una o dos. Lee todas las oraciones para tener una vision completa del texto.</li>
+<li>Identifica el tema general: de que habla el conjunto de oraciones?</li>
+</ul>
+
+<strong>Paso 2: Identifica la oracion INTRODUCTORIA (primera).</strong>
+La oracion que va primero tiene estas caracteristicas:
+<ul>
+<li>Presenta el tema de forma general, da contexto o define un concepto.</li>
+<li>NO tiene conectores que dependan de informacion previa (no empieza con "sin embargo", "por lo tanto", "ademas", "por ejemplo", "dicho", "este/esta").</li>
+<li>Suele ser la oracion mas general e independiente: tiene sentido completo sin necesidad de leer las demas.</li>
+<li>A menudo introduce un sujeto o concepto que las demas oraciones desarrollan.</li>
+<li>Ejemplo: "El agua es el recurso mas importante para la vida" - presenta el tema de forma amplia.</li>
+</ul>
+
+<strong>Paso 3: Identifica la oracion FINAL (conclusion).</strong>
+La oracion que va al final tiene estas caracteristicas:
+<ul>
+<li>Contiene conectores de conclusion: "por lo tanto", "en consecuencia", "en conclusion", "en resumen", "por eso", "asi", "de este modo".</li>
+<li>Resume, concluye o propone una accion basada en lo dicho anteriormente.</li>
+<li>Tiene un tono de cierre: no deja ideas abiertas ni introduce temas nuevos.</li>
+<li>Ejemplo: "Por lo tanto, es esencial cuidar nuestras fuentes de agua."</li>
+</ul>
+
+<strong>Paso 4: Ordena las oraciones intermedias usando pistas.</strong>
+
+<strong>Pistas de conectores textuales:</strong>
+<ul>
+<li><strong>"Ademas" / "Tambien" / "Asimismo":</strong> anade informacion -> va DESPUES de una idea que amplia o complementa.</li>
+<li><strong>"Sin embargo" / "No obstante" / "Pero":</strong> introduce contraste -> va DESPUES de una idea opuesta. Si la oracion anterior es positiva, lo que sigue con "sin embargo" sera negativo, y viceversa.</li>
+<li><strong>"Por ejemplo":</strong> da un ejemplo especifico -> va DESPUES de una afirmacion general.</li>
+<li><strong>"Primero" / "En primer lugar":</strong> indica el inicio de una secuencia.</li>
+<li><strong>"Luego" / "Despues" / "Posteriormente" / "A continuacion":</strong> indica el paso siguiente en una secuencia.</li>
+<li><strong>"Finalmente" / "Por ultimo":</strong> cierra una secuencia.</li>
+<li><strong>"Por lo tanto" / "Por consiguiente" / "En consecuencia" / "Por eso":</strong> indica una conclusion derivada de lo anterior.</li>
+</ul>
+
+<strong>Pistas de REFERENTES (pronombres y demostrativos):</strong>
+<ul>
+<li><strong>"Este/Esta/Esto":</strong> se refiere a algo mencionado justo antes. La oracion con "este" VA DESPUES de la que menciona el referente.</li>
+<li><strong>"Dicho/Dicha":</strong> indica algo mencionado previamente. "Dicho descubrimiento" = el descubrimiento mencionado antes.</li>
+<li><strong>"Tal":</strong> se refiere a algo ya dicho. "Tal situacion" = la situacion descrita antes.</li>
+<li><strong>"Ella/El/Ellos":</strong> pronombres que sustituyen a sujetos ya mencionados.</li>
+<li><strong>"Estas travesias" / "Dicha contaminacion":</strong> expresiones que hacen referencia a algo que DEBE haber sido mencionado antes. Si ves "dicha contaminacion", busca cual oracion habla de contaminacion y ponla ANTES.</li>
+</ul>
+
+<strong>Paso 5: Verifica el orden.</strong>
+<ul>
+<li>Lee todo el texto en el orden que elegiste, de corrido.</li>
+<li>Suena natural? Fluye logicamente?</li>
+<li>Hay alguna oracion que mencione algo que aun no se ha presentado?</li>
+<li>Los conectores encajan con las ideas que los rodean?</li>
+</ul>
+
+<strong>PATRONES DE ORGANIZACION COMUNES:</strong>
+
+<strong>1. General -> Particular -> Conclusion:</strong>
+<ul>
+<li>La oracion mas general va primero.</li>
+<li>Le siguen datos, ejemplos o detalles especificos.</li>
+<li>La conclusion cierra.</li>
+<li>Ejemplo: "La educacion es clave para el desarrollo. (general) -> Las estadisticas muestran que los graduados ganan mas. (dato) -> En conclusion, la educacion transforma vidas. (conclusion)"</li>
+</ul>
+
+<strong>2. Cronologico (secuencia temporal):</strong>
+<ul>
+<li>Las oraciones siguen un orden en el tiempo.</li>
+<li>Busca marcadores temporales: primero, luego, despues, finalmente, en 1928, posteriormente.</li>
+<li>Ejemplo: "En 1928, Fleming descubrio la penicilina. -> Tal descubrimiento revoluciono la medicina. -> Gracias a ella, enfermedades antes mortales pudieron ser tratadas."</li>
+</ul>
+
+<strong>3. Causa -> Efecto -> Conclusion:</strong>
+<ul>
+<li>Primero se presenta un hecho o problema (causa).</li>
+<li>Luego su consecuencia o efecto.</li>
+<li>Finalmente una conclusion o propuesta.</li>
+<li>Ejemplo: "Las fabricas emiten gases toxicos. -> Dicha contaminacion afecta la salud. -> Es urgente implementar regulaciones."</li>
+</ul>
+
+<strong>4. Tesis -> Contraste -> Conclusion:</strong>
+<ul>
+<li>Se presenta una idea positiva.</li>
+<li>"Sin embargo" introduce una idea negativa o matizacion.</li>
+<li>La conclusion integra ambas ideas.</li>
+<li>Ejemplo: "La tecnologia ha mejorado la comunicacion. -> Sin embargo, tambien presenta riesgos. -> Por lo tanto, es necesario legislar su uso."</li>
+</ul>
+
+<strong>5. Problema -> Evidencia -> Solucion:</strong>
+<ul>
+<li>Se presenta un problema.</li>
+<li>Se dan datos o ejemplos que lo demuestran.</li>
+<li>Se propone una solucion o accion.</li>
+</ul>
+
+<strong>ERRORES COMUNES AL ORDENAR:</strong>
+<ul>
+<li><strong>Poner una oracion con "dicho/esta/tal" ANTES del referente:</strong> Si una oracion dice "dicha contaminacion", no puede ir primera porque aun no se ha hablado de contaminacion.</li>
+<li><strong>Poner la conclusion al principio:</strong> Una oracion con "por lo tanto" o "en conclusion" casi nunca va primera.</li>
+<li><strong>Confundir "primero" y "finalmente" del texto con las del ejercicio:</strong> Los conectores de orden dentro de las oraciones te dicen el orden DEL TEXTO, no del ejercicio.</li>
+<li><strong>Ignorar la logica de la relacion causa-efecto:</strong> La causa SIEMPRE va antes del efecto. No puedes decir "por eso debemos reciclar" antes de explicar por que.</li>
+</ul>
+
+<strong>TRUCO RAPIDO:</strong>
+Si no sabes por donde empezar, identifica primero la oracion que NUNCA podria ir primera (tiene "dicho", "sin embargo", "por lo tanto", "ademas") y descarta esa opcion. Luego busca la que NUNCA podria ir al final (introduce un tema nuevo sin cerrarlo). Asi reduces las posibilidades rapidamente.`,
         examples: [
           {
             problem: "Ordena: I. Por lo tanto, es esencial cuidar nuestras fuentes de agua. II. El agua es el recurso más importante para la vida. III. Sin embargo, la contaminación amenaza este recurso.",
@@ -649,43 +1537,217 @@ La oración simple tiene: Sujeto + Verbo + Complemento.
       {
         id: "vicios-lenguaje",
         title: "Vicios del Lenguaje",
-        content: `Los <strong>vicios del lenguaje</strong> son errores comunes al hablar o escribir que afectan la claridad y corrección del mensaje. En la PAA, debes identificarlos y corregirlos.
+        content: `Los <strong>vicios del lenguaje</strong> son errores, defectos o usos inadecuados del idioma que afectan la claridad, correccion o elegancia del mensaje. Son muy comunes en el habla cotidiana, y por eso la PAA los evalua: debes ser capaz de identificarlos, clasificarlos y corregirlos. Dominar este tema te permite no solo responder bien en el examen, sino tambien mejorar tu expresion escrita y oral.
 
-<strong>Principales vicios:</strong>
+<strong>1. REDUNDANCIA (Pleonasmo)</strong>
 
-<strong>1. Redundancia (Pleonasmo):</strong> repetir una idea innecesariamente.
+La redundancia consiste en repetir una idea que ya esta implicita en otra palabra de la oracion. Es decir, se dice dos veces lo mismo con palabras diferentes. Aunque algunos pleonasmos son aceptados como enfasis literario ("lo vi con mis propios ojos"), en la PAA se consideran errores.
+
+<strong>Ejemplos de redundancias comunes (memorizalos):</strong>
 <ul>
-<li>❌ "Subir arriba" → ✅ "Subir" (subir ya implica arriba)</li>
-<li>❌ "Vuelvo a repetir" → ✅ "Repito" (repetir ya implica volver a decir)</li>
-<li>❌ "Lapso de tiempo" → ✅ "Lapso" (lapso ya significa período de tiempo)</li>
+<li>"Subir <strong>arriba</strong>" -> "Subir" (subir ya implica ir hacia arriba)</li>
+<li>"Bajar <strong>abajo</strong>" -> "Bajar" (bajar ya implica ir hacia abajo)</li>
+<li>"Salir <strong>afuera</strong>" -> "Salir" (salir ya implica ir hacia afuera)</li>
+<li>"Entrar <strong>adentro</strong>" -> "Entrar" (entrar ya implica ir hacia adentro)</li>
+<li>"Vuelvo a <strong>repetir</strong>" -> "Repito" (repetir ya significa volver a decir)</li>
+<li>"<strong>Lapso</strong> de tiempo" -> "Lapso" (lapso ya significa periodo de tiempo)</li>
+<li>"Lo vi con mis <strong>propios</strong> ojos" -> "Lo vi" (ver ya implica usar los ojos, y son los propios)</li>
+<li>"<strong>Hemorragia</strong> de sangre" -> "Hemorragia" (hemorragia ya significa salida de sangre)</li>
+<li>"<strong>Protagonista</strong> principal" -> "Protagonista" (el protagonista ya es el principal)</li>
+<li>"<strong>Consenso</strong> general" -> "Consenso" (consenso ya implica acuerdo general)</li>
+<li>"<strong>Erario</strong> publico" -> "Erario" (erario ya se refiere a fondos publicos)</li>
+<li>"<strong>Biografia</strong> de su vida" -> "Biografia" (bio = vida, grafia = escritura)</li>
+<li>"<strong>Resultado</strong> final" -> "Resultado" (un resultado ya es algo final)</li>
+<li>"<strong>Prever</strong> con anticipacion" -> "Prever" (pre = antes, ver = anticipar)</li>
+<li>"<strong>Periodo</strong> de tiempo" -> "Periodo" (periodo ya implica un lapso temporal)</li>
+<li>"<strong>Aterido</strong> de frio" -> "Aterido" (aterido ya significa muerto de frio)</li>
+<li>"<strong>Cardumen</strong> de peces" -> "Cardumen" (un cardumen ya es un grupo de peces)</li>
 </ul>
 
-<strong>2. Barbarismo:</strong> uso incorrecto de palabras o formas gramaticales.
+<strong>Como detectar redundancias:</strong> Preguntate: la segunda palabra anade informacion NUEVA que no esta ya en la primera? Si la respuesta es no, es redundancia.
+
+<strong>2. BARBARISMO</strong>
+
+El barbarismo es el uso incorrecto de palabras o formas gramaticales. Incluye errores de pronunciacion, escritura o conjugacion de verbos. Son muy frecuentes en el habla cotidiana y la PAA los evalua constantemente.
+
+<strong>a) Barbarismos de conjugacion verbal (los mas evaluados):</strong>
 <ul>
-<li>❌ "Hubieron muchos problemas" → ✅ "Hubo muchos problemas" (haber impersonal es singular)</li>
-<li>❌ "Dijistes" → ✅ "Dijiste" (no se agrega -s a la segunda persona del pretérito)</li>
-<li>❌ "Más mejor" → ✅ "Mejor" (mejor ya es comparativo)</li>
+<li>"Dijistes" -> "Dijiste" (no se agrega -s al preterito de segunda persona)</li>
+<li>"Vinistes" -> "Viniste"</li>
+<li>"Hicistes" -> "Hiciste"</li>
+<li>"Comistes" -> "Comiste"</li>
+<li><strong>Regla:</strong> En la segunda persona del preterito indefinido (tu), NUNCA se agrega -s al final. Es "tu dijiste", no "tu dijistes".</li>
+<li>"Haiga" -> "Haya" (del verbo haber)</li>
+<li>"Semos" -> "Somos" (del verbo ser)</li>
+<li>"Cabo" -> "Quepo" (del verbo caber, primera persona presente)</li>
+<li>"Conducio" -> "Condujo" (del verbo conducir, preterito)</li>
 </ul>
 
-<strong>3. Solecismo:</strong> error de sintaxis o concordancia.
+<strong>b) Barbarismos de forma comparativa:</strong>
 <ul>
-<li>❌ "Habemos muchos estudiantes" → ✅ "Somos muchos estudiantes"</li>
-<li>❌ "Le dije a ellos" → ✅ "Les dije a ellos" (concordancia de número)</li>
-<li>❌ "La gente piensan" → ✅ "La gente piensa" (sujeto colectivo singular)</li>
+<li>"Mas mejor" -> "Mejor" (mejor ya es el comparativo de bueno)</li>
+<li>"Mas peor" -> "Peor" (peor ya es el comparativo de malo)</li>
+<li>"Mas mayor" -> "Mayor" (mayor ya es comparativo de grande)</li>
+<li>"Mas menor" -> "Menor" (menor ya es comparativo de pequeno)</li>
+<li>"Mas superior" -> "Superior" (superior ya indica un grado mas alto)</li>
+<li>"Menos inferior" -> "Inferior"</li>
+<li><strong>Regla:</strong> Mejor, peor, mayor, menor, superior e inferior ya son formas comparativas. No necesitan "mas" ni "menos".</li>
 </ul>
 
-<strong>4. Dequeísmo y Queísmo:</strong>
+<strong>c) Barbarismos con el verbo HABER impersonal:</strong>
 <ul>
-<li>❌ "Pienso de que es correcto" → ✅ "Pienso que es correcto" (dequeísmo: sobra "de")</li>
-<li>❌ "Estoy seguro que vendrá" → ✅ "Estoy seguro de que vendrá" (queísmo: falta "de")</li>
-<li><strong>Truco:</strong> sustituye por "eso". "Pienso eso" ✓ (no "pienso de eso") → no lleva "de".</li>
+<li>"Hubieron muchos problemas" -> "Hubo muchos problemas"</li>
+<li>"Habian muchas personas" -> "Habia muchas personas"</li>
+<li>"Han habido quejas" -> "Ha habido quejas"</li>
+<li>"Habemos muchos" -> "Somos muchos" o "Hay muchos de nosotros"</li>
+<li><strong>Regla:</strong> El verbo "haber" cuando significa "existir" SIEMPRE va en singular, sin importar cuantas cosas o personas le sigan.</li>
 </ul>
 
-<strong>5. Anfibología:</strong> ambigüedad; la oración se puede interpretar de más de una forma.
+<strong>d) Barbarismos de escritura:</strong>
 <ul>
-<li>❌ "Vi a tu hermano con el telescopio" (¿quién tiene el telescopio?)</li>
-<li>✅ "Con el telescopio, vi a tu hermano" o "Vi a tu hermano, quien tenía el telescopio"</li>
-</ul>`,
+<li>"Desicion" -> "Decision"</li>
+<li>"Exceso" (correcto) vs. "exeso" (incorrecto)</li>
+<li>"Iba" (correcto, del verbo ir) vs. "hiba" (incorrecto)</li>
+<li>"A traves" (correcto) vs. "atraves" (incorrecto, son dos palabras)</li>
+</ul>
+
+<strong>3. SOLECISMO</strong>
+
+El solecismo es un error de sintaxis, es decir, de la estructura o construccion de la oracion. Incluye errores de concordancia, uso incorrecto de preposiciones y mal uso de pronombres.
+
+<strong>a) Solecismos de concordancia:</strong>
+<ul>
+<li>"La gente <strong>piensan</strong>" -> "La gente <strong>piensa</strong>" (sujeto colectivo singular = verbo singular)</li>
+<li>"<strong>Le</strong> dije a ellos" -> "<strong>Les</strong> dije a ellos" (concordancia de numero: "ellos" = plural = "les")</li>
+<li>"<strong>Le</strong> pedi a los ninos" -> "<strong>Les</strong> pedi a los ninos"</li>
+<li>"Hubieron fiestas" -> "Hubo fiestas" (haber impersonal = siempre singular)</li>
+</ul>
+
+<strong>b) Solecismos con pronombres (leismo, laismo, loismo):</strong>
+<ul>
+<li><strong>Laismo:</strong> "La dije la verdad" -> "Le dije la verdad" (CI = le/les, no la/las)</li>
+<li><strong>Loismo:</strong> "Lo dije que viniera" -> "Le dije que viniera"</li>
+<li><strong>Leismo:</strong> "Le vi en la calle" -> "Lo vi en la calle" (CD masculino = lo)</li>
+<li><strong>Truco:</strong> Para complemento INDIRECTO (a quien se da/dice/pide algo) = LE/LES. Para complemento DIRECTO (a quien/que se ve/busca/encuentra) = LO/LA/LOS/LAS.</li>
+</ul>
+
+<strong>c) Solecismos de preposicion:</strong>
+<ul>
+<li>"En base a" -> "Con base en" o "Sobre la base de"</li>
+<li>"De acuerdo a" -> "De acuerdo con"</li>
+<li>"Diferente a" -> "Diferente de" (aunque "diferente a" se acepta en el uso moderno)</li>
+<li>"En relacion a" -> "En relacion con" o "Con relacion a"</li>
+</ul>
+
+<strong>4. DEQUEISMO Y QUEISMO (en profundidad)</strong>
+
+Estos dos vicios son tan frecuentes en la PAA que merecen una seccion detallada. Son como las dos caras de una misma moneda: en uno sobra "de" y en el otro falta.
+
+<strong>DEQUEISMO (agregar "de" donde no debe ir):</strong>
+<ul>
+<li>"Pienso <strong>de que</strong> es correcto" -> "Pienso <strong>que</strong> es correcto"</li>
+<li>"Creo <strong>de que</strong> va a llover" -> "Creo <strong>que</strong> va a llover"</li>
+<li>"Dice <strong>de que</strong> vendran" -> "Dice <strong>que</strong> vendran"</li>
+<li>"Opino <strong>de que</strong> es justo" -> "Opino <strong>que</strong> es justo"</li>
+<li>"Es necesario <strong>de que</strong> estudies" -> "Es necesario <strong>que</strong> estudies"</li>
+<li>"Resulta <strong>de que</strong> no habia nadie" -> "Resulta <strong>que</strong> no habia nadie"</li>
+</ul>
+
+<strong>Verbos y expresiones que NUNCA llevan "de" antes de "que":</strong>
+pensar, creer, decir, opinar, afirmar, asegurar, negar, considerar, resultar, es necesario, es posible, es probable, es importante, es evidente
+
+<strong>QUEISMO (omitir "de" donde debe ir):</strong>
+<ul>
+<li>"Estoy seguro <strong>que</strong> vendra" -> "Estoy seguro <strong>de que</strong> vendra"</li>
+<li>"Me alegro <strong>que</strong> estes bien" -> "Me alegro <strong>de que</strong> estes bien"</li>
+<li>"Me entere <strong>que</strong> ganamos" -> "Me entere <strong>de que</strong> ganamos"</li>
+<li>"Estoy convencido <strong>que</strong> ganara" -> "Estoy convencido <strong>de que</strong> ganara"</li>
+<li>"No me acuerdo <strong>que</strong> lo dijera" -> "No me acuerdo <strong>de que</strong> lo dijera"</li>
+<li>"Se dio cuenta <strong>que</strong> era tarde" -> "Se dio cuenta <strong>de que</strong> era tarde"</li>
+</ul>
+
+<strong>Verbos y expresiones que SI llevan "de que":</strong>
+estar seguro de que, alegrarse de que, enterarse de que, convencerse de que, acordarse de que, darse cuenta de que, tener miedo de que, arrepentirse de que, avergonzarse de que, olvidarse de que, preocuparse de que
+
+<strong>EL TRUCO DEL "ESO" (metodo definitivo para distinguir):</strong>
+<ol>
+<li>Toma la oracion y reemplaza todo lo que va desde "que" hasta el final por la palabra "eso".</li>
+<li>Si la oracion suena bien SIN "de", no lleva "de que": "Pienso eso" (suena bien) -> "Pienso que..."</li>
+<li>Si la oracion suena bien CON "de", lleva "de que": "Me entere de eso" (suena bien) -> "Me entere de que..."</li>
+<li>Mas ejemplos:
+  <ul>
+  <li>"Creo eso" (correcto) vs. "Creo de eso" (suena mal) -> "Creo que..."</li>
+  <li>"Me alegro de eso" (correcto) vs. "Me alegro eso" (suena mal) -> "Me alegro de que..."</li>
+  <li>"Resulta eso" (correcto) vs. "Resulta de eso" (suena mal) -> "Resulta que..."</li>
+  <li>"Estoy convencido de eso" (correcto) -> "Estoy convencido de que..."</li>
+  <li>"Es necesario eso" (correcto) vs. "Es necesario de eso" (suena mal) -> "Es necesario que..."</li>
+  </ul>
+</li>
+</ol>
+
+<strong>5. ANFIBOLOGIA (ambiguedad)</strong>
+
+La anfibologia ocurre cuando una oracion se puede interpretar de mas de una forma, creando confusion. El problema no es gramatical (la oracion puede estar bien construida) sino de claridad.
+
+<strong>Ejemplos y correcciones:</strong>
+<ul>
+<li>"Vi a tu hermano con el telescopio" - Ambiguo: yo use el telescopio para verlo? O tu hermano tenia el telescopio?
+  <ul>
+  <li>Correccion 1: "Con el telescopio, vi a tu hermano" (yo use el telescopio)</li>
+  <li>Correccion 2: "Vi a tu hermano, quien tenia el telescopio" (el lo tenia)</li>
+  </ul>
+</li>
+<li>"Pedro le dijo a Juan que su auto estaba danado" - Ambiguo: el auto de quien? De Pedro o de Juan?
+  <ul>
+  <li>Correccion: "Pedro le dijo a Juan que el auto de Juan estaba danado"</li>
+  </ul>
+</li>
+<li>"Se venden vestidos de damas usados" - Ambiguo: las damas son usadas? O los vestidos?
+  <ul>
+  <li>Correccion: "Se venden vestidos usados de dama"</li>
+  </ul>
+</li>
+<li>"El profesor dijo al alumno que habia reprobado" - Ambiguo: quien reprobo? El profesor o el alumno?
+  <ul>
+  <li>Correccion: "El profesor le dijo al alumno: 'Has reprobado'" o "El profesor que habia reprobado le dijo al alumno..."</li>
+  </ul>
+</li>
+<li>"Maria hablo con Ana en su oficina" - Ambiguo: la oficina de quien?
+  <ul>
+  <li>Correccion: "Maria hablo con Ana en la oficina de Ana"</li>
+  </ul>
+</li>
+</ul>
+
+<strong>Como detectar anfibologia:</strong> Preguntate: esta oracion puede entenderse de dos maneras diferentes? Si la respuesta es si, es anfibologica. El problema suele estar en pronombres posesivos ambiguos ("su") o en complementos que pueden modificar a diferentes partes de la oracion.
+
+<strong>6. OTROS VICIOS DEL LENGUAJE</strong>
+
+<strong>a) Cacofonia:</strong> repeticion desagradable de sonidos.
+<ul>
+<li>"Tres tristes tigres tragaban trigo" (uso intencional en trabalenguas)</li>
+<li>"Para para la parada" (uso no intencional = vicio)</li>
+</ul>
+
+<strong>b) Muletillas o pobreza de vocabulario:</strong> uso excesivo de palabras como "este", "o sea", "bueno", "tipo", "como que".
+<ul>
+<li>No se evaluan directamente en la PAA pero afectan la calidad de la expresion.</li>
+</ul>
+
+<strong>c) Arcaismos:</strong> uso de palabras o formas que ya no se usan en el espanol actual.
+<ul>
+<li>"Agora" -> "Ahora"</li>
+<li>"Ansina" -> "Asi"</li>
+</ul>
+
+<strong>RESUMEN: COMO ABORDAR PREGUNTAS DE VICIOS EN LA PAA</strong>
+<ol>
+<li>Lee cada opcion buscando especificamente: redundancias, barbarismos de conjugacion, errores de concordancia, dequeismo/queismo y ambiguedades.</li>
+<li>Si la pregunta dice "Cual oracion es CORRECTA", busca la unica que no tenga ningun vicio.</li>
+<li>Si la pregunta dice "Identifica el vicio", clasifica el error segun las categorias que aprendiste.</li>
+<li>Usa el truco del "eso" para dequeismo/queismo.</li>
+<li>Busca comparativos dobles (mas mejor) y verbos "haber" mal conjugados (hubieron, habemos).</li>
+</ol>`,
         examples: [
           {
             problem: "Identifica el vicio: 'Hubieron muchas personas en la fiesta.'",

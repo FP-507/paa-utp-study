@@ -11,25 +11,64 @@ export const mathTopics: Topic[] = [
       {
         id: "operaciones-basicas",
         title: "Operaciones con Números Enteros",
-        content: `Los números enteros incluyen los positivos, negativos y el cero. Es fundamental dominar las operaciones básicas y el <strong>orden de operaciones (PEMDAS)</strong>:
+        content: `Los números enteros incluyen los positivos, negativos y el cero (..., −3, −2, −1, 0, 1, 2, 3, ...). Forman el conjunto ℤ y son la base de todo el razonamiento matemático en la PAA. Es fundamental dominar las operaciones básicas y, sobre todo, el <strong>orden de operaciones (PEMDAS)</strong>, ya que la mayoría de errores en la prueba vienen de aplicar las operaciones en el orden incorrecto.
 
-<strong>Orden de operaciones:</strong>
+<strong style="color:#f59e0b">¿Por qué importa el orden de operaciones?</strong>
+Imagina que te piden calcular <code>3 + 4 × 2</code>. Si sumas primero obtienes 14, pero si multiplicas primero obtienes 11. La respuesta correcta es <strong>11</strong>, porque la multiplicación tiene mayor prioridad. El acrónimo PEMDAS te da el orden correcto:
+
+<strong>Orden de operaciones (PEMDAS):</strong>
 <ol>
-<li><strong>P</strong>aréntesis — resuelve primero lo que está dentro</li>
-<li><strong>E</strong>xponentes — potencias y raíces</li>
-<li><strong>M</strong>ultiplicación y <strong>D</strong>ivisión — de izquierda a derecha</li>
-<li><strong>A</strong>dición y <strong>S</strong>ustracción — de izquierda a derecha</li>
+<li><strong>P</strong>aréntesis — resuelve primero lo que está dentro de ( ), [ ] y { }. Si hay paréntesis anidados, empieza por los más internos.</li>
+<li><strong>E</strong>xponentes — potencias y raíces (2³, √9)</li>
+<li><strong>M</strong>ultiplicación y <strong>D</strong>ivisión — se resuelven de <em>izquierda a derecha</em> (tienen la misma prioridad entre sí)</li>
+<li><strong>A</strong>dición y <strong>S</strong>ustracción — se resuelven de <em>izquierda a derecha</em> (tienen la misma prioridad entre sí)</li>
 </ol>
 
-<strong>Reglas de signos:</strong>
+<strong style="color:#f59e0b">Ejemplo detallado paso a paso:</strong>
+Calcula: <code>5 + 2 × (3² − 1) ÷ 4</code>
+<ol>
+<li><strong>Paréntesis:</strong> Dentro del paréntesis hay un exponente → 3² = 9. Luego 9 − 1 = 8. Queda: 5 + 2 × 8 ÷ 4</li>
+<li><strong>Multiplicación y división (izquierda a derecha):</strong> 2 × 8 = 16, luego 16 ÷ 4 = 4. Queda: 5 + 4</li>
+<li><strong>Suma:</strong> 5 + 4 = <strong>9</strong></li>
+</ol>
+
+<strong style="color:#f59e0b">Reglas de signos — ¿Por qué negativo × negativo = positivo?</strong>
+Piensa en los signos como direcciones. Negativo significa "dirección opuesta". Si inviertes una dirección opuesta, regresas a la dirección original (positivo).
+
 <ul>
-<li>Positivo × Positivo = Positivo</li>
-<li>Negativo × Negativo = Positivo</li>
-<li>Positivo × Negativo = Negativo</li>
-<li>Misma regla aplica para la división</li>
+<li><strong>(+) × (+) = (+)</strong> → Mismo sentido, resultado positivo</li>
+<li><strong>(−) × (−) = (+)</strong> → Doble inversión = dirección original</li>
+<li><strong>(+) × (−) = (−)</strong> → Una inversión = dirección opuesta</li>
+<li><strong>(−) × (+) = (−)</strong> → Una inversión = dirección opuesta</li>
+<li>Las mismas reglas aplican para la <strong>división</strong></li>
 </ul>
 
-<strong>Valor absoluto:</strong> Es la distancia de un número al cero. Siempre es positivo. |−5| = 5, |3| = 3.`,
+<strong>Truco para contar signos:</strong> Cuando multiplicas varios números, cuenta la cantidad de signos negativos. Si es <em>par</em>, el resultado es positivo. Si es <em>impar</em>, es negativo. Ejemplo: (−2)(−3)(−4) tiene 3 negativos (impar) → resultado negativo = −24.
+
+<strong style="color:#f59e0b">Valor absoluto — más que una definición</strong>
+El valor absoluto |a| representa la <em>distancia</em> de un número al cero en la recta numérica. La distancia siempre es positiva. Esto significa:
+<ul>
+<li>|−5| = 5 (está a 5 unidades del cero)</li>
+<li>|3| = 3 (está a 3 unidades del cero)</li>
+<li>|0| = 0</li>
+</ul>
+
+<strong>Cuidado con expresiones dentro del valor absoluto:</strong> primero resuelve la expresión interior, luego aplica el valor absoluto. Por ejemplo: |3 − 10| = |−7| = 7, <strong>NO</strong> es |3| − |10| = 3 − 10 = −7.
+
+<strong style="color:#f59e0b">Propiedad clave para la PAA:</strong>
+<code>−x²</code> NO es lo mismo que <code>(−x)²</code>.
+<ul>
+<li><code>−x²</code> significa <code>−(x²)</code>: primero elevas al cuadrado, luego aplicas el negativo. Si x = 3: −(3²) = −9</li>
+<li><code>(−x)²</code> significa elevar todo al cuadrado. Si x = 3: (−3)² = 9</li>
+</ul>
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Sumar antes de multiplicar: 3 + 4 × 2 = 14 (incorrecto). ✅ 3 + 8 = 11</li>
+<li>❌ Olvidar que restar un negativo es sumar: 5 − (−3) ≠ 2. ✅ 5 − (−3) = 5 + 3 = 8</li>
+<li>❌ Confundir −3² con (−3)²: −3² = −9, pero (−3)² = 9</li>
+<li>❌ Resolver multiplicación y división de derecha a izquierda en vez de izquierda a derecha</li>
+</ul>`,
         examples: [
           {
             problem: "Calcula: 3 + 4 × 2 − (6 ÷ 3)",
@@ -63,31 +102,80 @@ export const mathTopics: Topic[] = [
       {
         id: "fracciones",
         title: "Fracciones",
-        content: `Una fracción representa una parte de un todo: <code>a/b</code> donde <strong>a</strong> es el numerador y <strong>b</strong> es el denominador.
+        content: `Una fracción representa una <em>parte de un todo</em>: <code>a/b</code> donde <strong>a</strong> es el numerador (cuántas partes tomas) y <strong>b</strong> es el denominador (en cuántas partes iguales se divide el todo). Piénsalo como una pizza: si la cortas en 8 pedazos y comes 3, comiste <strong>3/8</strong> de la pizza.
 
-<strong>Operaciones con fracciones:</strong>
+<strong style="color:#f59e0b">Concepto fundamental: ¿Qué NO puede ser el denominador?</strong>
+El denominador <strong>nunca puede ser cero</strong>. No tiene sentido dividir algo en cero partes. Si en la PAA ves una fracción con denominador que podría ser cero, esa es una restricción importante.
 
-<strong>Suma y resta:</strong> Necesitan el mismo denominador (MCM).
+<strong style="color:#f59e0b">Fracciones equivalentes</strong>
+Dos fracciones son equivalentes si representan la misma cantidad. Para obtener fracciones equivalentes, multiplica o divide numerador y denominador por el mismo número:
 <ul>
-<li>2/3 + 1/4 → MCM de 3 y 4 = 12 → 8/12 + 3/12 = 11/12</li>
+<li>1/2 = 2/4 = 3/6 = 4/8 = 50/100 (todas representan la mitad)</li>
+<li>Para verificar: multiplica en cruz. a/b = c/d si a×d = b×c</li>
 </ul>
 
-<strong>Multiplicación:</strong> Numerador × numerador, denominador × denominador.
+<strong style="color:#f59e0b">Suma y resta de fracciones — paso a paso</strong>
+Para sumar o restar fracciones, necesitan el <strong>mismo denominador</strong>. Si no lo tienen, busca el MCM (Mínimo Común Múltiplo):
+
+<strong>Procedimiento detallado:</strong>
+<ol>
+<li>Encuentra el MCM de los denominadores</li>
+<li>Convierte cada fracción al denominador común</li>
+<li>Suma o resta los numeradores (el denominador queda igual)</li>
+<li>Simplifica si es posible</li>
+</ol>
+
+<strong>Ejemplo:</strong> 2/3 + 1/4
+<ol>
+<li>MCM de 3 y 4: Múltiplos de 3 → 3, 6, 9, <strong>12</strong>... Múltiplos de 4 → 4, 8, <strong>12</strong>... MCM = 12</li>
+<li>2/3 = (2×4)/(3×4) = 8/12. Y 1/4 = (1×3)/(4×3) = 3/12</li>
+<li>8/12 + 3/12 = 11/12</li>
+<li>11 y 12 no tienen factores comunes → ya está simplificada</li>
+</ol>
+
+<strong style="color:#f59e0b">Multiplicación de fracciones</strong>
+Es la operación más sencilla: numerador × numerador, denominador × denominador. <strong>No necesitas denominador común.</strong>
 <ul>
-<li>2/3 × 4/5 = 8/15</li>
+<li>2/3 × 4/5 = (2×4)/(3×5) = 8/15</li>
+</ul>
+<strong>Truco de simplificación cruzada:</strong> Antes de multiplicar, puedes simplificar diagonalmente. Ejemplo: 4/9 × 3/8. Simplifica 4 con 8 (÷4) y 3 con 9 (÷3): queda 1/3 × 1/2 = 1/6. Es más rápido que multiplicar 12/72 y luego simplificar.
+
+<strong style="color:#f59e0b">División de fracciones — "voltea y multiplica"</strong>
+Para dividir fracciones, multiplica por el <strong>recíproco</strong> (inviertes la segunda fracción):
+<ul>
+<li>2/3 ÷ 4/5 = 2/3 × <strong>5/4</strong> = 10/12 = 5/6</li>
+</ul>
+<strong>¿Por qué funciona?</strong> Dividir entre una fracción es preguntar "¿cuántas veces cabe esta fracción en la otra?". Al invertir y multiplicar, matemáticamente haces lo mismo. Es como preguntar "¿cuántas mitades caben en 3?" → 3 ÷ 1/2 = 3 × 2 = 6. Efectivamente, 6 mitades hacen 3.
+
+<strong style="color:#f59e0b">Simplificar fracciones</strong>
+Divide numerador y denominador por su MCD (Máximo Común Divisor):
+<ul>
+<li>12/18 → MCD de 12 y 18 = 6 → (12÷6)/(18÷6) = 2/3</li>
+<li>Truco: si ambos son pares, divide entre 2. Repite hasta que no se pueda.</li>
 </ul>
 
-<strong>División:</strong> Multiplica por el recíproco (voltea la segunda fracción).
+<strong style="color:#f59e0b">Fracciones mixtas e impropias</strong>
 <ul>
-<li>2/3 ÷ 4/5 = 2/3 × 5/4 = 10/12 = 5/6</li>
+<li><strong>Fracción impropia:</strong> el numerador es mayor que el denominador (7/3)</li>
+<li><strong>Número mixto:</strong> un entero más una fracción (2⅓)</li>
+<li><strong>De mixto a impropio:</strong> multiplica entero × denominador + numerador. 2⅓ = (2×3 + 1)/3 = 7/3</li>
+<li><strong>De impropio a mixto:</strong> divide. 17/5 = 3 con residuo 2, entonces 3 2/5</li>
 </ul>
 
-<strong>Simplificar:</strong> Divide numerador y denominador por su MCD.
-<ul>
-<li>12/18 → MCD = 6 → 2/3</li>
-</ul>
+<strong style="color:#f59e0b">Comparación de fracciones</strong>
+Para saber cuál fracción es mayor, hay dos métodos:
+<ol>
+<li><strong>Denominador común:</strong> convierte ambas al mismo denominador y compara numeradores</li>
+<li><strong>Multiplicación cruzada:</strong> para comparar a/b y c/d, compara a×d con b×c. Si a×d > b×c, entonces a/b > c/d</li>
+</ol>
 
-<strong>Fracciones mixtas:</strong> 2⅓ = 7/3 (multiplica entero × denominador + numerador).`,
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Sumar numeradores Y denominadores: 1/3 + 1/4 ≠ 2/7. ✅ Busca MCM</li>
+<li>❌ Olvidar simplificar la respuesta final</li>
+<li>❌ No convertir mixtos a impropios antes de operar</li>
+<li>❌ Confundir "de" con suma: "1/3 de 12" significa 1/3 × 12 = 4, no 1/3 + 12</li>
+</ul>`,
         examples: [
           {
             problem: "Simplifica: 3/4 + 2/6",
@@ -121,27 +209,89 @@ export const mathTopics: Topic[] = [
       {
         id: "porcentajes",
         title: "Porcentajes, Razones y Proporciones",
-        content: `<strong>Porcentajes:</strong>
-Un porcentaje es una fracción con denominador 100. Para calcular el X% de un número, multiplica por X/100.
+        content: `<strong style="color:#f59e0b">Porcentajes — el lenguaje de las proporciones</strong>
+Un porcentaje es literalmente "por cada cien". Es una forma de expresar una fracción con denominador 100. Cuando decimos "25%", estamos diciendo "25 de cada 100" o 25/100 = 1/4. Los porcentajes están en todas partes: descuentos en tiendas, impuestos, notas de la universidad, estadísticas.
 
-<strong>Conversiones:</strong>
+<strong>Tres formas de expresar lo mismo:</strong>
 <ul>
-<li>Fracción a porcentaje: divide y multiplica × 100. Ejemplo: 3/4 = 0.75 = 75%</li>
-<li>Porcentaje a decimal: divide entre 100. Ejemplo: 45% = 0.45</li>
-<li>Decimal a porcentaje: multiplica × 100. Ejemplo: 0.125 = 12.5%</li>
+<li><strong>Fracción:</strong> 3/4</li>
+<li><strong>Decimal:</strong> 0.75</li>
+<li><strong>Porcentaje:</strong> 75%</li>
 </ul>
 
-<strong>Aumentos y descuentos:</strong>
+<strong style="color:#f59e0b">Conversiones — domínalas para la PAA:</strong>
 <ul>
-<li>Aumento del 20%: Precio × 1.20</li>
-<li>Descuento del 15%: Precio × 0.85</li>
+<li><strong>Fracción → Porcentaje:</strong> divide el numerador entre el denominador, luego multiplica × 100. Ejemplo: 3/4 = 0.75 × 100 = 75%</li>
+<li><strong>Porcentaje → Decimal:</strong> divide entre 100 (mueve el punto dos lugares a la izquierda). Ejemplo: 45% = 0.45</li>
+<li><strong>Decimal → Porcentaje:</strong> multiplica × 100 (mueve el punto dos lugares a la derecha). Ejemplo: 0.125 = 12.5%</li>
+<li><strong>Porcentaje → Fracción:</strong> pon el porcentaje sobre 100 y simplifica. Ejemplo: 60% = 60/100 = 3/5</li>
 </ul>
 
-<strong>Razones y Proporciones:</strong>
-Una razón compara dos cantidades: a:b o a/b.
-Una proporción es la igualdad de dos razones: a/b = c/d.
+<strong>Equivalencias que debes memorizar:</strong>
+<code>1/2 = 50% | 1/4 = 25% | 3/4 = 75% | 1/5 = 20% | 1/3 ≈ 33.3% | 2/3 ≈ 66.7% | 1/8 = 12.5%</code>
 
-<strong>Regla de tres:</strong> Si a→b, entonces c→x. Resuelves: x = (b × c) / a.`,
+<strong style="color:#f59e0b">Calcular el X% de un número</strong>
+Multiplica el número por X/100 (o por el decimal equivalente).
+<ul>
+<li>¿Cuánto es el 15% de 200? → 200 × 0.15 = 30</li>
+<li><strong>Truco del 10%:</strong> El 10% de cualquier número es mover el punto decimal un lugar a la izquierda. 10% de 350 = 35. Luego puedes calcular otros: 5% = la mitad del 10%, 20% = el doble del 10%, etc.</li>
+</ul>
+
+<strong style="color:#f59e0b">Aumentos y descuentos — el atajo del factor</strong>
+En lugar de calcular el porcentaje y luego sumar/restar, usa un <strong>factor multiplicador</strong>:
+<ul>
+<li><strong>Aumento del 20%:</strong> Precio × (1 + 0.20) = Precio × 1.20</li>
+<li><strong>Descuento del 15%:</strong> Precio × (1 − 0.15) = Precio × 0.85</li>
+<li><strong>Aumento del 8% (impuesto):</strong> Precio × 1.08</li>
+</ul>
+
+<strong style="color:#f59e0b">⚠ Trampa clásica de la PAA: aumentos y descuentos sucesivos</strong>
+Un aumento del 20% seguido de un descuento del 20% <strong>NO te devuelve al precio original</strong>.
+<ul>
+<li>Precio original: B/.100</li>
+<li>Aumento 20%: 100 × 1.20 = B/.120</li>
+<li>Descuento 20%: 120 × 0.80 = B/.96</li>
+<li>¡El precio final es B/.96, NO B/.100! Perdiste un 4%.</li>
+</ul>
+La razón: el descuento se aplica sobre el precio <em>ya aumentado</em>, que es mayor.
+
+<strong style="color:#f59e0b">¿Cuál fue el porcentaje de cambio?</strong>
+<code>Porcentaje de cambio = (Valor nuevo − Valor original) / Valor original × 100</code>
+<ul>
+<li>Si el resultado es positivo → fue un aumento</li>
+<li>Si el resultado es negativo → fue un descuento</li>
+<li>Ejemplo: De B/.50 a B/.65 → (65−50)/50 × 100 = 30% de aumento</li>
+</ul>
+
+<strong style="color:#f59e0b">Razones y Proporciones</strong>
+Una <strong>razón</strong> compara dos cantidades: a:b o a/b. Ejemplo: si hay 12 niñas y 18 niños, la razón es 12:18 = 2:3 (simplificando entre 6).
+
+Una <strong>proporción</strong> es la igualdad de dos razones: a/b = c/d. La propiedad fundamental dice que <strong>a × d = b × c</strong> (productos cruzados).
+
+<strong style="color:#f59e0b">Regla de tres — la herramienta más usada</strong>
+La regla de tres resuelve problemas donde dos cantidades están relacionadas proporcionalmente.
+
+<strong>Proporción directa</strong> (cuando una sube, la otra también sube):
+Si 5 kg cuestan B/.15, ¿cuánto cuestan 8 kg?
+<code>5 kg → B/.15</code>
+<code>8 kg → x</code>
+<code>x = (15 × 8) / 5 = B/.24</code>
+
+<strong>Proporción inversa</strong> (cuando una sube, la otra baja):
+Si 3 obreros hacen un trabajo en 12 días, ¿en cuántos días lo hacen 4 obreros?
+<code>3 obreros → 12 días</code>
+<code>4 obreros → x días</code>
+<code>x = (3 × 12) / 4 = 9 días</code> (más obreros = menos días)
+
+<strong>¿Cómo sé si es directa o inversa?</strong> Pregúntate: "Si aumento la primera cantidad, ¿la segunda aumenta o disminuye?" Si aumenta → directa. Si disminuye → inversa.
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Calcular el porcentaje de cambio usando el valor nuevo en vez del original</li>
+<li>❌ Pensar que un aumento y descuento iguales se cancelan</li>
+<li>❌ Confundir proporción directa e inversa en problemas de obreros/tiempo</li>
+<li>❌ No simplificar razones a su mínima expresión</li>
+</ul>`,
         examples: [
           {
             problem: "Un artículo cuesta B/.80 y tiene 25% de descuento. ¿Cuál es el precio final?",
@@ -175,29 +325,77 @@ Una proporción es la igualdad de dos razones: a/b = c/d.
       {
         id: "potencias-raices",
         title: "Potencias y Raíces",
-        content: `<strong>Potencias:</strong>
-Una potencia indica multiplicación repetida: a<sup>n</sup> = a × a × ... × a (n veces).
+        content: `<strong style="color:#f59e0b">Potencias — multiplicación abreviada</strong>
+Una potencia indica multiplicación repetida: a<sup>n</sup> = a × a × ... × a (n veces). El número <strong>a</strong> es la <em>base</em> y <strong>n</strong> es el <em>exponente</em>. Ejemplo: 2<sup>5</sup> = 2 × 2 × 2 × 2 × 2 = 32.
 
-<strong>Leyes de exponentes:</strong>
+<strong>¿Por qué son importantes?</strong> Las potencias aparecen constantemente en la PAA: en fórmulas de área y volumen, en notación científica, en ecuaciones cuadráticas, y en problemas de crecimiento.
+
+<strong style="color:#f59e0b">Leyes de exponentes — entiende el PORQUÉ</strong>
+No memorices estas leyes sin entenderlas. Cada una tiene una lógica simple:
+
 <ul>
-<li>a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></li>
-<li>a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m−n</sup></li>
-<li>(a<sup>m</sup>)<sup>n</sup> = a<sup>m×n</sup></li>
-<li>a<sup>0</sup> = 1 (cualquier número elevado a 0 es 1)</li>
-<li>a<sup>−n</sup> = 1/a<sup>n</sup></li>
-<li>(a × b)<sup>n</sup> = a<sup>n</sup> × b<sup>n</sup></li>
+<li><strong>a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></strong> — ¿Por qué? Porque 2³ × 2⁴ = (2×2×2) × (2×2×2×2) = 2⁷. Estás juntando las multiplicaciones.</li>
+<li><strong>a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m−n</sup></strong> — ¿Por qué? Porque 2⁵ ÷ 2³ = (2×2×2×2×2) ÷ (2×2×2). Cancelas 3 doses y quedan 2 → 2².</li>
+<li><strong>(a<sup>m</sup>)<sup>n</sup> = a<sup>m×n</sup></strong> — ¿Por qué? Porque (2³)² = 2³ × 2³ = 2⁶. Estás multiplicando el grupo n veces.</li>
+<li><strong>a<sup>0</sup> = 1</strong> — ¿Por qué? Por el patrón: 2³=8, 2²=4, 2¹=2, 2⁰=? Cada vez divides entre 2: 8÷2=4, 4÷2=2, 2÷2=<strong>1</strong>. (Nota: 0⁰ no está definido)</li>
+<li><strong>a<sup>−n</sup> = 1/a<sup>n</sup></strong> — ¿Por qué? Siguiendo el patrón: 2¹=2, 2⁰=1, 2⁻¹=? Continúa dividiendo entre 2: 1÷2=1/2. Un exponente negativo NO hace el número negativo, lo convierte en <em>fracción</em>.</li>
+<li><strong>(a × b)<sup>n</sup> = a<sup>n</sup> × b<sup>n</sup></strong> — El exponente se "distribuye" en la multiplicación. Ejemplo: (3×2)² = 6² = 36 = 3² × 2² = 9 × 4 = 36 ✓</li>
+<li><strong>(a/b)<sup>n</sup> = a<sup>n</sup>/b<sup>n</sup></strong> — También se distribuye en la división.</li>
 </ul>
 
-<strong>Raíces:</strong>
-La raíz cuadrada √a es el número que multiplicado por sí mismo da a.
+<strong style="color:#f59e0b">Potencias que debes memorizar para la PAA:</strong>
+<code>2¹=2, 2²=4, 2³=8, 2⁴=16, 2⁵=32, 2⁶=64, 2⁷=128, 2⁸=256, 2⁹=512, 2¹⁰=1024</code>
+<code>3²=9, 3³=27, 3⁴=81 | 4²=16, 4³=64 | 5²=25, 5³=125 | 6²=36 | 7²=49 | 8²=64 | 9²=81</code>
+
+<strong style="color:#f59e0b">Raíces — la operación inversa</strong>
+La raíz cuadrada √a pregunta: "¿Qué número multiplicado por sí mismo da a?" Es lo opuesto a elevar al cuadrado.
 <ul>
 <li>√25 = 5 porque 5 × 5 = 25</li>
-<li>√a = a<sup>1/2</sup></li>
-<li>∛a = a<sup>1/3</sup> (raíz cúbica)</li>
+<li>√a = a<sup>1/2</sup> — una raíz es un exponente fraccionario</li>
+<li>∛a = a<sup>1/3</sup> (raíz cúbica) — pregunta: "¿Qué número elevado al cubo da a?"</li>
+<li>∛27 = 3 porque 3 × 3 × 3 = 27</li>
+<li>∛(−8) = −2 porque (−2)³ = −8 (las raíces cúbicas SÍ pueden ser negativas)</li>
 </ul>
 
-<strong>Simplificación de radicales:</strong>
-√50 = √(25 × 2) = 5√2`,
+<strong>Cuadrados perfectos que debes conocer:</strong>
+<code>1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225</code>
+(Son los cuadrados de 1 a 15)
+
+<strong style="color:#f59e0b">Simplificación de radicales — paso a paso</strong>
+Para simplificar √n, busca el mayor cuadrado perfecto que divida a n:
+<ol>
+<li>√50 → ¿Qué cuadrado perfecto divide a 50? 25 sí: 50 = 25 × 2</li>
+<li>√50 = √(25 × 2) = √25 × √2 = 5√2</li>
+</ol>
+
+<strong>Otro ejemplo:</strong> √72
+<ol>
+<li>72 = 36 × 2 (36 es cuadrado perfecto)</li>
+<li>√72 = √(36 × 2) = 6√2</li>
+</ol>
+
+<strong style="color:#f59e0b">Operaciones con radicales</strong>
+<ul>
+<li><strong>Suma/resta:</strong> solo si tienen el mismo radical. 3√5 + 7√5 = 10√5. Pero 3√5 + 7√3 NO se pueden sumar.</li>
+<li><strong>Multiplicación:</strong> √a × √b = √(a×b). Ejemplo: √3 × √12 = √36 = 6</li>
+<li><strong>División:</strong> √a / √b = √(a/b). Ejemplo: √50 / √2 = √25 = 5</li>
+</ul>
+
+<strong style="color:#f59e0b">Notación científica (aparece en la PAA)</strong>
+Escribe números muy grandes o pequeños como: a × 10<sup>n</sup> donde 1 ≤ a < 10.
+<ul>
+<li>3,500,000 = 3.5 × 10⁶ (mueves el punto 6 lugares a la izquierda)</li>
+<li>0.00042 = 4.2 × 10⁻⁴ (mueves el punto 4 lugares a la derecha)</li>
+</ul>
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Pensar que a⁻² es negativo. a⁻² = 1/a², que es positivo si a ≠ 0</li>
+<li>❌ Sumar exponentes al multiplicar bases diferentes: 2³ × 3² ≠ 6⁵. La ley solo aplica con la <em>misma base</em></li>
+<li>❌ Confundir (−3)² = 9 con −3² = −9</li>
+<li>❌ Creer que √(a² + b²) = a + b. Esto es FALSO. √(9+16) = √25 = 5, no 3+4=7</li>
+<li>❌ Sumar radicales diferentes: 2√3 + 5√2 no se simplifica más</li>
+</ul>`,
         examples: [
           {
             problem: "Simplifica: 2³ × 2⁴",
@@ -240,26 +438,89 @@ La raíz cuadrada √a es el número que multiplicado por sí mismo da a.
       {
         id: "expresiones-algebraicas",
         title: "Expresiones Algebraicas y Factorización",
-        content: `Una <strong>expresión algebraica</strong> combina números, variables y operaciones. Ejemplo: 3x² + 2x − 5.
+        content: `Una <strong>expresión algebraica</strong> combina números, variables (letras que representan valores desconocidos) y operaciones. Ejemplo: 3x² + 2x − 5. Este es un <strong>polinomio</strong> de segundo grado con tres <em>términos</em>.
 
-<strong>Términos semejantes:</strong> tienen la misma variable con el mismo exponente.
+<strong style="color:#f59e0b">Vocabulario esencial</strong>
 <ul>
-<li>3x² y 5x² son semejantes → se suman: 8x²</li>
-<li>3x² y 3x NO son semejantes</li>
+<li><strong>Término:</strong> cada parte separada por + o −. En <code>3x² + 2x − 5</code> hay tres términos: 3x², 2x, y −5</li>
+<li><strong>Coeficiente:</strong> el número que multiplica a la variable. En 3x², el coeficiente es 3</li>
+<li><strong>Término independiente:</strong> el término sin variable (la constante). Aquí es −5</li>
+<li><strong>Grado:</strong> el mayor exponente de la variable. Aquí es 2 (por x²)</li>
 </ul>
 
-<strong>Productos notables:</strong>
+<strong style="color:#f59e0b">Términos semejantes — cuándo y cómo combinar</strong>
+Dos términos son semejantes si tienen <em>exactamente la misma parte literal</em> (mismas variables con los mismos exponentes). Solo los términos semejantes se pueden sumar o restar:
 <ul>
-<li>(a + b)² = a² + 2ab + b²</li>
-<li>(a − b)² = a² − 2ab + b²</li>
-<li>(a + b)(a − b) = a² − b² (diferencia de cuadrados)</li>
+<li>3x² y 5x² son semejantes → 3x² + 5x² = 8x²</li>
+<li>3x² y 3x <strong>NO</strong> son semejantes (diferente exponente)</li>
+<li>4xy y −2xy son semejantes → 4xy − 2xy = 2xy</li>
+<li>4xy y 4x²y <strong>NO</strong> son semejantes</li>
 </ul>
 
-<strong>Factorización:</strong>
+<strong>Ejemplo de simplificación:</strong> 5x² + 3x − 2x² + 7 − x + 1
+<ol>
+<li>Agrupa semejantes: (5x² − 2x²) + (3x − x) + (7 + 1)</li>
+<li>Simplifica: 3x² + 2x + 8</li>
+</ol>
+
+<strong style="color:#f59e0b">Productos notables — los 3 más importantes</strong>
+Estas fórmulas aparecen constantemente en la PAA. No las memorices mecánicamente — entiéndelas:
+
+<strong>1. Cuadrado de un binomio (suma):</strong>
+<code>(a + b)² = a² + 2ab + b²</code>
+¿Por qué? Porque (a+b)² = (a+b)(a+b). Al multiplicar: a·a + a·b + b·a + b·b = a² + 2ab + b².
+Ejemplo: (x + 3)² = x² + 2(x)(3) + 3² = x² + 6x + 9. <strong>NO es x² + 9</strong> — el término del medio (2ab) es el que más se olvida.
+
+<strong>2. Cuadrado de un binomio (resta):</strong>
+<code>(a − b)² = a² − 2ab + b²</code>
+Es igual pero con el término del medio negativo. Note que b² siempre es <strong>positivo</strong> (se eleva al cuadrado).
+Ejemplo: (2x − 5)² = 4x² − 20x + 25
+
+<strong>3. Diferencia de cuadrados (suma por diferencia):</strong>
+<code>(a + b)(a − b) = a² − b²</code>
+Los términos del medio se cancelan: a·(−b) + b·a = −ab + ab = 0.
+Ejemplo: (x + 7)(x − 7) = x² − 49
+
+<strong style="color:#f59e0b">Factorización — descomponer en factores</strong>
+Factorizar es lo opuesto a expandir. Conviertes una expresión en un producto de factores más simples. Es esencial para resolver ecuaciones cuadráticas.
+
+<strong>Método 1: Factor común</strong>
+Busca el máximo factor que comparten todos los términos y sácalo:
 <ul>
-<li><strong>Factor común:</strong> 6x² + 9x = 3x(2x + 3)</li>
-<li><strong>Trinomio:</strong> x² + 5x + 6 = (x + 2)(x + 3)</li>
-<li><strong>Diferencia de cuadrados:</strong> x² − 16 = (x + 4)(x − 4)</li>
+<li>6x² + 9x → MCD de 6 y 9 es 3, ambos tienen x → <strong>3x(2x + 3)</strong></li>
+<li>4x³ − 8x² + 12x → Factor común 4x → <strong>4x(x² − 2x + 3)</strong></li>
+</ul>
+<strong>Siempre intenta factor común PRIMERO, antes de cualquier otro método.</strong>
+
+<strong>Método 2: Trinomio de la forma x² + bx + c</strong>
+Busca dos números que: multiplicados den <strong>c</strong> y sumados den <strong>b</strong>.
+<ul>
+<li>x² + 5x + 6: ¿Qué dos números multiplican 6 y suman 5? → <strong>2 y 3</strong> → (x + 2)(x + 3)</li>
+<li>x² − x − 12: ¿Qué números multiplican −12 y suman −1? → <strong>−4 y 3</strong> → (x − 4)(x + 3)</li>
+</ul>
+
+<strong>Método 3: Diferencia de cuadrados</strong>
+Si ves la forma a² − b², factoriza como (a + b)(a − b):
+<ul>
+<li>x² − 16 = x² − 4² = (x + 4)(x − 4)</li>
+<li>9x² − 25 = (3x)² − 5² = (3x + 5)(3x − 5)</li>
+</ul>
+
+<strong>Método 4: Trinomio cuadrado perfecto</strong>
+Si reconoces la forma a² ± 2ab + b², factoriza como (a ± b)²:
+<ul>
+<li>x² + 10x + 25 = (x + 5)² — porque 10x = 2(x)(5) y 25 = 5²</li>
+</ul>
+
+<strong style="color:#f59e0b">Verificación: siempre expande tu factorización</strong>
+Después de factorizar, multiplica los factores para comprobar que obtienes la expresión original. Si no coincide, revisa tus números.
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Olvidar el término 2ab en (a+b)²: (x+3)² ≠ x²+9. Es x²+6x+9</li>
+<li>❌ Confundir signos al factorizar trinomios con c negativo</li>
+<li>❌ No sacar factor común antes de intentar otros métodos</li>
+<li>❌ Pensar que x²+9 se puede factorizar como (x+3)(x+3). No, eso da x²+6x+9. La suma de cuadrados NO se factoriza con reales.</li>
 </ul>`,
         examples: [
           {
@@ -294,19 +555,67 @@ La raíz cuadrada √a es el número que multiplicado por sí mismo da a.
       {
         id: "ecuaciones-primer-grado",
         title: "Ecuaciones de Primer Grado",
-        content: `Una ecuación de primer grado tiene la forma <code>ax + b = c</code>. El objetivo es despejar la variable.
+        content: `Una ecuación de primer grado (o <strong>ecuación lineal</strong>) tiene la forma <code>ax + b = c</code>, donde la variable x aparece con exponente 1 (no hay x², x³, etc.). El objetivo es <strong>despejar la variable</strong> — aislarla de un lado del igual.
 
-<strong>Pasos para resolver:</strong>
+<strong style="color:#f59e0b">¿Qué significa "resolver" una ecuación?</strong>
+Significa encontrar el valor de x que hace que ambos lados sean iguales. Es como una balanza: todo lo que hagas de un lado, debes hacerlo del otro para mantener el equilibrio.
+
+<strong style="color:#f59e0b">Procedimiento paso a paso:</strong>
 <ol>
-<li>Elimina paréntesis (distribuye)</li>
-<li>Agrupa términos con variable a un lado y constantes al otro</li>
-<li>Simplifica términos semejantes</li>
-<li>Divide por el coeficiente de la variable</li>
+<li><strong>Elimina paréntesis</strong> — distribuye los coeficientes</li>
+<li><strong>Elimina fracciones</strong> — multiplica todo por el MCM de los denominadores</li>
+<li><strong>Agrupa</strong> — variables a un lado, constantes al otro (al mover un término, cambia de signo)</li>
+<li><strong>Simplifica</strong> — combina términos semejantes</li>
+<li><strong>Divide</strong> — por el coeficiente de la variable</li>
+<li><strong>Verifica</strong> — sustituye tu respuesta en la ecuación original</li>
 </ol>
 
-<strong>Principio fundamental:</strong> Lo que haces de un lado de la ecuación, debes hacerlo del otro.
+<strong style="color:#f59e0b">Ejemplo detallado:</strong> Resuelve 3(x − 2) + 4 = 2x + 5
+<ol>
+<li><strong>Distribuir:</strong> 3x − 6 + 4 = 2x + 5</li>
+<li><strong>Simplificar cada lado:</strong> 3x − 2 = 2x + 5</li>
+<li><strong>Variables a la izquierda:</strong> 3x − 2x = 5 + 2</li>
+<li><strong>Simplificar:</strong> x = 7</li>
+<li><strong>Verificar:</strong> 3(7−2) + 4 = 3(5) + 4 = 19. Y 2(7) + 5 = 19 ✓</li>
+</ol>
 
-<strong>Ecuaciones con fracciones:</strong> Multiplica toda la ecuación por el MCM de los denominadores para eliminar fracciones.`,
+<strong style="color:#f59e0b">Ecuaciones con fracciones — elimínalas primero</strong>
+Multiplica <strong>toda</strong> la ecuación (todos los términos, ambos lados) por el MCM de los denominadores.
+
+<strong>Ejemplo:</strong> x/3 + x/4 = 7
+<ol>
+<li>MCM de 3 y 4 = 12</li>
+<li>Multiplica todo por 12: 12·(x/3) + 12·(x/4) = 12·7</li>
+<li>Simplifica: 4x + 3x = 84</li>
+<li>Combina: 7x = 84 → x = 12</li>
+</ol>
+
+<strong style="color:#f59e0b">Problemas con palabras — la clave es traducir</strong>
+La PAA frecuentemente presenta ecuaciones disfrazadas de problemas con palabras. El truco es <strong>traducir el español a álgebra</strong>:
+<ul>
+<li>"un número" → x</li>
+<li>"el doble de" → 2x</li>
+<li>"tres más que" → x + 3</li>
+<li>"la mitad de" → x/2</li>
+<li>"consecutivos" → x, x+1, x+2</li>
+<li>"pares consecutivos" → x, x+2, x+4</li>
+<li>"la edad de Ana es el triple de la de su hijo" → a = 3h</li>
+</ul>
+
+<strong style="color:#f59e0b">Casos especiales que aparecen en la PAA:</strong>
+<ul>
+<li><strong>Identidad (infinitas soluciones):</strong> Si al simplificar llegas a algo como 0 = 0 o 5 = 5, la ecuación es verdadera para CUALQUIER valor de x. Ejemplo: 2(x+1) = 2x + 2 → siempre verdadera.</li>
+<li><strong>Contradicción (sin solución):</strong> Si llegas a algo como 0 = 5, la ecuación no tiene solución. Ejemplo: x + 1 = x + 3 → 1 = 3, imposible.</li>
+</ul>
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ No cambiar el signo al mover un término al otro lado</li>
+<li>❌ Multiplicar solo un lado por el MCM en vez de toda la ecuación</li>
+<li>❌ Distribuir mal: 3(x − 2) = 3x − 6, NO 3x − 2</li>
+<li>❌ Dividir incorrectamente: si 5x = 15, x = 3 (no x = 75)</li>
+<li>❌ No verificar la respuesta sustituyendo en la ecuación original</li>
+</ul>`,
         examples: [
           {
             problem: "Resuelve: 3(x − 2) + 4 = 2x + 5",
@@ -340,28 +649,69 @@ La raíz cuadrada √a es el número que multiplicado por sí mismo da a.
       {
         id: "ecuaciones-segundo-grado",
         title: "Ecuaciones de Segundo Grado",
-        content: `Una ecuación cuadrática tiene la forma <code>ax² + bx + c = 0</code>.
+        content: `Una ecuación cuadrática tiene la forma <code>ax² + bx + c = 0</code>, donde <strong>a ≠ 0</strong>. Se llama "cuadrática" o "de segundo grado" porque el mayor exponente de la variable es 2. Este tipo de ecuación puede tener <strong>dos soluciones, una solución, o ninguna solución real</strong>.
 
-<strong>Métodos de solución:</strong>
+<strong style="color:#f59e0b">¿Por qué puede tener dos soluciones?</strong>
+Piénsalo gráficamente: la ecuación ax² + bx + c = 0 pregunta "¿en qué puntos la parábola y = ax² + bx + c cruza el eje x?". Una parábola puede cruzar el eje x en 2 puntos, tocarlo en 1 punto, o no tocarlo nunca.
 
-<strong>1. Factorización:</strong>
-Si puedes factorizar, igualas cada factor a cero.
-x² − 5x + 6 = 0 → (x−2)(x−3) = 0 → x = 2 o x = 3
+<strong style="color:#f59e0b">Método 1: Factorización (el más rápido)</strong>
+Si puedes descomponer el trinomio en dos factores, usas la <strong>propiedad del producto cero</strong>: si A × B = 0, entonces A = 0 o B = 0.
 
-<strong>2. Fórmula general (cuadrática):</strong>
-x = (−b ± √(b²−4ac)) / 2a
+<strong>Ejemplo paso a paso:</strong> x² − 5x + 6 = 0
+<ol>
+<li>Busca dos números que multipliquen <strong>6</strong> y sumen <strong>−5</strong>: son −2 y −3</li>
+<li>Factoriza: (x − 2)(x − 3) = 0</li>
+<li>Iguala cada factor a cero: x − 2 = 0 → x = 2, o x − 3 = 0 → x = 3</li>
+<li>Soluciones: x = 2 y x = 3</li>
+<li>Verifica: 2² − 5(2) + 6 = 4 − 10 + 6 = 0 ✓ | 3² − 5(3) + 6 = 9 − 15 + 6 = 0 ✓</li>
+</ol>
 
-<strong>El discriminante</strong> (b²−4ac) indica:
+<strong style="color:#f59e0b">Método 2: Fórmula cuadrática (funciona SIEMPRE)</strong>
+Cuando no puedes factorizar fácilmente, usa la fórmula general:
+<div style="text-align:center;margin:0.8rem 0;font-size:1.1em"><code>x = (−b ± √(b² − 4ac)) / (2a)</code></div>
+
+<strong>Ejemplo paso a paso:</strong> 2x² + 3x − 2 = 0
+<ol>
+<li>Identifica: a = 2, b = 3, c = −2</li>
+<li>Calcula el discriminante: Δ = b² − 4ac = 9 − 4(2)(−2) = 9 + 16 = 25</li>
+<li>Aplica la fórmula: x = (−3 ± √25) / (2·2) = (−3 ± 5) / 4</li>
+<li>Dos soluciones: x = (−3 + 5)/4 = 2/4 = <strong>1/2</strong> y x = (−3 − 5)/4 = −8/4 = <strong>−2</strong></li>
+</ol>
+
+<strong style="color:#f59e0b">El discriminante (Δ = b² − 4ac) — tu detector de soluciones</strong>
+Antes de resolver toda la ecuación, calcula el discriminante para saber qué esperar:
 <ul>
-<li>Si es positivo → 2 soluciones reales</li>
-<li>Si es cero → 1 solución real (raíz doble)</li>
-<li>Si es negativo → no hay soluciones reales</li>
+<li><strong>Δ > 0</strong> → 2 soluciones reales diferentes (la parábola cruza el eje x en 2 puntos)</li>
+<li><strong>Δ = 0</strong> → 1 solución real repetida o "raíz doble" (la parábola toca el eje x en 1 punto)</li>
+<li><strong>Δ < 0</strong> → No hay soluciones reales (la parábola no toca el eje x)</li>
 </ul>
+Si la PAA pregunta "¿cuántas soluciones tiene?", basta con calcular el discriminante sin resolver toda la fórmula.
 
-<strong>Relación entre raíces y coeficientes:</strong>
+<strong style="color:#f59e0b">Relación entre raíces y coeficientes (Vieta)</strong>
+Si las raíces de ax² + bx + c = 0 son r₁ y r₂, entonces:
 <ul>
-<li>Suma de raíces = −b/a</li>
-<li>Producto de raíces = c/a</li>
+<li><strong>Suma de raíces:</strong> r₁ + r₂ = −b/a</li>
+<li><strong>Producto de raíces:</strong> r₁ × r₂ = c/a</li>
+</ul>
+Esto es útil cuando te preguntan por la suma o producto sin pedirte que resuelvas. También puedes reconstruir la ecuación: x² − (suma)x + (producto) = 0.
+
+<strong>Ejemplo:</strong> Si las raíces son 4 y −1, la ecuación es x² − (4+(−1))x + (4)(−1) = 0 → x² − 3x − 4 = 0.
+
+<strong style="color:#f59e0b">Método 3: Completar el cuadrado</strong>
+Transforma ax² + bx + c = 0 en la forma (x + p)² = q:
+<ol>
+<li>Pasa c al otro lado: x² + bx = −c</li>
+<li>Suma (b/2)² a ambos lados: x² + bx + (b/2)² = −c + (b/2)²</li>
+<li>Factoriza el lado izquierdo como cuadrado perfecto</li>
+</ol>
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Olvidar que a, b, c incluyen sus signos: en x² − 7x + 10 = 0, b = <strong>−7</strong> (no 7)</li>
+<li>❌ No poner la ecuación en forma ax² + bx + c = 0 antes de aplicar la fórmula</li>
+<li>❌ Olvidar el ± en la fórmula y dar solo una solución</li>
+<li>❌ Error con el 2a: x = (−b ± √Δ) / <strong>2a</strong>, no / 2 × a</li>
+<li>❌ No verificar que ambas soluciones satisfacen la ecuación original</li>
 </ul>`,
         examples: [
           {
@@ -396,27 +746,75 @@ x = (−b ± √(b²−4ac)) / 2a
       {
         id: "sistemas-ecuaciones",
         title: "Sistemas de Ecuaciones",
-        content: `Un sistema de ecuaciones tiene dos o más ecuaciones con las mismas variables.
+        content: `Un <strong>sistema de ecuaciones</strong> es un conjunto de dos o más ecuaciones que deben cumplirse <em>simultáneamente</em>. Las variables tienen que satisfacer <strong>todas</strong> las ecuaciones al mismo tiempo. En la PAA, generalmente se trabaja con sistemas de 2 ecuaciones con 2 variables (x e y).
 
-<strong>Método de sustitución:</strong>
+<strong style="color:#f59e0b">¿Qué significa resolver un sistema?</strong>
+Encontrar los valores de x e y que hacen verdaderas <strong>ambas</strong> ecuaciones al mismo tiempo. Gráficamente, cada ecuación lineal es una recta, y la solución es el punto donde las rectas se cruzan.
+
+<strong style="color:#f59e0b">Método 1: Sustitución — mejor cuando una variable ya está despejada</strong>
 <ol>
-<li>Despeja una variable de una ecuación</li>
-<li>Sustituye en la otra ecuación</li>
-<li>Resuelve y sustituye de vuelta</li>
+<li>Despeja una variable de una ecuación (elige la más fácil)</li>
+<li>Sustituye esa expresión en la otra ecuación</li>
+<li>Resuelve la ecuación resultante (ahora tiene una sola variable)</li>
+<li>Sustituye el valor encontrado en la expresión del paso 1 para hallar la otra variable</li>
 </ol>
 
-<strong>Método de eliminación:</strong>
+<strong>Ejemplo detallado:</strong> y = 2x + 1 y 3x + y = 11
 <ol>
-<li>Multiplica una o ambas ecuaciones para que un coeficiente sea igual</li>
-<li>Suma o resta las ecuaciones para eliminar una variable</li>
-<li>Resuelve y sustituye</li>
+<li>La primera ecuación ya tiene y despejada: y = 2x + 1</li>
+<li>Sustituye en la segunda: 3x + (2x + 1) = 11</li>
+<li>Resuelve: 5x + 1 = 11 → 5x = 10 → x = 2</li>
+<li>Sustituye x = 2 en y = 2(2) + 1 = 5</li>
+<li>Solución: (2, 5). Verifica en ambas: y = 2(2)+1 = 5 ✓ y 3(2)+5 = 11 ✓</li>
 </ol>
 
-<strong>Interpretación gráfica:</strong>
+<strong style="color:#f59e0b">Método 2: Eliminación — mejor cuando los coeficientes son simples</strong>
+<ol>
+<li>Multiplica una o ambas ecuaciones por un número para que los coeficientes de una variable sean iguales (o opuestos)</li>
+<li>Suma o resta las ecuaciones para eliminar esa variable</li>
+<li>Resuelve la ecuación resultante</li>
+<li>Sustituye en cualquiera de las ecuaciones originales</li>
+</ol>
+
+<strong>Ejemplo detallado:</strong> x + y = 10 y 2x − y = 5
+<ol>
+<li>Observa que y tiene coeficientes +1 y −1 (opuestos). Perfecto para sumar.</li>
+<li>Suma las ecuaciones: (x + y) + (2x − y) = 10 + 5 → 3x = 15</li>
+<li>Resuelve: x = 5</li>
+<li>Sustituye: 5 + y = 10 → y = 5</li>
+<li>Solución: (5, 5)</li>
+</ol>
+
+<strong style="color:#f59e0b">¿Cuándo usar cada método?</strong>
 <ul>
-<li>Solución única = las rectas se cruzan en un punto</li>
-<li>Sin solución = rectas paralelas</li>
-<li>Infinitas soluciones = misma recta</li>
+<li><strong>Sustitución:</strong> cuando una variable ya está despejada (y = ...) o su coeficiente es 1</li>
+<li><strong>Eliminación:</strong> cuando los coeficientes son fáciles de igualar multiplicando</li>
+<li>En la PAA, elige el que te parezca más rápido mirando los coeficientes</li>
+</ul>
+
+<strong style="color:#f59e0b">Interpretación gráfica — 3 posibilidades</strong>
+<ul>
+<li><strong>Solución única</strong> = las rectas se cruzan en exactamente un punto (pendientes diferentes)</li>
+<li><strong>Sin solución</strong> = rectas paralelas que nunca se tocan (misma pendiente, diferente intercepto). Al resolver, llegas a una contradicción como 0 = 5</li>
+<li><strong>Infinitas soluciones</strong> = ambas ecuaciones representan la misma recta. Al resolver, llegas a una identidad como 0 = 0</li>
+</ul>
+
+<strong>¿Cómo detectar sin resolver?</strong> Si a₁/a₂ = b₁/b₂ ≠ c₁/c₂ → paralelas (sin solución). Si a₁/a₂ = b₁/b₂ = c₁/c₂ → misma recta (infinitas).
+
+<strong style="color:#f59e0b">Problemas con palabras — muy comunes en la PAA</strong>
+La clave es traducir la historia a ecuaciones:
+<ul>
+<li>"La suma de dos números es 25 y su diferencia es 7" → x + y = 25 y x − y = 7</li>
+<li>"Un boleto de adulto cuesta B/.5 y uno de niño B/.3. Se vendieron 20 boletos por B/.76" → a + n = 20 y 5a + 3n = 76</li>
+<li>"Pedro tiene el doble de dinero que Juan. Juntos tienen B/.45" → p = 2j y p + j = 45</li>
+</ul>
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Sustituir en la misma ecuación de donde despejaste (obtienes una identidad trivial)</li>
+<li>❌ Olvidar verificar la solución en <strong>ambas</strong> ecuaciones</li>
+<li>❌ Al multiplicar una ecuación, olvidar multiplicar TODOS los términos (incluyendo el lado derecho)</li>
+<li>❌ Confundir "sin solución" con "la solución es cero". Son cosas muy diferentes.</li>
 </ul>`,
         examples: [
           {
@@ -451,23 +849,72 @@ x = (−b ± √(b²−4ac)) / 2a
       {
         id: "desigualdades",
         title: "Desigualdades",
-        content: `Las desigualdades usan los símbolos <code>&lt;</code>, <code>&gt;</code>, <code>≤</code>, <code>≥</code>.
+        content: `Las desigualdades (o <strong>inecuaciones</strong>) son como ecuaciones, pero en vez de "=" usan los símbolos <code>&lt;</code> (menor que), <code>&gt;</code> (mayor que), <code>≤</code> (menor o igual), <code>≥</code> (mayor o igual). A diferencia de una ecuación que tiene una respuesta puntual, una desigualdad tiene un <strong>conjunto de soluciones</strong> — un rango de valores.
 
-<strong>Reglas:</strong>
+<strong style="color:#f59e0b">Las 3 reglas fundamentales</strong>
+Se resuelven igual que ecuaciones, con una diferencia crucial:
 <ul>
-<li>Puedes sumar o restar lo mismo de ambos lados sin cambiar el sentido</li>
-<li>Puedes multiplicar o dividir por un positivo sin cambiar el sentido</li>
-<li><strong>Al multiplicar o dividir por un negativo, INVIERTES el sentido</strong></li>
+<li><strong>Regla 1:</strong> Puedes sumar o restar lo mismo de ambos lados <em>sin cambiar</em> el sentido de la desigualdad</li>
+<li><strong>Regla 2:</strong> Puedes multiplicar o dividir por un <em>positivo</em> sin cambiar el sentido</li>
+<li><strong>⚠ Regla 3 (LA MÁS IMPORTANTE):</strong> Al multiplicar o dividir por un <strong>negativo</strong>, debes <strong>INVERTIR</strong> el sentido de la desigualdad</li>
 </ul>
 
-<strong>Ejemplo:</strong>
-−2x > 6 → al dividir por −2, inviertes: x < −3
+<strong style="color:#f59e0b">¿Por qué se invierte el signo al multiplicar por un negativo?</strong>
+Piénsalo con números: sabemos que 2 < 5. Si multiplicamos ambos por −1: −2 y −5. Ahora −2 > −5 (−2 está más a la derecha en la recta numérica). El orden se invirtió. Esto SIEMPRE pasa al multiplicar por un negativo.
 
-<strong>Intervalos:</strong>
+<strong style="color:#f59e0b">Ejemplo paso a paso:</strong> Resuelve −2x > 6
+<ol>
+<li>Dividimos ambos lados por −2</li>
+<li><strong>Como dividimos por un negativo, invertimos el signo:</strong> x < −3</li>
+<li>Solución: todos los números menores que −3</li>
+</ol>
+
+<strong style="color:#f59e0b">Otro ejemplo:</strong> Resuelve 5 − 3x ≤ 14
+<ol>
+<li>Resta 5 de ambos lados: −3x ≤ 9</li>
+<li>Divide por −3 e <strong>invierte</strong>: x ≥ −3</li>
+<li>Solución: todos los números desde −3 en adelante (incluyendo −3)</li>
+</ol>
+
+<strong style="color:#f59e0b">Notación de intervalos — el idioma de las desigualdades</strong>
+Los intervalos son una forma compacta de escribir conjuntos de números:
 <ul>
-<li>x > 3 → (3, ∞) — paréntesis = no incluye el 3</li>
-<li>x ≥ 3 → [3, ∞) — corchete = incluye el 3</li>
-<li>2 < x ≤ 5 → (2, 5]</li>
+<li><strong>x > 3</strong> → (3, ∞) — paréntesis redondo = NO incluye el 3 (abierto)</li>
+<li><strong>x ≥ 3</strong> → [3, ∞) — corchete = SÍ incluye el 3 (cerrado)</li>
+<li><strong>2 < x ≤ 5</strong> → (2, 5] — abierto en 2, cerrado en 5</li>
+<li><strong>−1 ≤ x ≤ 4</strong> → [−1, 4] — cerrado en ambos extremos</li>
+<li><strong>Nota:</strong> el infinito (∞) SIEMPRE lleva paréntesis, nunca corchete (no puedes "incluir" el infinito)</li>
+</ul>
+
+<strong>Regla mnemotécnica:</strong> Paréntesis ( ) para < y > (estrictos, abiertos). Corchetes [ ] para ≤ y ≥ (incluyen el valor, cerrados).
+
+<strong style="color:#f59e0b">Desigualdades compuestas (dobles)</strong>
+A veces un valor está entre dos límites: −5 < 2x + 1 < 9
+<ol>
+<li>Resuelve para x restando 1 de las <strong>tres partes</strong>: −6 < 2x < 8</li>
+<li>Divide las tres partes por 2: −3 < x < 4</li>
+<li>Solución en intervalo: (−3, 4)</li>
+</ol>
+
+<strong style="color:#f59e0b">Desigualdades con valor absoluto</strong>
+<ul>
+<li><strong>|x| < a</strong> significa −a < x < a (el valor está <em>dentro</em> del rango)</li>
+<li><strong>|x| > a</strong> significa x < −a o x > a (el valor está <em>fuera</em> del rango)</li>
+<li>Ejemplo: |x| ≤ 4 → −4 ≤ x ≤ 4 → [−4, 4]</li>
+<li>Ejemplo: |x − 2| > 3 → x − 2 < −3 o x − 2 > 3 → x < −1 o x > 5</li>
+</ul>
+
+<strong style="color:#f59e0b">Desigualdades cuadráticas (nivel avanzado PAA)</strong>
+Para resolver x² < 9: piensa en |x| < 3, lo que da −3 < x < 3.
+Para resolver x² > 9: piensa en |x| > 3, lo que da x < −3 o x > 3.
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ El error #1: olvidar invertir el sentido al dividir por un negativo</li>
+<li>❌ Confundir paréntesis y corchetes en la notación de intervalos</li>
+<li>❌ Escribir [−3, ∞] en vez de [−3, ∞) — el infinito siempre va con paréntesis</li>
+<li>❌ En desigualdades dobles, operar solo dos partes en vez de las tres</li>
+<li>❌ En |x| > a, escribir −a < x < a en vez de x < −a o x > a</li>
 </ul>`,
         examples: [
           {
@@ -502,21 +949,43 @@ x = (−b ± √(b²−4ac)) / 2a
       {
         id: "funciones",
         title: "Funciones",
-        content: `Una <strong>función</strong> es una relación que asigna a cada valor de entrada (x) exactamente un valor de salida. Se escribe <code>f(x)</code>.
+        content: `Una <strong>función</strong> es una relación que asigna a cada valor de entrada (x) <strong>exactamente un</strong> valor de salida. Se escribe <code>f(x)</code>, que se lee "f de x". Piensa en una función como una <em>máquina</em>: metes un número (x), la máquina lo procesa, y sale un resultado f(x).
 
-<strong>Conceptos clave:</strong>
+<strong style="color:#f59e0b">¿Qué NO es una función?</strong>
+Si un mismo valor de x produce <em>dos resultados diferentes</em>, NO es función. Gráficamente, si una línea vertical toca la gráfica en más de un punto, no es función (<strong>prueba de la línea vertical</strong>).
+
+<strong style="color:#f59e0b">Conceptos clave que debes dominar:</strong>
 <ul>
-<li><strong>Dominio:</strong> todos los valores posibles de x (entrada)</li>
-<li><strong>Rango:</strong> todos los valores posibles de f(x) (salida)</li>
-<li><strong>Evaluar:</strong> sustituir x por un valor. Si f(x) = 2x + 3, entonces f(4) = 2(4) + 3 = 11</li>
+<li><strong>Dominio:</strong> todos los valores de x que puedes usar como entrada. Pregunta: "¿qué valores de x están permitidos?"</li>
+<li><strong>Rango:</strong> todos los valores de f(x) que la función puede producir como salida</li>
+<li><strong>Evaluar f(a):</strong> sustituir x por el valor a. Si f(x) = 2x + 3, entonces f(4) = 2(4) + 3 = 11</li>
 </ul>
 
-<strong>Función lineal: f(x) = mx + b</strong>
+<strong style="color:#f59e0b">Restricciones comunes del dominio:</strong>
 <ul>
-<li><strong>m</strong> = pendiente (inclinación de la recta). Si m > 0 sube, si m < 0 baja.</li>
-<li><strong>b</strong> = intercepto en y (donde cruza el eje y)</li>
-<li>La pendiente entre dos puntos: m = (y₂ − y₁) / (x₂ − x₁)</li>
+<li><strong>Fracciones:</strong> el denominador no puede ser cero. En f(x) = 1/(x−3), el dominio es x ≠ 3</li>
+<li><strong>Raíces cuadradas:</strong> lo que está dentro debe ser ≥ 0. En f(x) = √(x−5), el dominio es x ≥ 5</li>
+<li><strong>Polinomios:</strong> todos los reales (sin restricciones). f(x) = x² + 3x tiene dominio = todos los reales</li>
 </ul>
+
+<strong style="color:#f59e0b">Función lineal: f(x) = mx + b — la más importante</strong>
+Su gráfica es una <strong>línea recta</strong>. Los dos parámetros clave son:
+<ul>
+<li><strong>m = pendiente</strong> — mide la inclinación. Indica cuánto cambia y por cada unidad que avanza x.
+  <ul>
+  <li>Si m > 0 → la recta <strong>sube</strong> (de izquierda a derecha)</li>
+  <li>Si m < 0 → la recta <strong>baja</strong></li>
+  <li>Si m = 0 → la recta es <strong>horizontal</strong> (función constante)</li>
+  <li>Cuanto mayor sea |m|, más empinada es la recta</li>
+  </ul>
+</li>
+<li><strong>b = intercepto en y</strong> — es el punto donde la recta cruza el eje y (cuando x = 0). f(0) = b.</li>
+</ul>
+
+<strong>Calcular la pendiente entre dos puntos:</strong> <code>m = (y₂ − y₁) / (x₂ − x₁)</code>
+Ejemplo: Puntos (1, 3) y (4, 9) → m = (9−3)/(4−1) = 6/3 = 2. La recta sube 2 unidades por cada 1 que avanza en x.
+
+<strong>Encontrar el intercepto en x (raíz):</strong> Iguala f(x) = 0 y despeja x. En f(x) = 2x − 6: 0 = 2x − 6 → x = 3. La recta cruza el eje x en (3, 0).
 
 <div style="display:flex;justify-content:center;margin:1.5rem 0">
 <svg width="280" height="220" viewBox="0 0 280 220">
@@ -535,12 +1004,25 @@ x = (−b ± √(b²−4ac)) / 2a
 </svg>
 </div>
 
-<strong>Función cuadrática: f(x) = ax² + bx + c</strong>
+<strong style="color:#f59e0b">Rectas paralelas y perpendiculares:</strong>
 <ul>
-<li>Su gráfica es una <strong>parábola</strong></li>
-<li>Si a > 0, abre hacia arriba (tiene mínimo). Si a < 0, abre hacia abajo (tiene máximo).</li>
-<li><strong>Vértice:</strong> x = −b/(2a), luego sustituye para hallar y</li>
-<li><strong>Eje de simetría:</strong> x = −b/(2a)</li>
+<li><strong>Paralelas:</strong> tienen la MISMA pendiente (m₁ = m₂) pero diferente intercepto. Nunca se cruzan.</li>
+<li><strong>Perpendiculares:</strong> sus pendientes son recíprocas negativas (m₁ × m₂ = −1). Forman ángulo de 90°. Si una tiene pendiente 2, la perpendicular tiene pendiente −1/2.</li>
+</ul>
+
+<strong style="color:#f59e0b">Composición de funciones</strong>
+f(g(x)) significa evaluar g primero, y luego usar el resultado como entrada de f.
+Ejemplo: Si f(x) = 3x − 1 y g(x) = x + 5, entonces f(g(2)) = f(2+5) = f(7) = 3(7)−1 = 20.
+
+<strong style="color:#f59e0b">Función cuadrática: f(x) = ax² + bx + c</strong>
+Su gráfica es una <strong>parábola</strong> — una curva en forma de U (o U invertida). Es una de las funciones más importantes en la PAA.
+<ul>
+<li>Si <strong>a > 0</strong>, abre hacia <strong>arriba</strong> (forma de U, tiene un punto <em>mínimo</em>)</li>
+<li>Si <strong>a < 0</strong>, abre hacia <strong>abajo</strong> (forma de ∩, tiene un punto <em>máximo</em>)</li>
+<li>Cuanto mayor sea |a|, más "estrecha" es la parábola</li>
+<li><strong>Vértice:</strong> el punto más alto o más bajo. x = −b/(2a), luego sustituye para hallar y</li>
+<li><strong>Eje de simetría:</strong> la línea vertical x = −b/(2a) que divide la parábola en dos mitades iguales</li>
+<li><strong>Raíces (ceros):</strong> donde la parábola cruza el eje x. Se hallan resolviendo ax² + bx + c = 0</li>
 </ul>
 
 <div style="display:flex;justify-content:center;margin:1.5rem 0">
@@ -554,7 +1036,24 @@ x = (−b ± √(b²−4ac)) / 2a
   <text x="90" y="15" fill="#10b981" font-family="sans-serif" font-size="10">Eje de simetría</text>
   <text x="200" y="60" fill="#e2e8f0" font-family="sans-serif" font-size="12">a > 0</text>
 </svg>
-</div>`,
+</div>
+
+<strong style="color:#f59e0b">Ejemplo: hallar el vértice</strong>
+f(x) = x² − 6x + 8
+<ol>
+<li>x del vértice: x = −(−6)/(2·1) = 3</li>
+<li>y del vértice: f(3) = 9 − 18 + 8 = −1</li>
+<li>Vértice: (3, −1). Como a = 1 > 0, este es el punto mínimo.</li>
+</ol>
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Confundir f(x) = 0 (buscar raíces) con f(0) (evaluar en x=0, da el intercepto en y)</li>
+<li>❌ Olvidar que la pendiente puede ser negativa o fraccionaria</li>
+<li>❌ Evaluar f(−2) como f(−2) = 2(−2) + 3 = −4 + 3 = −1 y confundirse con los signos</li>
+<li>❌ En composición de funciones, evaluar en el orden incorrecto: f(g(x)) ≠ g(f(x))</li>
+<li>❌ Pensar que el vértice siempre está en el origen</li>
+</ul>`,
         examples: [
           {
             problem: "Si f(x) = 3x − 5, ¿cuánto es f(4)?",
@@ -592,26 +1091,77 @@ x = (−b ± √(b²−4ac)) / 2a
       {
         id: "sucesiones",
         title: "Sucesiones y Patrones",
-        content: `Una <strong>sucesión</strong> es una lista ordenada de números que sigue un patrón.
+        content: `Una <strong>sucesión</strong> es una lista ordenada de números que sigue un patrón o regla definida. Cada número de la lista es un <strong>término</strong>. Las sucesiones son uno de los temas favoritos de la PAA porque evalúan tu capacidad de reconocer patrones.
 
-<strong>Sucesión aritmética:</strong> se suma siempre la misma cantidad (diferencia común <strong>d</strong>).
+<strong style="color:#f59e0b">Sucesión aritmética — suma constante</strong>
+En una sucesión aritmética, cada término se obtiene <strong>sumando siempre la misma cantidad</strong> al anterior. Esta cantidad se llama <strong>diferencia común (d)</strong>.
+
 <ul>
-<li>Ejemplo: 2, 5, 8, 11, 14, ... (d = 3)</li>
-<li><strong>Término general:</strong> aₙ = a₁ + (n − 1)·d</li>
-<li><strong>Suma de n términos:</strong> Sₙ = n(a₁ + aₙ)/2</li>
+<li>Ejemplo: 2, 5, 8, 11, 14, ... → d = 3 (cada término es 3 más que el anterior)</li>
+<li>Ejemplo: 20, 17, 14, 11, ... → d = −3 (la diferencia puede ser negativa → decrece)</li>
 </ul>
 
-<strong>Sucesión geométrica:</strong> se multiplica siempre por la misma cantidad (razón común <strong>r</strong>).
+<strong>Fórmulas de la sucesión aritmética:</strong>
 <ul>
-<li>Ejemplo: 3, 6, 12, 24, 48, ... (r = 2)</li>
-<li><strong>Término general:</strong> aₙ = a₁ · r⁽ⁿ⁻¹⁾</li>
-<li><strong>Suma de n términos:</strong> Sₙ = a₁(rⁿ − 1)/(r − 1)</li>
+<li><strong>Término general:</strong> <code>aₙ = a₁ + (n − 1)·d</code> — te da directamente cualquier término sin calcular todos los anteriores</li>
+<li><strong>Suma de n términos:</strong> <code>Sₙ = n(a₁ + aₙ)/2</code> — es el promedio del primero y último, multiplicado por la cantidad</li>
 </ul>
 
-<strong>¿Cómo identificar el tipo?</strong>
+<strong style="color:#f59e0b">Ejemplo paso a paso:</strong> En la sucesión 4, 7, 10, 13, ..., ¿cuál es el término 20?
+<ol>
+<li>Identifica: a₁ = 4, d = 7 − 4 = 3</li>
+<li>Aplica la fórmula: a₂₀ = 4 + (20 − 1)·3 = 4 + 57 = 61</li>
+</ol>
+
+<strong style="color:#f59e0b">¿Cómo encontrar d?</strong> Resta cualquier término menos el anterior: d = aₙ − aₙ₋₁
+
+<strong style="color:#f59e0b">Sucesión geométrica — multiplicación constante</strong>
+En una sucesión geométrica, cada término se obtiene <strong>multiplicando siempre por la misma cantidad</strong>. Esta cantidad se llama <strong>razón común (r)</strong>.
+
 <ul>
-<li>Si la <em>diferencia</em> entre términos consecutivos es constante → aritmética</li>
-<li>Si el <em>cociente</em> entre términos consecutivos es constante → geométrica</li>
+<li>Ejemplo: 3, 6, 12, 24, 48, ... → r = 2 (cada término es el doble del anterior)</li>
+<li>Ejemplo: 81, 27, 9, 3, 1, ... → r = 1/3 (decrece, la razón es una fracción)</li>
+</ul>
+
+<strong>Fórmulas de la sucesión geométrica:</strong>
+<ul>
+<li><strong>Término general:</strong> <code>aₙ = a₁ · r⁽ⁿ⁻¹⁾</code></li>
+<li><strong>Suma de n términos:</strong> <code>Sₙ = a₁(rⁿ − 1)/(r − 1)</code> (cuando r ≠ 1)</li>
+</ul>
+
+<strong style="color:#f59e0b">Ejemplo:</strong> En la sucesión 2, 6, 18, 54, ..., ¿cuál es el término 5?
+<ol>
+<li>Identifica: a₁ = 2, r = 6/2 = 3</li>
+<li>a₅ = 2 · 3⁴ = 2 · 81 = 162</li>
+</ol>
+
+<strong style="color:#f59e0b">¿Cómo distinguir aritmética de geométrica?</strong>
+<ul>
+<li>Calcula las <strong>diferencias</strong> entre términos consecutivos. Si son iguales → <strong>aritmética</strong></li>
+<li>Calcula los <strong>cocientes</strong> entre términos consecutivos. Si son iguales → <strong>geométrica</strong></li>
+<li>Ejemplo: 5, 10, 20, 40 → Diferencias: 5, 10, 20 (no constantes). Cocientes: 2, 2, 2 (constantes) → <strong>geométrica</strong></li>
+</ul>
+
+<strong style="color:#f59e0b">Otros patrones que aparecen en la PAA:</strong>
+<ul>
+<li><strong>Fibonacci:</strong> 1, 1, 2, 3, 5, 8, 13, 21, ... — cada término es la suma de los dos anteriores</li>
+<li><strong>Cuadrados perfectos:</strong> 1, 4, 9, 16, 25, 36, ... — el término n es n²</li>
+<li><strong>Diferencia variable:</strong> 1, 2, 4, 7, 11, 16, ... — las diferencias son 1, 2, 3, 4, 5 (crecen linealmente)</li>
+<li><strong>Alternante:</strong> 1, −1, 1, −1, ... — alterna signos (multiplica por −1)</li>
+</ul>
+
+<strong style="color:#f59e0b">Conexión con la vida real:</strong>
+<ul>
+<li><strong>Aritmética:</strong> ahorras la misma cantidad cada mes (B/.100 + B/.100 + ...)</li>
+<li><strong>Geométrica:</strong> tu dinero crece con interés compuesto (se multiplica por un factor cada período)</li>
+</ul>
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Confundir n (posición del término) con aₙ (valor del término). a₁₀ no es 10, es el valor del décimo término.</li>
+<li>❌ En la fórmula aₙ = a₁ + (n−1)d, escribir n en vez de (n−1). El primer término "usa 0 saltos".</li>
+<li>❌ Dividir mal para encontrar la razón en geométricas: r = aₙ/aₙ₋₁, no al revés</li>
+<li>❌ No verificar si una sucesión que parece aritmética podría tener un patrón diferente (e.g., diferencias de diferencias)</li>
 </ul>`,
         examples: [
           {
@@ -655,12 +1205,15 @@ x = (−b ± √(b²−4ac)) / 2a
       {
         id: "angulos-rectas",
         title: "Ángulos y Rectas",
-        content: `<strong>Tipos de ángulos:</strong>
+        content: `Un <strong>ángulo</strong> se forma cuando dos rayos (semirrectas) comparten un punto de origen llamado <strong>vértice</strong>. Se mide en <strong>grados (°)</strong>, donde una vuelta completa = 360°. Los ángulos están en todas partes: en la arquitectura, en la navegación, y por supuesto en la PAA.
+
+<strong style="color:#f59e0b">Tipos de ángulos según su medida:</strong>
 <ul>
-<li><strong>Agudo:</strong> menor de 90°</li>
-<li><strong>Recto:</strong> exactamente 90°</li>
-<li><strong>Obtuso:</strong> entre 90° y 180°</li>
-<li><strong>Llano:</strong> exactamente 180°</li>
+<li><strong>Agudo:</strong> menor de 90° (piensa en la punta de una flecha)</li>
+<li><strong>Recto:</strong> exactamente 90° (la esquina de una hoja de papel). Se marca con un cuadradito.</li>
+<li><strong>Obtuso:</strong> entre 90° y 180° (más abierto que un ángulo recto)</li>
+<li><strong>Llano (o raso):</strong> exactamente 180° (una línea recta)</li>
+<li><strong>Reflejo (o cóncavo):</strong> entre 180° y 360°</li>
 </ul>
 
 <div style="display:flex;justify-content:center;margin:1.5rem 0">
@@ -692,18 +1245,38 @@ x = (−b ± √(b²−4ac)) / 2a
 </svg>
 </div>
 
-<strong>Relaciones entre ángulos:</strong>
+<strong style="color:#f59e0b">Relaciones entre ángulos — las más preguntadas en la PAA:</strong>
+
+<strong>Ángulos complementarios:</strong> dos ángulos que suman <strong>90°</strong>.
 <ul>
-<li><strong>Complementarios:</strong> suman 90°</li>
-<li><strong>Suplementarios:</strong> suman 180°</li>
-<li><strong>Opuestos por el vértice:</strong> son iguales</li>
+<li>Si un ángulo mide 35°, su complemento mide 90° − 35° = 55°</li>
+<li>Mnemotécnica: <strong>C</strong>omplementarios → <strong>C</strong>uarto de giro (90°)</li>
 </ul>
 
-<strong>Rectas paralelas cortadas por una transversal:</strong>
+<strong>Ángulos suplementarios:</strong> dos ángulos que suman <strong>180°</strong>.
 <ul>
-<li><strong>Ángulos correspondientes:</strong> son iguales</li>
-<li><strong>Ángulos alternos internos:</strong> son iguales</li>
-<li><strong>Ángulos co-interiores (consecutivos internos):</strong> suman 180°</li>
+<li>Si un ángulo mide 110°, su suplemento mide 180° − 110° = 70°</li>
+<li>Mnemotécnica: <strong>S</strong>uplementarios → <strong>S</strong>emicírculo (180°)</li>
+</ul>
+
+<strong>Ángulos opuestos por el vértice:</strong> cuando dos rectas se cruzan, los ángulos opuestos son <strong>iguales</strong>. Es como una X: los ángulos de arriba-izquierda y abajo-derecha son iguales, y los de arriba-derecha y abajo-izquierda también.
+
+<strong style="color:#f59e0b">Suma de ángulos interiores de un polígono:</strong>
+<code>Suma = (n − 2) × 180°</code>, donde n es el número de lados.
+<ul>
+<li>Triángulo (n=3): (3−2)×180° = 180°</li>
+<li>Cuadrilátero (n=4): (4−2)×180° = 360°</li>
+<li>Pentágono (n=5): (5−2)×180° = 540°</li>
+<li>Hexágono (n=6): (6−2)×180° = 720° → cada ángulo de un hexágono regular = 720°/6 = 120°</li>
+</ul>
+
+<strong style="color:#f59e0b">Rectas paralelas cortadas por una transversal — tema estrella</strong>
+Cuando una recta (transversal) corta a dos rectas paralelas, se forman 8 ángulos con relaciones especiales:
+<ul>
+<li><strong>Ángulos correspondientes:</strong> están en la misma posición respecto a cada paralela → son <strong>iguales</strong></li>
+<li><strong>Ángulos alternos internos:</strong> están en lados opuestos de la transversal, entre las paralelas → son <strong>iguales</strong></li>
+<li><strong>Ángulos alternos externos:</strong> están en lados opuestos de la transversal, fuera de las paralelas → son <strong>iguales</strong></li>
+<li><strong>Ángulos co-interiores (consecutivos internos):</strong> están del mismo lado de la transversal, entre las paralelas → suman <strong>180°</strong></li>
 </ul>
 
 <div style="display:flex;justify-content:center;margin:1.5rem 0">
@@ -731,7 +1304,25 @@ x = (−b ± √(b²−4ac)) / 2a
   <text x="30" y="205" fill="#e2e8f0" font-family="sans-serif" font-size="11">Correspondientes: 1=5, 2=6, 3=7, 4=8</text>
   <text x="30" y="218" fill="#e2e8f0" font-family="sans-serif" font-size="11">Alternos internos: 3=5, 4=6</text>
 </svg>
-</div>`,
+</div>
+
+<strong style="color:#f59e0b">Estrategia para problemas de ángulos en la PAA:</strong>
+<ol>
+<li><strong>Identifica la configuración:</strong> ¿hay rectas paralelas? ¿hay un triángulo? ¿se cruzan dos rectas?</li>
+<li><strong>Marca los ángulos conocidos</strong> y busca relaciones (complementarios, suplementarios, correspondientes, etc.)</li>
+<li><strong>Plantea la ecuación:</strong> si un ángulo es 3x y otro 48°, y son opuestos por el vértice, entonces 3x = 48° → x = 16°</li>
+</ol>
+
+<strong style="color:#f59e0b">Ángulo exterior de un triángulo:</strong>
+Un ángulo exterior de un triángulo es igual a la <strong>suma de los dos ángulos interiores no adyacentes</strong>. Además, un ángulo exterior y su interior adyacente son suplementarios (suman 180°).
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Confundir complementarios (90°) con suplementarios (180°)</li>
+<li>❌ Asumir que ángulos correspondientes son iguales sin verificar que las rectas sean paralelas</li>
+<li>❌ Olvidar que los co-interiores SUMAN 180° (no son iguales)</li>
+<li>❌ No saber la fórmula (n−2)×180° para polígonos</li>
+</ul>`,
         examples: [
           {
             problem: "Si un ángulo mide 35°, ¿cuánto mide su complemento?",
@@ -764,13 +1355,15 @@ x = (−b ± √(b²−4ac)) / 2a
       {
         id: "triangulos",
         title: "Triángulos",
-        content: `<strong>La suma de los ángulos internos de un triángulo es 180°.</strong>
+        content: `El triángulo es la figura geométrica más fundamental: es el polígono con menos lados posibles (3) y la base de toda la geometría. En la PAA, los triángulos aparecen en una gran variedad de problemas.
 
-<strong>Clasificación por lados:</strong>
+<strong style="color:#f59e0b">Propiedad más importante:</strong> La suma de los ángulos internos de <strong>cualquier</strong> triángulo es <strong>180°</strong>. Esto significa que si conoces dos ángulos, puedes encontrar el tercero restando de 180°. Ejemplo: si dos ángulos miden 45° y 65°, el tercero = 180° − 45° − 65° = 70°.
+
+<strong style="color:#f59e0b">Clasificación por lados:</strong>
 <ul>
-<li><strong>Equilátero:</strong> 3 lados iguales (60° cada ángulo)</li>
-<li><strong>Isósceles:</strong> 2 lados iguales</li>
-<li><strong>Escaleno:</strong> todos los lados diferentes</li>
+<li><strong>Equilátero:</strong> 3 lados iguales → los 3 ángulos miden 60° (es el más simétrico)</li>
+<li><strong>Isósceles:</strong> 2 lados iguales → los ángulos de la base (opuestos a los lados iguales) también son iguales</li>
+<li><strong>Escaleno:</strong> todos los lados diferentes → todos los ángulos son diferentes</li>
 </ul>
 
 <div style="display:flex;justify-content:center;margin:1.5rem 0">
@@ -805,15 +1398,27 @@ x = (−b ± √(b²−4ac)) / 2a
 </svg>
 </div>
 
-<strong>Clasificación por ángulos:</strong>
+<strong style="color:#f59e0b">Clasificación por ángulos:</strong>
 <ul>
-<li><strong>Acutángulo:</strong> todos los ángulos menores de 90°</li>
-<li><strong>Rectángulo:</strong> tiene un ángulo de 90°</li>
-<li><strong>Obtusángulo:</strong> tiene un ángulo mayor de 90°</li>
+<li><strong>Acutángulo:</strong> todos los ángulos menores de 90° (los tres son agudos)</li>
+<li><strong>Rectángulo:</strong> tiene exactamente un ángulo de 90° (el más importante para la PAA)</li>
+<li><strong>Obtusángulo:</strong> tiene un ángulo mayor de 90° (solo puede tener uno obtuso, porque 2 ángulos > 90° sumarían más de 180°)</li>
 </ul>
 
-<strong>Teorema de Pitágoras</strong> (solo para triángulos rectángulos):
-<code>a² + b² = c²</code> donde c es la hipotenusa (lado más largo, opuesto al ángulo recto).
+<strong>¿Cómo saber si un triángulo es rectángulo sin medir ángulos?</strong>
+Dados tres lados a, b, c (donde c es el mayor):
+<ul>
+<li>Si a² + b² = c² → es <strong>rectángulo</strong></li>
+<li>Si a² + b² > c² → es <strong>acutángulo</strong></li>
+<li>Si a² + b² < c² → es <strong>obtusángulo</strong></li>
+</ul>
+
+<strong style="color:#f59e0b">Teorema de Pitágoras — el teorema más famoso de las matemáticas</strong>
+Solo aplica para <strong>triángulos rectángulos</strong>:
+<code>a² + b² = c²</code>
+Donde <strong>c</strong> es la <strong>hipotenusa</strong> (el lado más largo, opuesto al ángulo recto) y <strong>a, b</strong> son los <strong>catetos</strong> (los lados que forman el ángulo recto).
+
+<strong>¿Cómo identificar la hipotenusa?</strong> Es siempre el lado opuesto al ángulo de 90°, y siempre es el más largo.
 
 <div style="display:flex;justify-content:center;margin:1.5rem 0">
 <svg width="280" height="200" viewBox="0 0 280 200">
@@ -830,9 +1435,45 @@ x = (−b ± √(b²−4ac)) / 2a
 </svg>
 </div>
 
-<strong>Área del triángulo:</strong> A = (base × altura) / 2
+<strong style="color:#f59e0b">Ternas pitagóricas que debes memorizar:</strong>
+Estos son conjuntos de números enteros que satisfacen el teorema:
+<ul>
+<li><strong>(3, 4, 5)</strong> y sus múltiplos: (6, 8, 10), (9, 12, 15), (15, 20, 25)</li>
+<li><strong>(5, 12, 13)</strong> y sus múltiplos: (10, 24, 26)</li>
+<li><strong>(8, 15, 17)</strong></li>
+<li><strong>(7, 24, 25)</strong></li>
+</ul>
+Si en la PAA ves catetos 6 y 8, inmediatamente sabes que la hipotenusa es 10 (es 3-4-5 multiplicado por 2).
 
-<strong>Triángulos semejantes:</strong> Tienen los mismos ángulos y sus lados son proporcionales.`,
+<strong style="color:#f59e0b">Área del triángulo:</strong>
+<code>A = (base × altura) / 2</code>
+<ul>
+<li>La <strong>base</strong> puede ser cualquier lado del triángulo</li>
+<li>La <strong>altura</strong> es la distancia perpendicular desde la base al vértice opuesto</li>
+<li>En un triángulo rectángulo, los catetos son la base y la altura: A = (cateto₁ × cateto₂) / 2</li>
+</ul>
+
+<strong style="color:#f59e0b">Triángulos semejantes — proporcionalidad</strong>
+Dos triángulos son <strong>semejantes</strong> si tienen los mismos ángulos (misma forma, diferente tamaño). Cuando son semejantes:
+<ul>
+<li>Sus lados correspondientes son <strong>proporcionales</strong></li>
+<li>El <strong>factor de escala</strong> k = lado del mayor / lado correspondiente del menor</li>
+<li>Si el factor de escala es k, las áreas se relacionan como k²</li>
+</ul>
+
+<strong>Ejemplo:</strong> Un triángulo tiene lados 3, 4, 5. Otro semejante tiene un lado de 10 correspondiente al de 5. Factor de escala = 10/5 = 2. Entonces los otros lados son 3×2 = 6 y 4×2 = 8.
+
+<strong style="color:#f59e0b">Desigualdad triangular</strong>
+Para que tres segmentos puedan formar un triángulo, la suma de dos lados cualesquiera debe ser <strong>mayor</strong> que el tercer lado. Ejemplo: ¿pueden 2, 3, 7 formar un triángulo? 2 + 3 = 5 < 7 → No.
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Usar Pitágoras en triángulos que no son rectángulos</li>
+<li>❌ Confundir la hipotenusa con un cateto (la hipotenusa es siempre c, la más larga)</li>
+<li>❌ Olvidar dividir entre 2 al calcular el área</li>
+<li>❌ Asumir que un triángulo isósceles es siempre equilátero</li>
+<li>❌ Usar la altura equivocada (debe ser perpendicular a la base elegida)</li>
+</ul>`,
         examples: [
           {
             problem: "Un triángulo rectángulo tiene catetos de 3 y 4. ¿Cuánto mide la hipotenusa?",
@@ -866,13 +1507,25 @@ x = (−b ± √(b²−4ac)) / 2a
       {
         id: "circunferencia",
         title: "Circunferencia y Círculo",
-        content: `<strong>Elementos:</strong>
+        content: `La <strong>circunferencia</strong> es la línea curva (el borde), mientras que el <strong>círculo</strong> es toda la región interior incluyendo el borde. En la práctica, mucha gente los usa como sinónimos, pero en la PAA la distinción importa: la circunferencia es una longitud (perímetro) y el círculo tiene un área.
+
+<strong style="color:#f59e0b">Elementos del círculo:</strong>
 <ul>
-<li><strong>Radio (r):</strong> distancia del centro al borde</li>
-<li><strong>Diámetro (d):</strong> d = 2r</li>
-<li><strong>Circunferencia:</strong> perímetro del círculo = 2πr = πd</li>
+<li><strong>Centro (O):</strong> el punto equidistante de todos los puntos de la circunferencia</li>
+<li><strong>Radio (r):</strong> distancia del centro a cualquier punto de la circunferencia. Todos los radios son iguales.</li>
+<li><strong>Diámetro (d):</strong> un segmento que pasa por el centro y une dos puntos de la circunferencia. d = 2r</li>
+<li><strong>Cuerda:</strong> cualquier segmento que une dos puntos de la circunferencia. El diámetro es la cuerda más larga.</li>
+<li><strong>Arco:</strong> una parte de la circunferencia (un "pedazo" de la curva)</li>
+<li><strong>Sector:</strong> la región entre dos radios y un arco (como un "trozo de pizza")</li>
+<li><strong>Tangente:</strong> una recta que toca la circunferencia en exactamente un punto. Es perpendicular al radio en ese punto.</li>
+</ul>
+
+<strong style="color:#f59e0b">Las dos fórmulas fundamentales:</strong>
+<ul>
+<li><strong>Circunferencia (perímetro):</strong> C = 2πr = πd</li>
 <li><strong>Área del círculo:</strong> A = πr²</li>
 </ul>
+<strong>Cuidado:</strong> no confundas C (perímetro, una longitud) con A (área). Circunferencia tiene r¹ (lineal), Área tiene r² (cuadrático).
 
 <div style="display:flex;justify-content:center;margin:1.5rem 0">
 <svg width="300" height="300" viewBox="0 0 300 300">
@@ -899,16 +1552,49 @@ x = (−b ± √(b²−4ac)) / 2a
 </svg>
 </div>
 
-<strong>Valor de π ≈ 3.14159</strong> (en la PAA generalmente usan π ≈ 3.14)
+<strong style="color:#f59e0b">El número π (pi)</strong>
+π ≈ 3.14159... Es la razón entre la circunferencia y el diámetro de CUALQUIER círculo: π = C/d. Es un número irracional (tiene infinitos decimales sin patrón). En la PAA generalmente usan <strong>π ≈ 3.14</strong> o dejan las respuestas "en términos de π" (como 25π).
 
-<strong>Arco y sector circular:</strong>
+<strong style="color:#f59e0b">Arco y sector circular — fracciones del círculo</strong>
+Un sector circular es como una "rebanada de pizza". El ángulo central θ determina qué fracción del círculo es:
 <ul>
-<li>Longitud del arco = (θ/360°) × 2πr</li>
-<li>Área del sector = (θ/360°) × πr²</li>
+<li><strong>Fracción del círculo:</strong> θ/360°</li>
+<li><strong>Longitud del arco:</strong> L = (θ/360°) × 2πr — es esa fracción del perímetro</li>
+<li><strong>Área del sector:</strong> A = (θ/360°) × πr² — es esa fracción del área total</li>
 </ul>
 
-<strong>Ángulo central:</strong> su medida es igual a la del arco que subtiende.
-<strong>Ángulo inscrito:</strong> su medida es la mitad del arco que subtiende.`,
+<strong>Ejemplo:</strong> Un sector con ángulo 90° y radio 6:
+<ul>
+<li>Fracción = 90°/360° = 1/4 (un cuarto del círculo)</li>
+<li>Área = (1/4) × π(6²) = (1/4)(36π) = 9π</li>
+<li>Longitud del arco = (1/4) × 2π(6) = (1/4)(12π) = 3π</li>
+</ul>
+
+<strong style="color:#f59e0b">Ángulos en la circunferencia:</strong>
+<ul>
+<li><strong>Ángulo central:</strong> tiene su vértice en el centro del círculo. Su medida es <strong>igual</strong> a la del arco que subtiende.</li>
+<li><strong>Ángulo inscrito:</strong> tiene su vértice en un punto de la circunferencia. Su medida es la <strong>mitad</strong> del arco que subtiende.</li>
+<li>Esto significa que un ángulo central y un ángulo inscrito que subtienden el mismo arco tienen una relación: el central es el doble del inscrito.</li>
+</ul>
+
+<strong style="color:#f59e0b">Corona circular</strong>
+La corona circular es la región entre dos círculos concéntricos (mismo centro, diferentes radios R y r):
+<code>Área corona = πR² − πr² = π(R² − r²)</code>
+
+<strong style="color:#f59e0b">Semicírculo</strong>
+Es la mitad del círculo:
+<ul>
+<li>Área del semicírculo = πr²/2</li>
+<li>Perímetro del semicírculo = πr + 2r (medio perímetro + diámetro)</li>
+</ul>
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Usar el diámetro en la fórmula del área en vez del radio: A = π(d)² está MAL. Primero divide d entre 2</li>
+<li>❌ Confundir circunferencia (perímetro) con área</li>
+<li>❌ Olvidar que el ángulo inscrito es la MITAD del arco, no igual</li>
+<li>❌ No reducir la fracción θ/360° antes de calcular</li>
+</ul>`,
         examples: [
           {
             problem: "¿Cuál es el área de un círculo con radio 7 cm?",
@@ -942,13 +1628,40 @@ x = (−b ± √(b²−4ac)) / 2a
       {
         id: "area-volumen",
         title: "Perímetro, Área y Volumen",
-        content: `<strong>Fórmulas de figuras planas:</strong>
+        content: `Este tema reúne las fórmulas más importantes de geometría. La clave no es memorizar todas mecánicamente, sino <strong>entender la lógica</strong> detrás de cada una. Muchas fórmulas están relacionadas entre sí.
 
-<strong>Rectángulo:</strong> P = 2(l+a), A = l × a
-<strong>Cuadrado:</strong> P = 4l, A = l²
-<strong>Paralelogramo:</strong> A = base × altura
-<strong>Trapecio:</strong> A = (B + b) × h / 2 (B=base mayor, b=base menor)
-<strong>Rombo:</strong> A = (D × d) / 2 (D y d son las diagonales)
+<strong style="color:#f59e0b">FIGURAS PLANAS — Perímetro y Área</strong>
+El <strong>perímetro</strong> es la distancia alrededor de la figura (suma de todos los lados). El <strong>área</strong> es la cantidad de superficie que cubre la figura.
+
+<strong>Rectángulo:</strong>
+<ul>
+<li>P = 2(l + a) — suma los 4 lados</li>
+<li>A = l × a — largo por ancho</li>
+</ul>
+
+<strong>Cuadrado</strong> (caso especial del rectángulo donde l = a):
+<ul>
+<li>P = 4l</li>
+<li>A = l² — lado al cuadrado (de ahí viene el nombre "elevar al cuadrado")</li>
+</ul>
+
+<strong>Paralelogramo</strong> (un rectángulo "inclinado"):
+<ul>
+<li>A = base × altura (la altura es perpendicular a la base, NO el lado inclinado)</li>
+</ul>
+
+<strong>Trapecio</strong> (tiene dos lados paralelos):
+<ul>
+<li>A = (B + b) × h / 2 donde B = base mayor, b = base menor, h = altura</li>
+<li>Truco: es como el promedio de las dos bases multiplicado por la altura</li>
+</ul>
+
+<strong>Rombo</strong> (4 lados iguales con diagonales perpendiculares):
+<ul>
+<li>A = (D × d) / 2 donde D y d son las diagonales mayor y menor</li>
+</ul>
+
+<strong>Triángulo:</strong> A = (base × altura) / 2 — es la mitad de un rectángulo con la misma base y altura
 
 <div style="display:flex;justify-content:center;margin:1.5rem 0">
 <svg width="520" height="180" viewBox="0 0 520 180">
@@ -985,14 +1698,65 @@ x = (−b ± √(b²−4ac)) / 2a
 </svg>
 </div>
 
-<strong>Fórmulas de volumen (sólidos):</strong>
+<strong style="color:#f59e0b">SÓLIDOS — Volumen y Área Superficial</strong>
+El <strong>volumen</strong> mide cuánto espacio ocupa un sólido (en unidades cúbicas: cm³, m³). El <strong>área superficial</strong> mide la superficie exterior total.
 
-<strong>Prisma rectangular (caja):</strong> V = largo × ancho × alto
-<strong>Cubo:</strong> V = l³
-<strong>Cilindro:</strong> V = πr²h
-<strong>Cono:</strong> V = πr²h / 3
-<strong>Esfera:</strong> V = (4/3)πr³
-<strong>Pirámide:</strong> V = (Área base × h) / 3`,
+<strong>Prisma rectangular (caja):</strong>
+<ul>
+<li>V = largo × ancho × alto</li>
+<li>Área superficial = 2(la + lh + ah)</li>
+</ul>
+
+<strong>Cubo</strong> (caso especial donde todos los lados son iguales):
+<ul>
+<li>V = l³ — lado al cubo (de ahí viene "elevar al cubo")</li>
+<li>Área superficial = 6l² (6 caras iguales)</li>
+</ul>
+
+<strong>Cilindro</strong> (como una lata):
+<ul>
+<li>V = πr²h — el área del círculo base multiplicada por la altura</li>
+<li>Área superficial = 2πr² + 2πrh (2 tapas circulares + la superficie lateral)</li>
+</ul>
+
+<strong>Cono</strong> (como un cono de helado):
+<ul>
+<li>V = πr²h / 3 — es exactamente <strong>un tercio</strong> del cilindro con la misma base y altura</li>
+</ul>
+
+<strong>Esfera</strong> (como una pelota):
+<ul>
+<li>V = (4/3)πr³</li>
+<li>Área superficial = 4πr²</li>
+</ul>
+
+<strong>Pirámide:</strong>
+<ul>
+<li>V = (Área de la base × h) / 3 — es un tercio del prisma con la misma base y altura</li>
+</ul>
+
+<strong style="color:#f59e0b">Patrón importante: la regla del "un tercio"</strong>
+<ul>
+<li>Volumen del <strong>cono</strong> = (1/3) × Volumen del <strong>cilindro</strong> con misma base y altura</li>
+<li>Volumen de la <strong>pirámide</strong> = (1/3) × Volumen del <strong>prisma</strong> con misma base y altura</li>
+</ul>
+Si recuerdas las fórmulas del cilindro y prisma, las del cono y pirámide son simplemente dividir entre 3.
+
+<strong style="color:#f59e0b">Unidades de medida:</strong>
+<ul>
+<li>Perímetro → unidades lineales (cm, m)</li>
+<li>Área → unidades cuadradas (cm², m²)</li>
+<li>Volumen → unidades cúbicas (cm³, m³). Recuerda: 1 litro = 1,000 cm³</li>
+</ul>
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Confundir radio con diámetro al calcular volúmenes de cilindros y esferas</li>
+<li>❌ Olvidar dividir entre 3 en conos y pirámides</li>
+<li>❌ Usar la fórmula del trapecio sin identificar correctamente las bases y la altura</li>
+<li>❌ Confundir área superficial con volumen</li>
+<li>❌ No convertir unidades cuando el problema mezcla cm y m</li>
+</ul>`,
         examples: [
           {
             problem: "Un cilindro tiene radio 3 cm y altura 10 cm. ¿Cuál es su volumen?",
@@ -1026,14 +1790,25 @@ x = (−b ± √(b²−4ac)) / 2a
       {
         id: "geometria-analitica",
         title: "Geometría Analítica",
-        content: `La <strong>geometría analítica</strong> estudia figuras geométricas usando coordenadas en el plano cartesiano.
+        content: `La <strong>geometría analítica</strong> es el puente entre el álgebra y la geometría: estudia figuras geométricas usando <strong>coordenadas numéricas</strong> en el plano cartesiano. Convierte problemas geométricos en ecuaciones y viceversa.
 
-<strong>Plano cartesiano:</strong>
+<strong style="color:#f59e0b">El plano cartesiano</strong>
+Creado por René Descartes, es un sistema de dos ejes perpendiculares que permite ubicar cualquier punto con dos números:
 <ul>
-<li>Eje X (horizontal) y Eje Y (vertical) se cruzan en el <strong>origen (0, 0)</strong></li>
-<li>Cada punto se representa como <code>(x, y)</code></li>
-<li>4 cuadrantes: I (+,+), II (−,+), III (−,−), IV (+,−)</li>
+<li><strong>Eje X (horizontal):</strong> positivo a la derecha, negativo a la izquierda</li>
+<li><strong>Eje Y (vertical):</strong> positivo hacia arriba, negativo hacia abajo</li>
+<li><strong>Origen:</strong> el punto (0, 0) donde se cruzan los ejes</li>
+<li>Cada punto se escribe como <code>(x, y)</code> — primero la coordenada horizontal, luego la vertical</li>
 </ul>
+
+<strong>Los 4 cuadrantes</strong> (se cuentan en sentido antihorario):
+<ul>
+<li><strong>I:</strong> (+, +) — arriba a la derecha</li>
+<li><strong>II:</strong> (−, +) — arriba a la izquierda</li>
+<li><strong>III:</strong> (−, −) — abajo a la izquierda</li>
+<li><strong>IV:</strong> (+, −) — abajo a la derecha</li>
+</ul>
+Los puntos sobre los ejes no pertenecen a ningún cuadrante.
 
 <div style="display:flex;justify-content:center;margin:1.5rem 0">
 <svg width="260" height="260" viewBox="0 0 260 260">
@@ -1052,24 +1827,70 @@ x = (−b ± √(b²−4ac)) / 2a
 </svg>
 </div>
 
-<strong>Fórmulas esenciales:</strong>
+<strong style="color:#f59e0b">Las 3 fórmulas más importantes de la geometría analítica:</strong>
 
-<strong>Distancia entre dos puntos:</strong>
-d = √[(x₂−x₁)² + (y₂−y₁)²]
+<strong>1. Distancia entre dos puntos</strong>
+<code>d = √[(x₂−x₁)² + (y₂−y₁)²]</code>
+Esta fórmula es simplemente el <strong>Teorema de Pitágoras</strong> aplicado al plano cartesiano. La distancia horizontal es (x₂−x₁), la vertical es (y₂−y₁), y la distancia total es la hipotenusa.
 
-<strong>Punto medio:</strong>
-M = ((x₁+x₂)/2, (y₁+y₂)/2)
+<strong>Ejemplo:</strong> Distancia entre (1, 2) y (4, 6):
+d = √[(4−1)² + (6−2)²] = √[9 + 16] = √25 = 5
 
-<strong>Pendiente de una recta:</strong>
-m = (y₂−y₁)/(x₂−x₁)
+<strong>2. Punto medio</strong>
+<code>M = ((x₁+x₂)/2, (y₁+y₂)/2)</code>
+Es simplemente el <strong>promedio</strong> de las coordenadas. El punto que está exactamente a la mitad del segmento.
 
-<strong>Ecuación de la recta:</strong>
+<strong>Ejemplo:</strong> Punto medio entre (−2, 3) y (6, 7):
+M = ((−2+6)/2, (3+7)/2) = (2, 5)
+
+<strong>Truco de la PAA:</strong> Si te dan el punto medio y un extremo, puedes encontrar el otro extremo. Si M = (3, 5) y un extremo es (1, 2), el otro extremo es (2·3−1, 2·5−2) = (5, 8).
+
+<strong>3. Pendiente de una recta</strong>
+<code>m = (y₂−y₁)/(x₂−x₁)</code>
+La pendiente mide la <strong>inclinación</strong> de la recta: cuánto sube (o baja) y por cada unidad que avanza x. También se lee como "cambio en y / cambio en x" o "subida / avance".
+
+<strong style="color:#f59e0b">Ecuaciones de la recta — dos formas principales:</strong>
 <ul>
-<li>Forma pendiente-intercepto: y = mx + b</li>
-<li>Forma punto-pendiente: y − y₁ = m(x − x₁)</li>
+<li><strong>Pendiente-intercepto:</strong> <code>y = mx + b</code> — útil cuando conoces la pendiente y el intercepto en y</li>
+<li><strong>Punto-pendiente:</strong> <code>y − y₁ = m(x − x₁)</code> — útil cuando conoces la pendiente y un punto</li>
 </ul>
 
-<strong>Rectas perpendiculares:</strong> sus pendientes son recíprocas negativas (m₁ · m₂ = −1).`,
+<strong>Para escribir la ecuación de una recta necesitas:</strong>
+<ol>
+<li>La pendiente m (dada directamente o calculada con dos puntos)</li>
+<li>Un punto por donde pasa la recta</li>
+</ol>
+
+<strong>Ejemplo:</strong> Escribe la ecuación de la recta con pendiente 3 que pasa por (1, 5):
+y − 5 = 3(x − 1) → y = 3x − 3 + 5 → y = 3x + 2
+
+<strong style="color:#f59e0b">Relaciones entre rectas:</strong>
+<ul>
+<li><strong>Paralelas:</strong> misma pendiente (m₁ = m₂), nunca se cruzan</li>
+<li><strong>Perpendiculares:</strong> pendientes que son recíprocas negativas: m₁ · m₂ = −1. Si una tiene pendiente 2, la perpendicular tiene pendiente −1/2</li>
+<li><strong>Secantes:</strong> se cruzan en un punto (pendientes diferentes pero no perpendiculares)</li>
+</ul>
+
+<strong style="color:#f59e0b">Interceptos — donde la recta cruza los ejes:</strong>
+<ul>
+<li><strong>Intercepto en y:</strong> el valor de y cuando x = 0. En y = mx + b, es <strong>b</strong>.</li>
+<li><strong>Intercepto en x (raíz):</strong> el valor de x cuando y = 0. Iguala y = 0 y despeja x.</li>
+</ul>
+
+<strong style="color:#f59e0b">Pendientes especiales:</strong>
+<ul>
+<li>Recta <strong>horizontal</strong>: m = 0 (no sube ni baja). Ecuación: y = k</li>
+<li>Recta <strong>vertical</strong>: m es <strong>indefinida</strong> (división por cero). Ecuación: x = k. No es una función.</li>
+</ul>
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Invertir las coordenadas: (x, y) NO es (y, x). x siempre va primero</li>
+<li>❌ Calcular la pendiente al revés: m = (x₂−x₁)/(y₂−y₁) está MAL. Es y sobre x</li>
+<li>❌ Confundir pendiente con intercepto: en y = 3x + 5, m = 3 y b = 5, no al revés</li>
+<li>❌ Olvidar que la perpendicular cambia signo Y es recíproca: la perpendicular a m = 3 es m = −1/3, no −3</li>
+<li>❌ No reconocer que la fórmula de distancia es Pitágoras</li>
+</ul>`,
         examples: [
           {
             problem: "¿Cuál es la distancia entre (1, 2) y (4, 6)?",
@@ -1116,20 +1937,90 @@ m = (y₂−y₁)/(x₂−x₁)
       {
         id: "tendencia-central",
         title: "Medidas de Tendencia Central",
-        content: `<strong>Media aritmética (promedio):</strong>
-Suma de todos los datos ÷ cantidad de datos.
+        content: `Las medidas de tendencia central responden la pregunta: "¿Cuál es el valor <em>típico</em> o <em>representativo</em> de un conjunto de datos?" Hay tres medidas principales, y cada una es útil en situaciones diferentes.
 
-<strong>Mediana:</strong>
-El valor central al ordenar los datos. Si hay cantidad par, es el promedio de los dos centrales.
+<strong style="color:#f59e0b">1. Media aritmética (promedio)</strong>
+<code>Media = Suma de todos los datos ÷ Cantidad de datos</code>
 
-<strong>Moda:</strong>
-El dato que más se repite. Puede haber más de una moda (bimodal) o ninguna.
+Es la medida más conocida. Usa TODOS los datos en su cálculo.
 
-<strong>Rango:</strong>
-Diferencia entre el valor máximo y el mínimo.
+<strong>Ejemplo:</strong> Datos: 4, 7, 2, 9, 3
+Media = (4 + 7 + 2 + 9 + 3) / 5 = 25/5 = 5
 
-<strong>Media ponderada:</strong>
-Cuando cada dato tiene un peso diferente: Σ(dato × peso) / Σ(pesos)`,
+<strong>Propiedad importante:</strong> Si conoces la media y la cantidad de datos, puedes encontrar la suma total.
+Si el promedio de 5 números es 20, entonces la suma = 5 × 20 = 100.
+
+<strong style="color:#f59e0b">⚠ El gran problema de la media: los valores extremos (outliers)</strong>
+La media es muy sensible a valores atípicos. Ejemplo: Los salarios de 5 personas son B/.500, B/.500, B/.600, B/.550, B/.10,000. La media = B/.2,430. ¿Es representativa? No — 4 de 5 personas ganan mucho menos que eso. El salario de B/.10,000 "arrastra" la media hacia arriba.
+
+<strong style="color:#f59e0b">2. Mediana — el valor del medio</strong>
+Es el valor que queda en el <strong>centro</strong> cuando ordenas todos los datos de menor a mayor.
+
+<strong>Paso a paso:</strong>
+<ol>
+<li><strong>SIEMPRE ordena los datos primero</strong> (de menor a mayor)</li>
+<li>Si la cantidad de datos es <strong>impar</strong>: la mediana es el dato de la posición central. Posición = (n+1)/2</li>
+<li>Si la cantidad de datos es <strong>par</strong>: la mediana es el <strong>promedio</strong> de los dos datos centrales</li>
+</ol>
+
+<strong>Ejemplo con cantidad impar (7 datos):</strong>
+Datos: 4, 7, 2, 9, 3, 7, 5
+Ordenados: 2, 3, 4, <strong>5</strong>, 7, 7, 9
+Mediana = 5 (el dato de la posición 4, que es el centro)
+
+<strong>Ejemplo con cantidad par (6 datos):</strong>
+Datos: 3, 8, 1, 5, 9, 4
+Ordenados: 1, 3, <strong>4, 5</strong>, 8, 9
+Mediana = (4 + 5) / 2 = 4.5 (promedio de los dos centrales)
+
+<strong>Ventaja de la mediana:</strong> NO se afecta por valores extremos. En el ejemplo de salarios anterior, la mediana sería B/.550, que es mucho más representativa.
+
+<strong style="color:#f59e0b">¿Cuándo usar la media vs. la mediana?</strong>
+<ul>
+<li><strong>Media:</strong> cuando los datos están distribuidos uniformemente sin valores extremos</li>
+<li><strong>Mediana:</strong> cuando hay valores extremos que podrían distorsionar el promedio (salarios, precios de casas, etc.)</li>
+</ul>
+
+<strong style="color:#f59e0b">3. Moda — el dato más frecuente</strong>
+Es el valor que <strong>más se repite</strong> en el conjunto de datos.
+<ul>
+<li>Datos: 2, 5, 3, <strong>5</strong>, 7, <strong>5</strong>, 8 → Moda = 5 (aparece 3 veces)</li>
+<li><strong>Bimodal:</strong> 3, 3, 5, 7, 7 → Modas = 3 y 7 (ambas se repiten 2 veces)</li>
+<li><strong>Sin moda:</strong> 2, 4, 6, 8 → ningún valor se repite</li>
+</ul>
+
+<strong>¿Cuándo es útil la moda?</strong> Para datos categóricos (no numéricos). Ejemplo: ¿cuál es el color favorito en la clase? Si 12 dicen azul, 8 rojo, 5 verde → la moda es "azul".
+
+<strong style="color:#f59e0b">4. Rango — la dispersión</strong>
+<code>Rango = Valor máximo − Valor mínimo</code>
+Mide qué tan "dispersos" o "esparcidos" están los datos. Un rango grande indica mucha variación.
+Ejemplo: Datos: 4, 12, 7, 3, 15, 9 → Rango = 15 − 3 = 12
+
+<strong style="color:#f59e0b">5. Media ponderada — cuando no todos los datos "valen" lo mismo</strong>
+Algunos datos tienen más importancia (peso) que otros. La media ponderada lo toma en cuenta:
+<code>Media ponderada = Σ(dato × peso) / Σ(pesos)</code>
+
+<strong>Ejemplo real:</strong> Un estudiante tiene estas notas con sus pesos:
+<ul>
+<li>Exámenes parciales (peso 30%): 80</li>
+<li>Trabajos (peso 50%): 90</li>
+<li>Participación (peso 20%): 70</li>
+</ul>
+Promedio ponderado = 80(0.30) + 90(0.50) + 70(0.20) = 24 + 45 + 14 = <strong>83</strong>
+(Es diferente del promedio simple (80+90+70)/3 = 80, porque los trabajos pesan más)
+
+<strong style="color:#f59e0b">Truco PAA: encontrar un dato faltante</strong>
+"Si la media de 4 números es 10 y tres son 8, 12, 6, ¿cuál es el cuarto?"
+Suma total = 4 × 10 = 40. Suma de los tres = 26. Cuarto = 40 − 26 = <strong>14</strong>.
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Calcular la mediana sin ordenar los datos primero</li>
+<li>❌ Confundir mediana con media: la mediana depende de la posición, la media depende de los valores</li>
+<li>❌ En datos pares, olvidar promediar los dos valores centrales para la mediana</li>
+<li>❌ Pensar que "sin moda" significa "la moda es 0". No, significa que no existe moda</li>
+<li>❌ Usar promedio simple cuando los pesos son diferentes</li>
+</ul>`,
         examples: [
           {
             problem: "Datos: 4, 7, 2, 9, 3, 7, 5. Calcula media, mediana y moda.",
@@ -1163,22 +2054,222 @@ Cuando cada dato tiene un peso diferente: Σ(dato × peso) / Σ(pesos)`,
       {
         id: "graficos",
         title: "Interpretación de Gráficos",
-        content: `En la PAA aparecen gráficos que debes interpretar correctamente.
+        content: `En la PAA aparecen gráficos que debes <strong>interpretar</strong> correctamente. No te piden dibujar gráficos, sino <em>leerlos, analizarlos y sacar conclusiones</em>. Este es uno de los temas más prácticos del examen — es pura lectura de datos visuales.
 
-<strong>Tipos de gráficos:</strong>
+<strong style="color:#f59e0b">1. Gráfico de Barras — comparar cantidades</strong>
+Se usa para comparar cantidades entre diferentes <strong>categorías</strong>. Cada categoría tiene una barra cuya altura (o longitud) representa su valor. Es el tipo más común en la PAA.
+
+<strong>¿Cómo leerlo?</strong>
 <ul>
-<li><strong>Barras:</strong> comparan cantidades entre categorías. Lee la altura de cada barra.</li>
-<li><strong>Circular (pastel):</strong> muestra proporciones del total. Cada sector es un porcentaje.</li>
-<li><strong>Líneas:</strong> muestran tendencias a lo largo del tiempo.</li>
-<li><strong>Histograma:</strong> como barras, pero para datos continuos agrupados en intervalos.</li>
+<li>El eje horizontal (x) muestra las categorías</li>
+<li>El eje vertical (y) muestra los valores numéricos</li>
+<li>La altura de cada barra indica el valor de esa categoría</li>
+<li>Puedes comparar barras visualmente para ver cuál es mayor o menor</li>
 </ul>
 
-<strong>Estrategias:</strong>
+<div style="display:flex;justify-content:center;margin:1.5rem 0">
+<svg width="420" height="280" viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="420" height="280" fill="rgba(42,80,128,0.2)" rx="8"/>
+  <text x="210" y="22" fill="#e2e8f0" font-family="sans-serif" font-size="13" text-anchor="middle" font-weight="bold">Ventas Mensuales (miles de B/.)</text>
+  <!-- Eje Y -->
+  <line x1="60" y1="35" x2="60" y2="230" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- Eje X -->
+  <line x1="60" y1="230" x2="390" y2="230" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- Líneas de referencia horizontales -->
+  <line x1="60" y1="191" x2="390" y2="191" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3"/>
+  <line x1="60" y1="152" x2="390" y2="152" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3"/>
+  <line x1="60" y1="113" x2="390" y2="113" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3"/>
+  <line x1="60" y1="74" x2="390" y2="74" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3"/>
+  <line x1="60" y1="35" x2="390" y2="35" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3"/>
+  <!-- Etiquetas eje Y -->
+  <text x="52" y="234" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="end">0</text>
+  <text x="52" y="195" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="end">10</text>
+  <text x="52" y="156" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="end">20</text>
+  <text x="52" y="117" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="end">30</text>
+  <text x="52" y="78" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="end">40</text>
+  <text x="52" y="39" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="end">50</text>
+  <!-- Barras -->
+  <rect x="80" y="152" width="45" height="78" fill="#f59e0b" rx="3"/>
+  <text x="102" y="146" fill="#f59e0b" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold">20</text>
+  <rect x="145" y="113" width="45" height="117" fill="#3b82f6" rx="3"/>
+  <text x="167" y="107" fill="#3b82f6" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold">30</text>
+  <rect x="210" y="74" width="45" height="156" fill="#10b981" rx="3"/>
+  <text x="232" y="68" fill="#10b981" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold">40</text>
+  <rect x="275" y="133" width="45" height="97" fill="#ef4444" rx="3"/>
+  <text x="297" y="127" fill="#ef4444" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold">25</text>
+  <rect x="340" y="55" width="45" height="175" fill="#8b5cf6" rx="3"/>
+  <text x="362" y="49" fill="#8b5cf6" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold">45</text>
+  <!-- Etiquetas eje X -->
+  <text x="102" y="248" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">Ene</text>
+  <text x="167" y="248" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">Feb</text>
+  <text x="232" y="248" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">Mar</text>
+  <text x="297" y="248" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">Abr</text>
+  <text x="362" y="248" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">May</text>
+  <!-- Etiqueta eje -->
+  <text x="210" y="270" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Mes</text>
+</svg>
+</div>
+
+<strong>Preguntas típicas de la PAA sobre barras:</strong>
 <ul>
-<li>Lee el título y las etiquetas de los ejes</li>
-<li>Identifica las unidades</li>
-<li>Observa tendencias generales antes de detalles</li>
-<li>Cuidado con escalas que no empiezan en cero — pueden exagerar diferencias</li>
+<li>¿Qué mes tuvo más/menos ventas? → Lee la barra más alta/baja</li>
+<li>¿Cuál fue el aumento de Ene a Feb? → 30 − 20 = 10 (miles de B/.)</li>
+<li>¿Cuál fue el promedio de ventas? → (20+30+40+25+45)/5 = 32</li>
+<li>¿En qué mes hubo una caída respecto al anterior? → De Mar (40) a Abr (25), cayó 15</li>
+</ul>
+
+<strong style="color:#f59e0b">2. Gráfico Circular (de Pastel) — mostrar proporciones</strong>
+Se usa para mostrar cómo se <strong>divide un todo</strong> en partes. El círculo completo = 100% = 360°. Cada "rebanada" (sector) representa una proporción del total.
+
+<strong>Relaciones clave:</strong>
+<ul>
+<li>El círculo completo = 360° = 100%</li>
+<li>Para convertir grados a porcentaje: (grados / 360) × 100</li>
+<li>Para convertir porcentaje a grados: (porcentaje / 100) × 360</li>
+<li>Ejemplo: un sector de 90° = 90/360 × 100 = 25%</li>
+</ul>
+
+<div style="display:flex;justify-content:center;margin:1.5rem 0">
+<svg width="480" height="260" viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="480" height="260" fill="rgba(42,80,128,0.2)" rx="8"/>
+  <text x="170" y="22" fill="#e2e8f0" font-family="sans-serif" font-size="13" text-anchor="middle" font-weight="bold">Distribución del Presupuesto</text>
+  <!-- Sector 1: Alimentación 35% = 126° -->
+  <path d="M 170 130 L 170 40 A 90 90 0 0 1 247 68 Z" fill="#f59e0b"/>
+  <!-- Sector 2: Transporte 25% = 90° -->
+  <path d="M 170 130 L 247 68 A 90 90 0 0 1 260 130 Z" fill="#3b82f6"/>
+  <!-- Sector 3: Vivienda 20% = 72° -->
+  <path d="M 170 130 L 260 130 A 90 90 0 0 1 225 207 Z" fill="#10b981"/>
+  <!-- Sector 4: Ahorro 12% = 43.2° -->
+  <path d="M 170 130 L 225 207 A 90 90 0 0 1 148 218 Z" fill="#ef4444"/>
+  <!-- Sector 5: Otros 8% = 28.8° -->
+  <path d="M 170 130 L 148 218 A 90 90 0 0 1 170 40 Z" fill="#8b5cf6"/>
+  <!-- Etiquetas de porcentaje -->
+  <text x="210" y="75" fill="#1e293b" font-family="sans-serif" font-size="12" font-weight="bold">35%</text>
+  <text x="248" y="110" fill="#1e293b" font-family="sans-serif" font-size="11" font-weight="bold">25%</text>
+  <text x="235" y="175" fill="#1e293b" font-family="sans-serif" font-size="11" font-weight="bold">20%</text>
+  <text x="175" y="205" fill="#1e293b" font-family="sans-serif" font-size="10" font-weight="bold">12%</text>
+  <text x="138" y="145" fill="#1e293b" font-family="sans-serif" font-size="10" font-weight="bold">8%</text>
+  <!-- Leyenda -->
+  <rect x="310" y="50" width="14" height="14" fill="#f59e0b" rx="2"/>
+  <text x="330" y="62" fill="#e2e8f0" font-family="sans-serif" font-size="11">Alimentación (35%)</text>
+  <rect x="310" y="75" width="14" height="14" fill="#3b82f6" rx="2"/>
+  <text x="330" y="87" fill="#e2e8f0" font-family="sans-serif" font-size="11">Transporte (25%)</text>
+  <rect x="310" y="100" width="14" height="14" fill="#10b981" rx="2"/>
+  <text x="330" y="112" fill="#e2e8f0" font-family="sans-serif" font-size="11">Vivienda (20%)</text>
+  <rect x="310" y="125" width="14" height="14" fill="#ef4444" rx="2"/>
+  <text x="330" y="137" fill="#e2e8f0" font-family="sans-serif" font-size="11">Ahorro (12%)</text>
+  <rect x="310" y="150" width="14" height="14" fill="#8b5cf6" rx="2"/>
+  <text x="330" y="162" fill="#e2e8f0" font-family="sans-serif" font-size="11">Otros (8%)</text>
+  <!-- Nota -->
+  <text x="365" y="200" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">Total = 100%</text>
+  <text x="365" y="215" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle">= 360°</text>
+</svg>
+</div>
+
+<strong>Preguntas típicas de la PAA sobre circulares:</strong>
+<ul>
+<li>Si el presupuesto total es B/.2,000, ¿cuánto se gasta en Alimentación? → 2,000 × 0.35 = B/.700</li>
+<li>¿Cuántos grados tiene el sector de Transporte? → 25% × 360° = 90°</li>
+<li>¿Qué fracción del presupuesto es Vivienda? → 20% = 1/5</li>
+</ul>
+
+<strong style="color:#f59e0b">3. Gráfico de Líneas — mostrar tendencias</strong>
+Se usa para mostrar cómo cambia un valor a lo largo del <strong>tiempo</strong>. Cada punto de datos se conecta con una línea, lo que permite ver la tendencia (si sube, baja, se mantiene, o fluctúa).
+
+<div style="display:flex;justify-content:center;margin:1.5rem 0">
+<svg width="460" height="260" viewBox="0 0 460 260" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="460" height="260" fill="rgba(42,80,128,0.2)" rx="8"/>
+  <text x="230" y="22" fill="#e2e8f0" font-family="sans-serif" font-size="13" text-anchor="middle" font-weight="bold">Temperatura Promedio por Mes (°C)</text>
+  <!-- Eje Y -->
+  <line x1="55" y1="35" x2="55" y2="220" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- Eje X -->
+  <line x1="55" y1="220" x2="430" y2="220" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- Líneas de referencia -->
+  <line x1="55" y1="183" x2="430" y2="183" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3"/>
+  <line x1="55" y1="146" x2="430" y2="146" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3"/>
+  <line x1="55" y1="109" x2="430" y2="109" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3"/>
+  <line x1="55" y1="72" x2="430" y2="72" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3"/>
+  <line x1="55" y1="35" x2="430" y2="35" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="3"/>
+  <!-- Etiquetas eje Y -->
+  <text x="48" y="224" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="end">20</text>
+  <text x="48" y="187" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="end">22</text>
+  <text x="48" y="150" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="end">24</text>
+  <text x="48" y="113" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="end">26</text>
+  <text x="48" y="76" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="end">28</text>
+  <text x="48" y="39" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="end">30</text>
+  <!-- Línea de datos -->
+  <polyline points="90,183 152,164 214,109 276,72 338,90 400,146" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Puntos de datos -->
+  <circle cx="90" cy="183" r="5" fill="#f59e0b"/>
+  <circle cx="152" cy="164" r="5" fill="#f59e0b"/>
+  <circle cx="214" cy="109" r="5" fill="#f59e0b"/>
+  <circle cx="276" cy="72" r="5" fill="#f59e0b"/>
+  <circle cx="338" cy="90" r="5" fill="#f59e0b"/>
+  <circle cx="400" cy="146" r="5" fill="#f59e0b"/>
+  <!-- Valores sobre los puntos -->
+  <text x="90" y="175" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">22</text>
+  <text x="152" y="156" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">23</text>
+  <text x="214" y="101" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">26</text>
+  <text x="276" y="64" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">28</text>
+  <text x="338" y="82" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">27</text>
+  <text x="400" y="138" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">24</text>
+  <!-- Etiquetas eje X -->
+  <text x="90" y="238" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">Ene</text>
+  <text x="152" y="238" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">Feb</text>
+  <text x="214" y="238" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">Mar</text>
+  <text x="276" y="238" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">Abr</text>
+  <text x="338" y="238" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">May</text>
+  <text x="400" y="238" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">Jun</text>
+  <!-- Etiqueta eje -->
+  <text x="230" y="255" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle">Mes</text>
+  <!-- Flecha de tendencia -->
+  <text x="180" y="130" fill="#10b981" font-family="sans-serif" font-size="10">↑ sube</text>
+  <text x="360" y="110" fill="#ef4444" font-family="sans-serif" font-size="10">↓ baja</text>
+</svg>
+</div>
+
+<strong>Preguntas típicas de la PAA sobre líneas:</strong>
+<ul>
+<li>¿Cuál es la tendencia general? → Sube de Ene a Abr, luego baja</li>
+<li>¿En qué mes se alcanzó la temperatura máxima? → Abril (28°C)</li>
+<li>¿Cuál fue el rango de temperaturas? → 28 − 22 = 6°C</li>
+<li>¿Entre qué meses hubo el mayor aumento? → Feb a Mar (+3°C)</li>
+<li>¿Cuál fue la temperatura promedio? → (22+23+26+28+27+24)/6 = 25°C</li>
+</ul>
+
+<strong style="color:#f59e0b">4. Histograma — datos agrupados en intervalos</strong>
+Es similar a un gráfico de barras, pero las barras son <strong>contiguas</strong> (sin espacio entre ellas) y representan <strong>intervalos</strong> de datos continuos en vez de categorías. La altura de cada barra es la frecuencia (cuántos datos caen en ese intervalo).
+
+<strong>Diferencia clave con el gráfico de barras:</strong>
+<ul>
+<li><strong>Barras:</strong> categorías separadas (colores, ciudades, meses)</li>
+<li><strong>Histograma:</strong> rangos numéricos continuos (edades 0-10, 10-20, 20-30...)</li>
+</ul>
+
+<strong style="color:#f59e0b">Estrategia general para interpretar CUALQUIER gráfico en la PAA:</strong>
+<ol>
+<li><strong>Lee el título</strong> — te dice qué información se muestra</li>
+<li><strong>Lee las etiquetas de los ejes</strong> — qué mide cada eje y en qué unidades</li>
+<li><strong>Observa la escala</strong> — ¿empieza en cero? ¿los intervalos son iguales?</li>
+<li><strong>Identifica la tendencia general</strong> antes de buscar datos específicos</li>
+<li><strong>Lee la pregunta cuidadosamente</strong> — ¿pide el valor, un cambio, un porcentaje, una tendencia?</li>
+</ol>
+
+<strong style="color:#f59e0b">⚠ Trampas visuales que usa la PAA:</strong>
+<ul>
+<li><strong>Escalas engañosas:</strong> si el eje y no empieza en cero, las diferencias parecen más grandes de lo que son</li>
+<li><strong>Gráficos circulares con sectores que no suman 100%:</strong> verifica que los porcentajes sumen el total</li>
+<li><strong>Barras dobles o apiladas:</strong> asegúrate de leer la leyenda para saber qué representa cada color</li>
+<li><strong>Escalas no uniformes:</strong> a veces los intervalos del eje no son iguales (0, 10, 20, 50, 100)</li>
+</ul>
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ No leer las etiquetas de los ejes y asumir las unidades</li>
+<li>❌ Confundir "mayor valor" con "mayor crecimiento" (una barra puede ser alta pero haber crecido poco)</li>
+<li>❌ En gráficos circulares, olvidar que 360° = 100%</li>
+<li>❌ Calcular porcentaje de cambio usando el valor nuevo en vez del original</li>
+<li>❌ En histogramas, contar las barras en vez de sumar las frecuencias</li>
 </ul>`,
         examples: [
           {
@@ -1213,26 +2304,100 @@ Cuando cada dato tiene un peso diferente: Σ(dato × peso) / Σ(pesos)`,
       {
         id: "probabilidad",
         title: "Probabilidad Básica",
-        content: `<strong>Probabilidad</strong> = número de casos favorables / número de casos posibles.
+        content: `La <strong>probabilidad</strong> mide qué tan probable es que ocurra un evento. Es una herramienta para cuantificar la incertidumbre. En la PAA, los problemas de probabilidad van desde lanzar dados y monedas hasta situaciones más complejas con conteo.
 
-Siempre está entre 0 (imposible) y 1 (seguro). Se puede expresar como fracción, decimal o porcentaje.
+<strong style="color:#f59e0b">La fórmula básica</strong>
+<div style="text-align:center;margin:0.8rem 0;font-size:1.1em"><code>P(evento) = Casos favorables / Casos posibles totales</code></div>
 
-<strong>Eventos:</strong>
+<strong style="color:#f59e0b">¿Qué significa conceptualmente?</strong>
+Imagina que metes la mano en una bolsa con 3 bolas rojas y 7 azules (10 en total). La probabilidad de sacar roja es 3/10. Esto significa que si repitieras el experimento muchas veces, aproximadamente el 30% de las veces sacarías una bola roja.
+
+<strong>Escala de probabilidad:</strong>
 <ul>
-<li><strong>Espacio muestral:</strong> todos los resultados posibles</li>
-<li><strong>Evento:</strong> un resultado o conjunto de resultados</li>
-<li><strong>Eventos mutuamente excluyentes:</strong> no pueden ocurrir al mismo tiempo</li>
+<li><strong>P = 0</strong> → Imposible (nunca va a pasar). Ejemplo: sacar un 7 de un dado normal</li>
+<li><strong>P = 1</strong> → Seguro (siempre va a pasar). Ejemplo: sacar un número del 1 al 6 de un dado</li>
+<li><strong>P = 0.5 (1/2)</strong> → Equiprobable (50-50). Ejemplo: cara o sello en una moneda</li>
+<li>La probabilidad SIEMPRE está entre 0 y 1 (o entre 0% y 100%)</li>
 </ul>
 
-<strong>Reglas:</strong>
+<strong style="color:#f59e0b">Vocabulario esencial:</strong>
 <ul>
-<li>P(A o B) = P(A) + P(B) si son mutuamente excluyentes</li>
-<li>P(A y B) = P(A) × P(B) si son independientes</li>
-<li>P(complemento de A) = 1 − P(A)</li>
+<li><strong>Experimento aleatorio:</strong> una acción cuyo resultado no se puede predecir con certeza (lanzar un dado, elegir una carta)</li>
+<li><strong>Espacio muestral (S):</strong> el conjunto de TODOS los resultados posibles. Para un dado: S = {1, 2, 3, 4, 5, 6}</li>
+<li><strong>Evento:</strong> un resultado o conjunto de resultados que nos interesa. "Sacar un número par" = {2, 4, 6}</li>
 </ul>
 
-<strong>Principio de conteo (multiplicativo):</strong>
-Si un evento puede ocurrir de m formas y otro de n formas, juntos: m × n formas.`,
+<strong style="color:#f59e0b">Las 3 reglas fundamentales:</strong>
+
+<strong>Regla 1: Complemento — "lo que NO ocurre"</strong>
+<code>P(no A) = 1 − P(A)</code>
+A veces es más fácil calcular la probabilidad de que algo NO ocurra.
+Ejemplo: P(llueva) = 0.3. P(NO llueva) = 1 − 0.3 = 0.7
+
+<strong>Regla 2: "O" (unión) — "uno u otro"</strong>
+<code>P(A o B) = P(A) + P(B)</code> cuando A y B son <strong>mutuamente excluyentes</strong> (no pueden ocurrir al mismo tiempo).
+Ejemplo: En un dado, P(sacar 3 o 5) = 1/6 + 1/6 = 2/6 = 1/3
+<strong>¿Cuándo se SUMAN probabilidades?</strong> Cuando los eventos no se superponen y quieres saber si ocurre <em>cualquiera</em> de ellos.
+
+<strong>Regla 3: "Y" (intersección) — "ambos ocurren"</strong>
+<code>P(A y B) = P(A) × P(B)</code> cuando A y B son <strong>independientes</strong> (uno no afecta al otro).
+Ejemplo: Al lanzar una moneda dos veces, P(cara y cara) = 1/2 × 1/2 = 1/4
+<strong>¿Cuándo se MULTIPLICAN probabilidades?</strong> Cuando quieres que ocurran <em>dos cosas a la vez</em> (o en secuencia) y son independientes.
+
+<strong style="color:#f59e0b">Regla mnemotécnica: "O" = sumar, "Y" = multiplicar</strong>
+
+<strong style="color:#f59e0b">Eventos independientes vs. dependientes</strong>
+<ul>
+<li><strong>Independientes:</strong> el resultado del primero NO afecta al segundo. Ejemplo: lanzar dos dados — lo que sale en el primero no cambia las probabilidades del segundo.</li>
+<li><strong>Dependientes:</strong> el resultado del primero SÍ afecta al segundo. Ejemplo: sacar 2 cartas de una baraja SIN reemplazo. Si sacas un as primero (4/52), ahora quedan 3 ases de 51 cartas (3/51). P(ambos ases) = 4/52 × 3/51 = 12/2652 = 1/221.</li>
+</ul>
+
+<strong style="color:#f59e0b">Principio de conteo (multiplicativo)</strong>
+Si una decisión puede tomarse de m formas y otra de n formas, el total de combinaciones es m × n.
+
+<strong>Ejemplo:</strong> Si tienes 4 camisas, 3 pantalones y 2 pares de zapatos: 4 × 3 × 2 = 24 combinaciones posibles.
+
+<strong style="color:#f59e0b">Permutaciones — cuando el ORDEN importa</strong>
+Una permutación cuenta las formas de ordenar elementos donde el orden sí importa.
+<ul>
+<li><strong>Permutación de n elementos:</strong> n! = n × (n−1) × (n−2) × ... × 1</li>
+<li>Ejemplo: ¿De cuántas formas pueden sentarse 4 personas en fila? 4! = 4×3×2×1 = 24</li>
+<li><strong>Permutación de n tomados de r:</strong> P(n,r) = n!/(n−r)!</li>
+<li>Ejemplo: Elegir presidente y vicepresidente de 10 personas: P(10,2) = 10×9 = 90</li>
+</ul>
+
+<strong>Factoriales que debes conocer:</strong>
+<code>0!=1, 1!=1, 2!=2, 3!=6, 4!=24, 5!=120, 6!=720, 7!=5040</code>
+
+<strong style="color:#f59e0b">Combinaciones — cuando el orden NO importa</strong>
+Una combinación cuenta las formas de elegir elementos sin importar el orden.
+<ul>
+<li><strong>C(n,r) = n! / (r! × (n−r)!)</strong></li>
+<li>Ejemplo: ¿De cuántas formas se elige un comité de 3 personas de un grupo de 10? C(10,3) = 10!/(3!×7!) = 120</li>
+<li>La diferencia con permutación: en un comité, elegir {Ana, Bob, Carlos} es lo mismo que {Carlos, Ana, Bob}</li>
+</ul>
+
+<strong style="color:#f59e0b">¿Permutación o combinación?</strong>
+<ul>
+<li>¿Importa el orden (presidente vs. vicepresidente, primer lugar vs. segundo)? → <strong>Permutación</strong></li>
+<li>¿No importa el orden (elegir un grupo, un comité, una mano de cartas)? → <strong>Combinación</strong></li>
+</ul>
+
+<strong style="color:#f59e0b">Espacios muestrales comunes en la PAA:</strong>
+<ul>
+<li><strong>Moneda:</strong> 2 resultados (cara, sello). 2 monedas: 4 resultados. 3 monedas: 8 resultados.</li>
+<li><strong>Dado:</strong> 6 resultados. 2 dados: 36 resultados (6×6).</li>
+<li><strong>Baraja española:</strong> 40 cartas. <strong>Baraja inglesa:</strong> 52 cartas (4 palos × 13 valores).</li>
+</ul>
+
+<strong style="color:#f59e0b">Errores comunes en la PAA:</strong>
+<ul>
+<li>❌ Sumar probabilidades cuando deberías multiplicar: "sacar cara Y luego cara" es 1/2 × 1/2, no 1/2 + 1/2</li>
+<li>❌ No ajustar las probabilidades en eventos dependientes (sin reemplazo)</li>
+<li>❌ Olvidar que 0! = 1 (no es 0)</li>
+<li>❌ Usar permutaciones cuando el orden no importa (o viceversa)</li>
+<li>❌ Dar una probabilidad mayor que 1 — si tu respuesta es > 1, algo está mal</li>
+</ul>`,
         examples: [
           {
             problem: "Al lanzar un dado, ¿cuál es la probabilidad de obtener un número par?",
