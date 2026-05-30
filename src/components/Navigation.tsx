@@ -84,7 +84,7 @@ export default function Navigation() {
 
           if ("children" in item) {
             const expanded = expandedSections.includes(item.label);
-            const active = isSectionActive(item.children);
+            const active = isSectionActive(item.children!);
 
             return (
               <div key={item.label} className="mb-1">
@@ -111,7 +111,7 @@ export default function Navigation() {
                 </button>
                 {expanded && (
                   <div className="ml-8 mt-1 space-y-0.5">
-                    {item.children.map((child) => (
+                    {item.children!.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
