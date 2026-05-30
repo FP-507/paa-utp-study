@@ -1,74 +1,171 @@
 import { Exercise, ExamConfig } from "./types";
+import { mathTopics } from "./math-data";
+import { verbalTopics } from "./verbal-data";
 
 export const examConfig: ExamConfig = {
-  totalQuestions: 40,
-  timeMinutes: 60,
+  totalQuestions: 100,
+  timeMinutes: 150,
   sections: [
-    { name: "Aritmética", count: 5 },
-    { name: "Álgebra", count: 5 },
-    { name: "Geometría", count: 5 },
-    { name: "Estadística", count: 5 },
-    { name: "Completar Oraciones", count: 5 },
-    { name: "Comprensión Lectora", count: 5 },
-    { name: "Analogías", count: 5 },
-    { name: "Redacción", count: 5 },
+    { name: "Aritmética", count: 12 },
+    { name: "Álgebra", count: 14 },
+    { name: "Geometría", count: 12 },
+    { name: "Estadística", count: 12 },
+    { name: "Completar Oraciones", count: 12 },
+    { name: "Comprensión Lectora", count: 14 },
+    { name: "Analogías", count: 12 },
+    { name: "Redacción", count: 12 },
   ],
 };
 
-export const simulatorQuestions: Exercise[] = [
+// --- DEDICATED SIMULATOR QUESTIONS (bonus pool, PAA-style) ---
+const dedicatedQuestions: Exercise[] = [
   // ARITMÉTICA
-  { id: "sim-a1", question: "Si el precio de un artículo es B/.120 y se le aplica un descuento del 15%, ¿cuál es el precio con descuento?", options: ["B/.102", "B/.105", "B/.108", "B/.98"], correctAnswer: 0, explanation: "120 × 0.15 = 18. Precio = 120 − 18 = B/.102", topic: "Aritmética" },
-  { id: "sim-a2", question: "¿Cuánto es (−5)² − (−3)³?", options: ["52", "2", "−2", "16"], correctAnswer: 0, explanation: "(−5)² = 25. (−3)³ = −27. 25 − (−27) = 25 + 27 = 52", topic: "Aritmética" },
-  { id: "sim-a3", question: "Si 2/5 de los estudiantes son mujeres y hay 150 estudiantes, ¿cuántas mujeres hay?", options: ["60", "90", "75", "50"], correctAnswer: 0, explanation: "150 × 2/5 = 300/5 = 60", topic: "Aritmética" },
-  { id: "sim-a4", question: "Un auto recorre 240 km en 3 horas. ¿Cuántos km recorre en 5 horas a la misma velocidad?", options: ["400", "360", "480", "300"], correctAnswer: 0, explanation: "Velocidad = 240/3 = 80 km/h. En 5 horas: 80 × 5 = 400 km", topic: "Aritmética" },
-  { id: "sim-a5", question: "¿Cuál es el resultado de √144 + √49?", options: ["19", "17", "193", "91"], correctAnswer: 0, explanation: "√144 = 12 y √49 = 7. 12 + 7 = 19", topic: "Aritmética" },
+  { id: "sim-a1", question: "Un comerciante compra un artículo en B/.80 y lo vende con un 25% de ganancia. Si luego aplica un 10% de descuento sobre el precio de venta, ¿cuál es el precio final?", options: ["B/.90", "B/.100", "B/.88", "B/.92"], correctAnswer: 0, explanation: "Precio de venta = 80 × 1.25 = B/.100. Con descuento: 100 × 0.90 = B/.90", topic: "Aritmética" },
+  { id: "sim-a2", question: "Si 3/4 de los estudiantes aprobaron el examen y el 60% de los que aprobaron obtuvo más de 80 puntos, ¿qué fracción del total obtuvo más de 80?", options: ["9/20", "3/5", "1/4", "2/5"], correctAnswer: 0, explanation: "3/4 × 60/100 = 3/4 × 3/5 = 9/20", topic: "Aritmética" },
+  { id: "sim-a3", question: "Un tanque tiene 240 litros. Se usa 1/3 el lunes, 1/4 del resto el martes. ¿Cuántos litros quedan?", options: ["120", "100", "80", "140"], correctAnswer: 0, explanation: "Lunes: 240 × 1/3 = 80 usados, quedan 160. Martes: 160 × 1/4 = 40 usados, quedan 120", topic: "Aritmética" },
+  { id: "sim-a4", question: "Si el precio de un producto aumenta un 20% y luego baja un 20%, ¿cuál es el efecto neto?", options: ["Disminuyó 4%", "Quedó igual", "Aumentó 4%", "Disminuyó 2%"], correctAnswer: 0, explanation: "100 × 1.20 = 120. Luego 120 × 0.80 = 96. Efecto: bajó 4%", topic: "Aritmética" },
+  { id: "sim-a5", question: "Tres obreros terminan un trabajo en 12 días. ¿En cuántos días lo terminan 4 obreros trabajando al mismo ritmo?", options: ["9", "8", "10", "16"], correctAnswer: 0, explanation: "Proporción inversa: 3 × 12 = 4 × x → x = 36/4 = 9 días", topic: "Aritmética" },
 
   // ÁLGEBRA
-  { id: "sim-b1", question: "Si 3x − 7 = 2x + 5, ¿cuánto vale x?", options: ["12", "7", "−2", "2"], correctAnswer: 0, explanation: "3x − 2x = 5 + 7 → x = 12", topic: "Álgebra" },
-  { id: "sim-b2", question: "Factoriza: x² − 4x − 21", options: ["(x−7)(x+3)", "(x+7)(x−3)", "(x−21)(x+1)", "(x+7)(x+3)"], correctAnswer: 0, explanation: "Busca dos números que multipliquen −21 y sumen −4: −7 y +3", topic: "Álgebra" },
-  { id: "sim-b3", question: "¿Cuál es el valor de x en el sistema: x + y = 10, 2x − y = 8?", options: ["6", "4", "8", "5"], correctAnswer: 0, explanation: "Sumando ambas: 3x = 18 → x = 6", topic: "Álgebra" },
-  { id: "sim-b4", question: "Si f(x) = 2x² − 3x + 1, ¿cuánto es f(2)?", options: ["3", "5", "7", "−1"], correctAnswer: 0, explanation: "f(2) = 2(4) − 3(2) + 1 = 8 − 6 + 1 = 3", topic: "Álgebra" },
-  { id: "sim-b5", question: "¿Cuántas soluciones reales tiene x² + 4x + 4 = 0?", options: ["Una (raíz doble)", "Dos diferentes", "Ninguna", "Infinitas"], correctAnswer: 0, explanation: "Discriminante = 16 − 16 = 0 → una raíz doble. (x+2)² = 0 → x = −2", topic: "Álgebra" },
+  { id: "sim-b1", question: "La edad de Pedro es el triple de la de Ana. Dentro de 12 años, la edad de Pedro será el doble de la de Ana. ¿Cuántos años tiene Ana?", options: ["12", "8", "6", "24"], correctAnswer: 0, explanation: "Sea a = edad de Ana, Pedro = 3a. Dentro de 12 años: 3a + 12 = 2(a + 12) → 3a + 12 = 2a + 24 → a = 12. Verificación: Ana = 12, Pedro = 36. En 12 años: Ana = 24, Pedro = 48. 48/24 = 2 ✓", topic: "Álgebra" },
+  { id: "sim-b2", question: "Si f(x) = 3x − 2 y g(x) = x² + 1, ¿cuánto es g(f(2))?", options: ["17", "13", "10", "25"], correctAnswer: 0, explanation: "f(2) = 3(2) − 2 = 4. g(4) = 4² + 1 = 17", topic: "Álgebra" },
+  { id: "sim-b3", question: "Un rectángulo tiene perímetro 34 cm. Si el largo es 3 cm más que el ancho, ¿cuál es el área?", options: ["70 cm²", "60 cm²", "80 cm²", "52 cm²"], correctAnswer: 0, explanation: "2(a + a+3) = 34 → 4a + 6 = 34 → a = 7. Largo = 10. Área = 7 × 10 = 70 cm²", topic: "Álgebra" },
+  { id: "sim-b4", question: "¿Para qué valores de x se cumple que x² − 5x + 6 ≤ 0?", options: ["2 ≤ x ≤ 3", "x ≤ 2 o x ≥ 3", "x < 2", "x > 3"], correctAnswer: 0, explanation: "x² − 5x + 6 = (x−2)(x−3). Es ≤ 0 cuando 2 ≤ x ≤ 3 (entre las raíces para parábola que abre arriba)", topic: "Álgebra" },
+  { id: "sim-b5", question: "En la sucesión 2, 6, 18, 54, ..., ¿cuál es la suma de los primeros 5 términos?", options: ["242", "162", "200", "320"], correctAnswer: 0, explanation: "Geométrica r=3. S₅ = 2(3⁵−1)/(3−1) = 2(243−1)/2 = 242", topic: "Álgebra" },
 
   // GEOMETRÍA
-  { id: "sim-c1", question: "Un triángulo rectángulo tiene catetos de 6 y 8. ¿Cuánto mide la hipotenusa?", options: ["10", "14", "48", "100"], correctAnswer: 0, explanation: "c² = 6² + 8² = 36 + 64 = 100 → c = 10", topic: "Geometría" },
-  { id: "sim-c2", question: "¿Cuál es el área de un círculo con diámetro 14?", options: ["49π", "196π", "14π", "28π"], correctAnswer: 0, explanation: "Radio = 7. Área = π(7²) = 49π", topic: "Geometría" },
-  { id: "sim-c3", question: "Si los ángulos de un triángulo son 2x, 3x y 4x, ¿cuánto vale x?", options: ["20°", "30°", "15°", "40°"], correctAnswer: 0, explanation: "2x + 3x + 4x = 180° → 9x = 180° → x = 20°", topic: "Geometría" },
-  { id: "sim-c4", question: "¿Cuál es el volumen de un cilindro con radio 3 y altura 5?", options: ["45π", "30π", "15π", "90π"], correctAnswer: 0, explanation: "V = πr²h = π(9)(5) = 45π", topic: "Geometría" },
-  { id: "sim-c5", question: "El perímetro de un cuadrado es 48 cm. ¿Cuál es su área?", options: ["144 cm²", "192 cm²", "96 cm²", "12 cm²"], correctAnswer: 0, explanation: "Lado = 48/4 = 12. Área = 12² = 144 cm²", topic: "Geometría" },
+  { id: "sim-c1", question: "Un terreno rectangular mide 30 m × 40 m. Si se construye un camino de 2 m de ancho alrededor del terreno, ¿cuál es el área del camino?", options: ["296 m²", "288 m²", "320 m²", "256 m²"], correctAnswer: 0, explanation: "Exterior con camino: (30 + 2×2) × (40 + 2×2) = 34 × 44 = 1496 m². Terreno solo: 30 × 40 = 1200 m². Área del camino = 1496 − 1200 = 296 m²", topic: "Geometría" },
+  { id: "sim-c2", question: "Dos ángulos de un triángulo miden 35° y 75°. ¿Qué tipo de triángulo es según sus ángulos?", options: ["Acutángulo", "Rectángulo", "Obtusángulo", "Equilátero"], correctAnswer: 0, explanation: "El tercer ángulo = 180° − 35° − 75° = 70°. Los tres ángulos (35°, 70°, 75°) son menores de 90° → acutángulo", topic: "Geometría" },
+  { id: "sim-c3", question: "Una pizza circular tiene diámetro de 40 cm. Si se corta en 8 porciones iguales, ¿cuál es el área de cada porción?", options: ["50π cm²", "200π cm²", "25π cm²", "100π cm²"], correctAnswer: 0, explanation: "Radio = 20. Área total = π(20)² = 400π. Cada porción = 400π/8 = 50π cm²", topic: "Geometría" },
+  { id: "sim-c4", question: "La distancia entre los puntos A(1, 3) y B(4, 7) es:", options: ["5", "7", "25", "√7"], correctAnswer: 0, explanation: "d = √[(4−1)² + (7−3)²] = √[9 + 16] = √25 = 5", topic: "Geometría" },
+  { id: "sim-c5", question: "Un cono tiene radio 6 cm y altura 8 cm. ¿Cuál es su volumen?", options: ["96π cm³", "288π cm³", "48π cm³", "192π cm³"], correctAnswer: 0, explanation: "V = πr²h/3 = π(36)(8)/3 = 288π/3 = 96π cm³", topic: "Geometría" },
 
   // ESTADÍSTICA
-  { id: "sim-d1", question: "La mediana del conjunto {3, 7, 1, 9, 5} es:", options: ["5", "3", "7", "25"], correctAnswer: 0, explanation: "Ordenados: 1, 3, 5, 7, 9. El valor central es 5.", topic: "Estadística" },
-  { id: "sim-d2", question: "Al lanzar dos dados, ¿cuál es la probabilidad de que la suma sea 7?", options: ["1/6", "1/12", "7/36", "1/36"], correctAnswer: 0, explanation: "Combinaciones que dan 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6 de 36 → 6/36 = 1/6", topic: "Estadística" },
-  { id: "sim-d3", question: "Si el promedio de 4 números es 15 y se agrega el número 25, ¿cuál es el nuevo promedio?", options: ["17", "20", "16", "18"], correctAnswer: 0, explanation: "Suma original = 60. Nueva suma = 85. Nuevo promedio = 85/5 = 17", topic: "Estadística" },
-  { id: "sim-d4", question: "En un gráfico circular, un sector de 144° representa:", options: ["40%", "36%", "44%", "14.4%"], correctAnswer: 0, explanation: "144/360 × 100 = 40%", topic: "Estadística" },
-  { id: "sim-d5", question: "¿De cuántas formas pueden sentarse 3 personas en 3 sillas?", options: ["6", "9", "3", "27"], correctAnswer: 0, explanation: "3! = 3 × 2 × 1 = 6 permutaciones", topic: "Estadística" },
+  { id: "sim-d1", question: "Los salarios mensuales de 5 empleados son: B/.800, B/.900, B/.950, B/.1000, B/.5000. ¿Cuál medida de tendencia central representa mejor los datos?", options: ["La mediana (B/.950)", "La media (B/.1730)", "La moda", "El rango"], correctAnswer: 0, explanation: "El valor B/.5000 es un dato atípico que infla la media. La mediana (B/.950) representa mejor al grupo típico.", topic: "Estadística" },
+  { id: "sim-d2", question: "Se lanzan dos dados. ¿Cuál es la probabilidad de que la suma sea mayor que 10?", options: ["1/12", "1/6", "1/9", "1/4"], correctAnswer: 0, explanation: "Sumas > 10: (5,6),(6,5),(6,6) = 3 combinaciones. P = 3/36 = 1/12", topic: "Estadística" },
+  { id: "sim-d3", question: "En un grupo de 30 estudiantes, 18 practican fútbol, 12 practican básquet y 5 practican ambos. ¿Cuántos no practican ninguno de los dos?", options: ["5", "0", "3", "10"], correctAnswer: 0, explanation: "Al menos uno: 18 + 12 − 5 = 25. Ninguno: 30 − 25 = 5", topic: "Estadística" },
+  { id: "sim-d4", question: "Si la media de 8 números es 15 y se elimina un número que vale 7, ¿cuál es la nueva media?", options: ["≈16.14", "14", "15", "17"], correctAnswer: 0, explanation: "Suma original = 8 × 15 = 120. Nueva suma = 120 − 7 = 113. Nueva media = 113/7 ≈ 16.14", topic: "Estadística" },
+  { id: "sim-d5", question: "¿De cuántas formas se puede formar un comité de 3 personas a partir de un grupo de 7?", options: ["35", "210", "21", "120"], correctAnswer: 0, explanation: "C(7,3) = 7!/(3!·4!) = (7×6×5)/(3×2×1) = 35", topic: "Estadística" },
 
   // COMPLETAR ORACIONES
-  { id: "sim-e1", question: "La investigación fue tan ______ que cambió por completo nuestra comprensión del fenómeno.", options: ["reveladora", "superficial", "irrelevante", "tediosa"], correctAnswer: 0, explanation: "'Cambió por completo nuestra comprensión' indica un impacto profundo = reveladora.", topic: "Completar Oraciones" },
-  { id: "sim-e2", question: "El político evitó dar respuestas ______, prefiriendo hablar con ______ para no comprometerse.", options: ["directas / ambigüedad", "vagas / claridad", "honestas / sinceridad", "evasivas / precisión"], correctAnswer: 0, explanation: "Evitar + no comprometerse = evade lo directo usando ambigüedad.", topic: "Completar Oraciones" },
-  { id: "sim-e3", question: "A pesar de la ______ del camino, los excursionistas decidieron continuar con ______.", options: ["dificultad / determinación", "facilidad / temor", "belleza / prisa", "distancia / pereza"], correctAnswer: 0, explanation: "'A pesar de' indica obstáculo. Continuar a pesar de dificultad requiere determinación.", topic: "Completar Oraciones" },
-  { id: "sim-e4", question: "La ______ del desierto obliga a las plantas a desarrollar mecanismos de ______ de agua.", options: ["aridez / conservación", "humedad / pérdida", "belleza / atracción", "extensión / producción"], correctAnswer: 0, explanation: "Desierto = aridez. Las plantas necesitan conservar agua en ambientes secos.", topic: "Completar Oraciones" },
-  { id: "sim-e5", question: "El avance tecnológico ha ______ la comunicación, pero también ha ______ el contacto humano directo.", options: ["facilitado / reducido", "complicado / aumentado", "eliminado / mejorado", "facilitado / mejorado"], correctAnswer: 0, explanation: "'Pero' indica contraste: la tecnología facilita comunicación PERO reduce contacto directo.", topic: "Completar Oraciones" },
+  { id: "sim-e1", question: "La ______ del presidente fue recibida con ______ por los ciudadanos que esperaban cambios más profundos.", options: ["propuesta / escepticismo", "renuncia / alegría", "elección / indiferencia", "promesa / entusiasmo"], correctAnswer: 0, explanation: "'Esperaban cambios más profundos' sugiere insatisfacción. Una propuesta recibida con escepticismo encaja con expectativas no cumplidas.", topic: "Completar Oraciones" },
+  { id: "sim-e2", question: "Aunque el tratamiento era ______, los efectos secundarios resultaron ser ______.", options: ["efectivo / considerables", "inútil / mínimos", "costoso / inexistentes", "novedoso / beneficiosos"], correctAnswer: 0, explanation: "'Aunque' indica contraste: el tratamiento funciona (efectivo) PERO tiene efectos negativos (considerables).", topic: "Completar Oraciones" },
+  { id: "sim-e3", question: "El arqueólogo describió el hallazgo como ______, ya que proporcionaba evidencia ______ de una civilización desconocida.", options: ["trascendental / irrefutable", "insignificante / abundante", "reciente / escasa", "polémico / contradictoria"], correctAnswer: 0, explanation: "Un hallazgo que prueba la existencia de algo desconocido es trascendental, y la evidencia que lo demuestra es irrefutable.", topic: "Completar Oraciones" },
+  { id: "sim-e4", question: "La creciente ______ de recursos naturales ha obligado a los gobiernos a implementar políticas de ______.", options: ["escasez / conservación", "abundancia / exportación", "demanda / producción", "calidad / inspección"], correctAnswer: 0, explanation: "La escasez de recursos es lo que obliga a conservarlos. Las otras opciones no presentan una relación causa-efecto lógica.", topic: "Completar Oraciones" },
+  { id: "sim-e5", question: "A diferencia de su hermano, que era ______ y reservado, ella se mostraba ______ en las reuniones sociales.", options: ["introvertido / extrovertida", "alegre / tímida", "sociable / callada", "amable / grosera"], correctAnswer: 0, explanation: "'A diferencia de' marca contraste. Si el hermano es reservado (introvertido), ella es lo opuesto: extrovertida.", topic: "Completar Oraciones" },
 
   // COMPRENSIÓN LECTORA
-  { id: "sim-f1", question: "Un texto explica los efectos del cambio climático en la agricultura panameña, con datos y soluciones propuestas. El propósito principal del autor es:", options: ["Informar y proponer soluciones", "Entretener al lector", "Criticar a los agricultores", "Vender productos agrícolas"], correctAnswer: 0, explanation: "Datos + soluciones propuestas = informar y proponer, no solo criticar o entretener.", topic: "Comprensión Lectora" },
-  { id: "sim-f2", question: "Un párrafo dice: 'Las energías renovables representan solo el 5% de la matriz energética del país, a pesar de su enorme potencial solar y eólico.' Se puede inferir que:", options: ["El país no aprovecha su potencial de energías limpias", "Las energías renovables son ineficientes", "El país no tiene recursos naturales", "La energía solar no funciona en ese país"], correctAnswer: 0, explanation: "Solo 5% a pesar de 'enorme potencial' = no se está aprovechando.", topic: "Comprensión Lectora" },
-  { id: "sim-f3", question: "¿Cuál sería la idea principal de un texto que describe la historia del Canal de Panamá, su impacto económico y su importancia geopolítica?", options: ["El Canal de Panamá es una obra de importancia histórica, económica y estratégica", "El Canal de Panamá fue difícil de construir", "Panamá tiene muchos barcos", "La historia de Panamá es interesante"], correctAnswer: 0, explanation: "La idea principal abarca los tres aspectos mencionados: historia, economía y geopolítica.", topic: "Comprensión Lectora" },
-  { id: "sim-f4", question: "Un autor escribe: 'Las redes sociales nos conectan con miles de personas, pero nos desconectan de quienes tenemos al lado.' El tono es:", options: ["Reflexivo y crítico", "Optimista y entusiasta", "Indiferente y neutral", "Agresivo y hostil"], correctAnswer: 0, explanation: "El contraste conectar/desconectar muestra reflexión crítica sobre las redes sociales.", topic: "Comprensión Lectora" },
-  { id: "sim-f5", question: "¿Qué tipo de texto presenta datos estadísticos, citas de expertos y un vocabulario técnico sobre un tema específico?", options: ["Expositivo", "Narrativo", "Poético", "Dramático"], correctAnswer: 0, explanation: "Datos, citas de expertos y vocabulario técnico son características del texto expositivo.", topic: "Comprensión Lectora" },
+  { id: "sim-f1", question: "Un texto describe cómo las abejas polinizan las flores, producen miel y mantienen el equilibrio de los ecosistemas. La idea principal es:", options: ["Las abejas cumplen funciones vitales para la naturaleza", "La miel es un producto valioso", "Las flores necesitan agua para crecer", "Los ecosistemas son complejos"], correctAnswer: 0, explanation: "El texto abarca tres funciones de las abejas (polinización, miel, equilibrio). La idea principal las engloba todas.", topic: "Comprensión Lectora" },
+  { id: "sim-f2", question: "Un autor escribe: 'Mientras invertimos millones en explorar Marte, millones de personas en la Tierra no tienen acceso a agua potable.' El propósito del autor es:", options: ["Criticar las prioridades de inversión", "Informar sobre la exploración espacial", "Describir la crisis del agua", "Entretener con datos curiosos"], correctAnswer: 0, explanation: "El contraste entre gasto espacial y necesidades básicas insatisfechas es una crítica a las prioridades.", topic: "Comprensión Lectora" },
+  { id: "sim-f3", question: "Si un texto afirma que 'los países con mayor inversión en educación tienen menores tasas de criminalidad', se puede inferir que:", options: ["La educación puede ser un factor preventivo contra el crimen", "La educación elimina totalmente el crimen", "Los países pobres siempre tienen más crimen", "Invertir en educación no tiene otros beneficios"], correctAnswer: 0, explanation: "La correlación sugiere que la educación PUEDE ser un factor (no garantía absoluta). Las otras opciones son generalizaciones excesivas.", topic: "Comprensión Lectora" },
+  { id: "sim-f4", question: "'En los últimos 50 años, la temperatura global ha aumentado 1.1°C. Este incremento, aparentemente pequeño, ha provocado el deshielo de glaciares, el aumento del nivel del mar y fenómenos climáticos extremos.' El tono del texto es:", options: ["Objetivo con tono de alerta", "Optimista y esperanzador", "Indiferente y neutral", "Sarcástico"], correctAnswer: 0, explanation: "Presenta datos objetivos (1.1°C, 50 años) pero las consecuencias enumeradas generan alarma. Es objetivo pero alertante.", topic: "Comprensión Lectora" },
+  { id: "sim-f5", question: "¿Cuál de las siguientes afirmaciones sobre un texto expositivo es correcta?", options: ["Presenta información de manera objetiva y organizada", "Siempre incluye la opinión personal del autor", "Su objetivo principal es entretener al lector", "Utiliza principalmente lenguaje figurado"], correctAnswer: 0, explanation: "Los textos expositivos informan de manera objetiva y organizada. La opinión es de textos argumentativos, entretener de narrativos.", topic: "Comprensión Lectora" },
 
   // ANALOGÍAS
-  { id: "sim-g1", question: "MÉDICO : ESTETOSCOPIO como ASTRÓNOMO : ?", options: ["Telescopio", "Estrella", "Universo", "Observatorio"], correctAnswer: 0, explanation: "Relación: profesional → herramienta. El médico usa estetoscopio, el astrónomo usa telescopio.", topic: "Analogías" },
-  { id: "sim-g2", question: "OVEJA : REBAÑO como SOLDADO : ?", options: ["Ejército", "Guerra", "Arma", "Cuartel"], correctAnswer: 0, explanation: "Relación: individuo → grupo. Conjunto de ovejas = rebaño. Conjunto de soldados = ejército.", topic: "Analogías" },
-  { id: "sim-g3", question: "SEMILLA : ÁRBOL como HUEVO : ?", options: ["Ave", "Nido", "Pluma", "Cascarón"], correctAnswer: 0, explanation: "Relación: origen → resultado/ser desarrollado. De la semilla sale el árbol, del huevo sale el ave.", topic: "Analogías" },
-  { id: "sim-g4", question: "TRISTE : DESOLADO como CONTENTO : ?", options: ["Eufórico", "Alegre", "Tranquilo", "Normal"], correctAnswer: 0, explanation: "Relación: grado de intensidad. Desolado es triste en grado extremo. Eufórico es contento en grado extremo.", topic: "Analogías" },
-  { id: "sim-g5", question: "AGUA : HIELO como LAVA : ?", options: ["Roca", "Volcán", "Fuego", "Magma"], correctAnswer: 0, explanation: "Relación: líquido → su forma sólida. El agua se solidifica en hielo. La lava se solidifica en roca.", topic: "Analogías" },
+  { id: "sim-g1", question: "CIRUJANO : BISTURÍ como ESCULTOR : ?", options: ["Cincel", "Estatua", "Mármol", "Museo"], correctAnswer: 0, explanation: "Relación: profesional → herramienta principal. El cirujano usa bisturí; el escultor usa cincel.", topic: "Analogías" },
+  { id: "sim-g2", question: "PRÓLOGO : EPÍLOGO como AMANECER : ?", options: ["Atardecer", "Mediodía", "Sol", "Noche"], correctAnswer: 0, explanation: "Relación: inicio → final. El prólogo es el inicio del libro y el epílogo el final. El amanecer inicia el día y el atardecer lo termina.", topic: "Analogías" },
+  { id: "sim-g3", question: "CONSTITUCIÓN : PAÍS como REGLAMENTO : ?", options: ["Institución", "Director", "Castigo", "Ley"], correctAnswer: 0, explanation: "Relación: norma fundamental → lo que rige. La constitución rige un país; el reglamento rige una institución.", topic: "Analogías" },
+  { id: "sim-g4", question: "CAUDALOSO : RÍO como FRONDOSO : ?", options: ["Árbol", "Hoja", "Verde", "Bosque"], correctAnswer: 0, explanation: "Relación: cualidad → objeto que la posee. Un río caudaloso (mucha agua); un árbol frondoso (muchas hojas).", topic: "Analogías" },
+  { id: "sim-g5", question: "ANESTESIA : DOLOR como AISLANTE : ?", options: ["Calor", "Cable", "Electricidad", "Frío"], correctAnswer: 0, explanation: "Relación: lo que impide/bloquea → lo que bloquea. La anestesia bloquea el dolor; el aislante bloquea el calor (o frío/electricidad, pero la relación más directa es bloquear la transferencia de calor).", topic: "Analogías" },
 
   // REDACCIÓN
-  { id: "sim-h1", question: "Identifica la oración correctamente escrita:", options: ["Los niños, que estaban cansados, se fueron temprano", "Los niños que estaban cansados se fueron, temprano", "Los niños que, estaban cansados, se fueron temprano", "Los niños que estaban, cansados se fueron temprano"], correctAnswer: 0, explanation: "La frase explicativa 'que estaban cansados' va entre comas.", topic: "Redacción" },
-  { id: "sim-h2", question: "¿Cuál es el conector adecuado? 'La empresa tuvo pérdidas ______ invirtió en nuevos equipos.'", options: ["no obstante", "porque", "además", "por ejemplo"], correctAnswer: 0, explanation: "Hay contraste entre tener pérdidas y aún así invertir → 'no obstante'.", topic: "Redacción" },
-  { id: "sim-h3", question: "¿Cuál palabra está mal acentuada?", options: ["Exámen", "Después", "Difícil", "Rápido"], correctAnswer: 0, explanation: "'Examen' es grave terminada en N → NO lleva tilde. Lo correcto es 'examen'.", topic: "Redacción" },
-  { id: "sim-h4", question: "¿Cuál oración tiene un error de concordancia?", options: ["Hubieron muchos problemas en la reunión", "Hubo muchos problemas en la reunión", "Los problemas fueron resueltos rápidamente", "La reunión terminó sin incidentes"], correctAnswer: 0, explanation: "'Haber' como impersonal siempre va en singular: 'Hubo' (no 'hubieron').", topic: "Redacción" },
-  { id: "sim-h5", question: "Reordena para coherencia: (1) En resumen, la lectura enriquece la mente. (2) Primero, amplía el vocabulario. (3) La lectura tiene múltiples beneficios. (4) También desarrolla el pensamiento crítico.", options: ["3, 2, 4, 1", "1, 2, 3, 4", "2, 4, 3, 1", "3, 4, 2, 1"], correctAnswer: 0, explanation: "3 = idea principal. 2 = primer beneficio. 4 = segundo beneficio. 1 = conclusión.", topic: "Redacción" },
+  { id: "sim-h1", question: "¿Cuál de las siguientes oraciones está correctamente puntuada?", options: ["Los estudiantes, que aprobaron el examen, recibirán un diploma.", "Los estudiantes que aprobaron, el examen recibirán un diploma.", "Los estudiantes que, aprobaron el examen recibirán un diploma.", "Los, estudiantes que aprobaron el examen recibirán un diploma."], correctAnswer: 0, explanation: "La cláusula explicativa 'que aprobaron el examen' va correctamente entre comas cuando es no restrictiva.", topic: "Redacción" },
+  { id: "sim-h2", question: "Identifique la oración sin vicios del lenguaje:", options: ["Necesito que me repita la instrucción.", "Necesito que me vuelva a repetir la instrucción.", "Necesito que me repita de nuevo la instrucción.", "Necesito que me reitere de nuevo otra vez la instrucción."], correctAnswer: 0, explanation: "Las opciones B, C y D tienen redundancia: 'vuelva a repetir', 'repita de nuevo' y 'reitere de nuevo otra vez' repiten la idea de hacer algo otra vez.", topic: "Redacción" },
+  { id: "sim-h3", question: "Elija el conector adecuado: 'El proyecto fue innovador; ______, no recibió financiamiento.'", options: ["sin embargo", "por lo tanto", "además", "es decir"], correctAnswer: 0, explanation: "Hay contraste entre ser innovador y no recibir financiamiento. 'Sin embargo' es el conector adversativo correcto.", topic: "Redacción" },
+  { id: "sim-h4", question: "¿Cuál oración tiene la acentuación correcta?", options: ["El médico dijo que el examen salió bien.", "El medico dijo que el exámen salio bien.", "El médico dijo que el exámen salió bien.", "El medico dijo que el examen salió bien."], correctAnswer: 0, explanation: "'Médico' (esdrújula, siempre lleva tilde). 'Examen' (grave terminada en n, NO lleva tilde). 'Salió' (aguda terminada en vocal, lleva tilde). 'Dijo' (grave terminada en vocal, no lleva tilde).", topic: "Redacción" },
+  { id: "sim-h5", question: "Ordene las oraciones para formar un párrafo coherente:\n1. Por esta razón, es fundamental proteger los arrecifes.\n2. Los arrecifes de coral albergan el 25% de la vida marina.\n3. Sin embargo, el cambio climático los está destruyendo.\n4. Además, son barreras naturales contra tormentas.", options: ["2, 4, 3, 1", "1, 2, 3, 4", "3, 2, 4, 1", "2, 3, 1, 4"], correctAnswer: 0, explanation: "2=tema principal. 4=información adicional ('además'). 3=contraste ('sin embargo'). 1=conclusión ('por esta razón').", topic: "Redacción" },
 ];
+
+// --- UTILITY FUNCTIONS ---
+
+function shuffleArray<T>(arr: T[]): T[] {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function shuffleOptions(exercise: Exercise): Exercise {
+  const indices = exercise.options.map((_, i) => i);
+  const shuffled = shuffleArray(indices);
+  return {
+    ...exercise,
+    options: shuffled.map((i) => exercise.options[i]),
+    correctAnswer: shuffled.indexOf(exercise.correctAnswer),
+  };
+}
+
+// --- SECTION MAPPINGS ---
+
+const mathSectionMap: Record<string, string> = {
+  aritmetica: "Aritmética",
+  algebra: "Álgebra",
+  geometria: "Geometría",
+  estadistica: "Estadística",
+};
+
+const verbalSectionMap: Record<string, string> = {
+  "completar-oraciones": "Completar Oraciones",
+  "comprension-lectora": "Comprensión Lectora",
+  analogias: "Analogías",
+  redaccion: "Redacción",
+};
+
+// --- BUILD EXAM ---
+
+export function buildExam(): Exercise[] {
+  // 1. Collect all exercises into section pools
+  const pool: Record<string, Exercise[]> = {};
+  examConfig.sections.forEach((s) => {
+    pool[s.name] = [];
+  });
+
+  // Add exercises from math data
+  mathTopics.forEach((topic) => {
+    const section = mathSectionMap[topic.id];
+    if (section && pool[section]) {
+      topic.subtopics.forEach((sub) => {
+        sub.exercises.forEach((ex) => {
+          pool[section].push({ ...ex, topic: section });
+        });
+      });
+    }
+  });
+
+  // Add exercises from verbal data
+  verbalTopics.forEach((topic) => {
+    const section = verbalSectionMap[topic.id];
+    if (section && pool[section]) {
+      topic.subtopics.forEach((sub) => {
+        sub.exercises.forEach((ex) => {
+          pool[section].push({ ...ex, topic: section });
+        });
+      });
+    }
+  });
+
+  // Add dedicated simulator questions
+  dedicatedQuestions.forEach((q) => {
+    if (q.topic && pool[q.topic]) {
+      pool[q.topic].push(q);
+    }
+  });
+
+  // 2. For each section, pick random questions and shuffle their options
+  const exam: Exercise[] = [];
+  examConfig.sections.forEach((section) => {
+    const available = shuffleArray(pool[section.name] || []);
+    const selected = available.slice(0, section.count);
+    // Shuffle options so the correct answer isn't always A
+    selected.forEach((q) => {
+      exam.push(shuffleOptions(q));
+    });
+  });
+
+  return exam;
+}
+
+// Legacy export for compatibility (not used by new simulator)
+export const simulatorQuestions = dedicatedQuestions;
