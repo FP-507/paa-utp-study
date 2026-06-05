@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { buildExam, examConfig } from "@/data/simulator-data";
+import { buildExam, examConfig, passages } from "@/data/simulator-data";
 import { saveExamResult } from "@/data/progress";
 import { Exercise, ExamResult } from "@/data/types";
+import QuestionFigure from "@/components/QuestionFigure";
 import Link from "next/link";
 
 type Phase = "intro" | "exam" | "results";
@@ -16,6 +17,7 @@ export default function SimuladorPage() {
   const [timeLeft, setTimeLeft] = useState(examConfig.timeMinutes * 60);
   const [showReview, setShowReview] = useState(false);
   const [reviewFilter, setReviewFilter] = useState<"all" | "wrong" | "skipped">("all");
+  const [passageCollapsed, setPassageCollapsed] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const finishExam = useCallback(() => {
@@ -58,6 +60,7 @@ export default function SimuladorPage() {
     setCurrent(0);
     setTimeLeft(examConfig.timeMinutes * 60);
     setShowReview(false);
+    setPassageCollapsed(false);
     setPhase("exam");
   };
 
@@ -98,31 +101,27 @@ export default function SimuladorPage() {
     0
   );
 
-  // Get which section the current question belongs to (by index ranges)
-  const getSectionForIndex = (idx: number): string => {
-    let cumulative = 0;
-    for (const section of examConfig.sections) {
-      cumulative += section.count;
-      if (idx < cumulative) return section.name;
-    }
-    return "";
-  };
+  // Determine topic category for color coding
+  const mathTopics = ["Aritmética", "Álgebra", "Geometría", "Estadística"];
+  const isMathTopic = (topic?: string) => mathTopics.includes(topic || "");
 
-  // Check if this index is the first question of a new section
-  const isNewSection = (idx: number): boolean => {
+  // Check if this question is the first of a passage group
+  const isFirstOfPassage = (idx: number): boolean => {
+    const q = questions[idx];
+    if (!q.passageId) return false;
     if (idx === 0) return true;
-    return getSectionForIndex(idx) !== getSectionForIndex(idx - 1);
+    return questions[idx - 1].passageId !== q.passageId;
   };
 
-  // Get section boundaries for the question navigation grid
-  const getSectionBoundaries = () => {
-    const boundaries: { name: string; start: number; count: number }[] = [];
-    let start = 0;
-    for (const section of examConfig.sections) {
-      boundaries.push({ name: section.name, start, count: section.count });
-      start += section.count;
-    }
-    return boundaries;
+  // Count passage group questions
+  const getPassageGroupInfo = (idx: number) => {
+    const q = questions[idx];
+    if (!q.passageId) return null;
+    let start = idx;
+    while (start > 0 && questions[start - 1].passageId === q.passageId) start--;
+    let end = idx;
+    while (end < questions.length - 1 && questions[end + 1].passageId === q.passageId) end++;
+    return { start, end, total: end - start + 1, current: idx - start + 1 };
   };
 
   // INTRO
@@ -182,8 +181,8 @@ export default function SimuladorPage() {
 
             <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-3 mb-6">
               <p className="text-xs text-amber-300/80">
-                💡 Las preguntas se seleccionan aleatoriamente de un banco de 370+ ejercicios.
-                Las opciones se barajan en cada intento para que nunca sea el mismo examen.
+                💡 Las preguntas se seleccionan aleatoriamente de un banco de 697+ ejercicios y se presentan en desorden, como en la PAA real.
+                Incluye textos de lectura con múltiples preguntas y figuras en geometría/estadística.
               </p>
             </div>
 
@@ -203,10 +202,10 @@ export default function SimuladorPage() {
   if (phase === "exam") {
     const q = questions[current];
     const answeredCount = answers.filter((a) => a !== null).length;
-    const isTimeLow = timeLeft < 600; // 10 minutes warning
-    const currentSection = getSectionForIndex(current);
-    const sectionBoundaries = getSectionBoundaries();
-    const isMathSection = ["Aritmética", "Álgebra", "Geometría", "Estadística"].includes(currentSection);
+    const isTimeLow = timeLeft < 600;
+    const isMath = isMathTopic(q.topic);
+    const passageInfo = getPassageGroupInfo(current);
+    const passageText = q.passageId ? passages[q.passageId] : null;
 
     return (
       <div className="min-h-screen bg-grid-pattern pt-14 lg:pt-0">
@@ -244,32 +243,55 @@ export default function SimuladorPage() {
         </div>
 
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-6">
-          {/* Section header */}
-          {isNewSection(current) && (
-            <div className={`mb-4 p-3 rounded-xl border ${isMathSection ? "border-amber-500/20 bg-amber-500/5" : "border-blue-500/20 bg-blue-500/5"}`}>
-              <div className="flex items-center gap-2">
-                <span className={`text-lg ${isMathSection ? "text-amber-400" : "text-blue-400"}`}>
-                  {isMathSection ? "∑" : "✦"}
-                </span>
-                <span className={`text-sm font-bold ${isMathSection ? "text-amber-300" : "text-blue-300"}`}>
-                  {currentSection}
-                </span>
-                <span className="text-xs text-slate-500 ml-auto">
-                  {examConfig.sections.find(s => s.name === currentSection)?.count} preguntas
-                </span>
-              </div>
+          {/* Passage block (if this question belongs to a passage) */}
+          {passageText && (
+            <div className="mb-4 animate-fade-in">
+              <button
+                onClick={() => setPassageCollapsed(!passageCollapsed)}
+                className="w-full flex items-center justify-between p-3 rounded-t-xl bg-blue-500/10 border border-blue-500/20 hover:bg-blue-500/15 transition"
+              >
+                <div className="flex items-center gap-2">
+                  <span className="text-blue-400 text-sm">📖</span>
+                  <span className="text-sm font-semibold text-blue-300">
+                    Texto de lectura
+                  </span>
+                  {passageInfo && (
+                    <span className="text-[10px] text-blue-400/60 bg-blue-500/10 px-2 py-0.5 rounded-full">
+                      Pregunta {passageInfo.current} de {passageInfo.total} sobre este texto
+                    </span>
+                  )}
+                </div>
+                <svg
+                  className={`w-4 h-4 text-blue-400 transition-transform ${passageCollapsed ? "" : "rotate-180"}`}
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {!passageCollapsed && (
+                <div className="p-5 rounded-b-xl border border-t-0 border-blue-500/20 bg-[#0a1628] max-h-[300px] overflow-y-auto">
+                  <div className="text-sm text-slate-300 leading-relaxed whitespace-pre-line">
+                    {passageText}
+                  </div>
+                </div>
+              )}
             </div>
           )}
 
           {/* Question card */}
           <div className="card p-6 sm:p-8 mb-6 animate-fade-in" key={current}>
             <div className="flex items-center gap-2 mb-4">
-              <span className={`text-xs px-2.5 py-1 rounded-full ${isMathSection ? "bg-amber-500/10 text-amber-400" : "bg-blue-500/10 text-blue-400"}`}>
+              <span className={`text-xs px-2.5 py-1 rounded-full ${isMath ? "bg-amber-500/10 text-amber-400" : "bg-blue-500/10 text-blue-400"}`}>
                 {q.topic}
               </span>
               <span className="text-xs text-slate-600">Pregunta {current + 1}</span>
             </div>
-            <p className="text-lg text-slate-200 font-medium mb-6 whitespace-pre-line">{q.question}</p>
+
+            <p className="text-lg text-slate-200 font-medium mb-4 whitespace-pre-line">{q.question}</p>
+
+            {/* SVG Figure (geometry/stats) */}
+            {q.figure && <QuestionFigure figureId={q.figure} />}
+
             <div className="space-y-2.5">
               {q.options.map((opt, i) => (
                 <button
@@ -321,35 +343,42 @@ export default function SimuladorPage() {
             )}
           </div>
 
-          {/* Section-based question grid */}
+          {/* Question grid (numbered, no section grouping — questions are shuffled) */}
           <div className="card p-4">
-            <p className="text-xs text-slate-500 mb-3 font-semibold">Navegación por secciones</p>
-            <div className="space-y-3">
-              {sectionBoundaries.map((sec) => (
-                <div key={sec.name}>
-                  <p className="text-[10px] text-slate-500 mb-1 uppercase tracking-wider">{sec.name}</p>
-                  <div className="flex flex-wrap gap-1">
-                    {Array.from({ length: sec.count }, (_, i) => {
-                      const idx = sec.start + i;
-                      return (
-                        <button
-                          key={idx}
-                          onClick={() => setCurrent(idx)}
-                          className={`w-7 h-7 rounded-md text-[10px] font-semibold transition ${
-                            idx === current
-                              ? "bg-amber-500 text-[#081526]"
-                              : answers[idx] !== null
-                              ? "bg-amber-500/20 text-amber-400"
-                              : "bg-white/5 text-slate-600"
-                          }`}
-                        >
-                          {idx + 1}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
+            <p className="text-xs text-slate-500 mb-3 font-semibold">Navegación rápida</p>
+            <div className="flex flex-wrap gap-1">
+              {questions.map((qItem, idx) => {
+                const isPassageQ = !!qItem.passageId;
+                return (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrent(idx)}
+                    title={qItem.topic || ""}
+                    className={`w-7 h-7 rounded-md text-[10px] font-semibold transition ${
+                      idx === current
+                        ? "bg-amber-500 text-[#081526]"
+                        : answers[idx] !== null
+                        ? "bg-amber-500/20 text-amber-400"
+                        : isPassageQ
+                        ? "bg-blue-500/10 text-blue-400/50 border border-blue-500/20"
+                        : "bg-white/5 text-slate-600"
+                    }`}
+                  >
+                    {idx + 1}
+                  </button>
+                );
+              })}
+            </div>
+            <div className="flex items-center gap-4 mt-3 text-[10px] text-slate-600">
+              <span className="flex items-center gap-1">
+                <span className="w-3 h-3 rounded bg-amber-500/20 inline-block" /> Respondida
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-3 h-3 rounded bg-blue-500/10 border border-blue-500/20 inline-block" /> Lectura
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-3 h-3 rounded bg-white/5 inline-block" /> Sin responder
+              </span>
             </div>
           </div>
         </div>
@@ -538,7 +567,12 @@ export default function SimuladorPage() {
                         }`}>
                           {i + 1}. {isSkipped ? "—" : isCorrect ? "✓" : "✗"}
                         </span>
-                        <p className="text-sm text-slate-300">{q.question}</p>
+                        <div>
+                          <span className={`text-[10px] px-1.5 py-0.5 rounded ${isMathTopic(q.topic) ? "bg-amber-500/10 text-amber-400" : "bg-blue-500/10 text-blue-400"}`}>
+                            {q.topic}
+                          </span>
+                          <p className="text-sm text-slate-300 mt-1">{q.question}</p>
+                        </div>
                       </div>
                       <div className="ml-7 text-xs space-y-1">
                         <p className="text-slate-500">

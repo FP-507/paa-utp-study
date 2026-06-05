@@ -24,6 +24,8 @@ export interface Exercise {
   explanation: string;
   topic?: string;
   subtopic?: string;
+  figure?: string;       // Figure ID — renders SVG diagram for geometry/stats
+  passageId?: string;    // Groups questions under same reading passage
 }
 
 export interface ExamConfig {
