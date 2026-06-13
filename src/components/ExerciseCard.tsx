@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Exercise } from "@/data/types";
 import { saveExerciseResult } from "@/data/progress";
+import { CheckCircleIcon, XCircleIcon } from "@/components/Icons";
 
 export default function ExerciseCard({
   exercise,
@@ -31,14 +32,14 @@ export default function ExerciseCard({
 
   return (
     <div className="card p-6 mb-4">
-      <p className="text-slate-200 font-medium mb-4">
+      <p className="text-slate-200 font-medium mb-5 leading-relaxed">
         {showNumber && (
-          <span className="text-amber-500 font-display mr-2">{index + 1}.</span>
+          <span className="text-amber-500 font-display font-bold mr-2">{index + 1}.</span>
         )}
         {exercise.question}
       </p>
 
-      <div className="space-y-2 mb-4">
+      <div className="space-y-2.5 mb-5" role="radiogroup" aria-label={`Opciones para pregunta ${index + 1}`}>
         {exercise.options.map((opt, i) => {
           let classes = "option-btn";
           if (revealed) {
@@ -54,22 +55,24 @@ export default function ExerciseCard({
               className={classes}
               onClick={() => handleSelect(i)}
               disabled={revealed}
+              role="radio"
+              aria-checked={i === selected}
             >
               <span className="inline-flex items-center gap-3">
                 <span
-                  className={`w-7 h-7 rounded-full border flex items-center justify-center text-xs font-semibold shrink-0 ${
+                  className={`w-7 h-7 rounded-full border-2 flex items-center justify-center text-xs font-bold shrink-0 transition-colors ${
                     revealed && i === exercise.correctAnswer
                       ? "bg-emerald-500/20 border-emerald-500 text-emerald-400"
                       : revealed && i === selected && !isCorrect
                       ? "bg-rose-500/20 border-rose-500 text-rose-400"
                       : i === selected
                       ? "bg-amber-500/20 border-amber-500 text-amber-400"
-                      : "border-slate-600 text-slate-500"
+                      : "border-slate-600/80 text-slate-500"
                   }`}
                 >
                   {String.fromCharCode(65 + i)}
                 </span>
-                <span>{opt}</span>
+                <span className="text-[15px]">{opt}</span>
               </span>
             </button>
           );
@@ -80,11 +83,7 @@ export default function ExerciseCard({
         <button
           onClick={handleCheck}
           disabled={selected === null}
-          className={`px-6 py-2.5 rounded-xl text-sm font-semibold transition-all ${
-            selected !== null
-              ? "bg-amber-500 text-navy-950 hover:bg-amber-400"
-              : "bg-slate-700 text-slate-500 cursor-not-allowed"
-          }`}
+          className={`btn-primary ${selected === null ? "opacity-40 cursor-not-allowed" : ""}`}
         >
           Verificar respuesta
         </button>
@@ -92,16 +91,26 @@ export default function ExerciseCard({
 
       {revealed && (
         <div
-          className={`mt-4 p-4 rounded-xl text-sm ${
+          className={`mt-4 p-4 rounded-xl text-sm flex gap-3 ${
             isCorrect
-              ? "bg-emerald-500/10 border border-emerald-500/30"
-              : "bg-rose-500/10 border border-rose-500/30"
+              ? "bg-emerald-500/8 border border-emerald-500/25"
+              : "bg-rose-500/8 border border-rose-500/25"
           }`}
+          role="alert"
         >
-          <p className={`font-semibold mb-1 ${isCorrect ? "text-emerald-400" : "text-rose-400"}`}>
-            {isCorrect ? "✓ ¡Correcto!" : "✗ Incorrecto"}
-          </p>
-          <p className="text-slate-300">{exercise.explanation}</p>
+          <div className="shrink-0 mt-0.5">
+            {isCorrect ? (
+              <CheckCircleIcon size={18} className="text-emerald-400" />
+            ) : (
+              <XCircleIcon size={18} className="text-rose-400" />
+            )}
+          </div>
+          <div>
+            <p className={`font-semibold mb-1 ${isCorrect ? "text-emerald-400" : "text-rose-400"}`}>
+              {isCorrect ? "Correcto" : "Incorrecto"}
+            </p>
+            <p className="text-slate-300 leading-relaxed">{exercise.explanation}</p>
+          </div>
         </div>
       )}
     </div>

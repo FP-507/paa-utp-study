@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Topic } from "@/data/types";
 import ExerciseCard from "./ExerciseCard";
+import { LightbulbIcon, CheckCircleIcon } from "@/components/Icons";
 
 export default function TopicContent({ topic }: { topic: Topic }) {
   const [activeTab, setActiveTab] = useState<"contenido" | "practica">("contenido");
@@ -15,12 +16,20 @@ export default function TopicContent({ topic }: { topic: Topic }) {
       {/* Header */}
       <div className="mb-8 animate-fade-in">
         <div className="flex items-center gap-3 mb-2">
-          <span className="text-3xl">{topic.icon}</span>
+          <div
+            className="w-10 h-10 rounded-xl flex items-center justify-center text-2xl"
+            style={{
+              background: `${topic.color}15`,
+              color: topic.color,
+            }}
+          >
+            {topic.icon}
+          </div>
           <h1 className="text-3xl sm:text-4xl font-display font-bold text-slate-100">
             {topic.title}
           </h1>
         </div>
-        <p className="text-slate-400 text-lg">{topic.description}</p>
+        <p className="text-slate-400 text-lg leading-relaxed">{topic.description}</p>
       </div>
 
       {/* Subtopic selector */}
@@ -40,23 +49,15 @@ export default function TopicContent({ topic }: { topic: Topic }) {
       <div className="flex gap-2 mb-8 animate-fade-in delay-2">
         <button
           onClick={() => setActiveTab("contenido")}
-          className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
-            activeTab === "contenido"
-              ? "bg-amber-500 text-[#081526]"
-              : "bg-white/5 text-slate-400 hover:text-slate-200"
-          }`}
+          className={`${activeTab === "contenido" ? "btn-primary" : "btn-secondary"}`}
         >
           Contenido
         </button>
         <button
           onClick={() => setActiveTab("practica")}
-          className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
-            activeTab === "practica"
-              ? "bg-amber-500 text-[#081526]"
-              : "bg-white/5 text-slate-400 hover:text-slate-200"
-          }`}
+          className={`${activeTab === "practica" ? "btn-primary" : "btn-secondary"}`}
         >
-          Práctica ({sub.exercises.length} ejercicios)
+          Práctica ({sub.exercises.length})
         </button>
       </div>
 
@@ -76,13 +77,14 @@ export default function TopicContent({ topic }: { topic: Topic }) {
           {/* Examples */}
           {sub.examples.length > 0 && (
             <div className="mb-6">
-              <h3 className="text-lg font-display font-semibold text-amber-400 mb-4">
+              <h3 className="text-lg font-display font-semibold text-amber-400 mb-4 flex items-center gap-2">
+                <LightbulbIcon size={18} />
                 Ejemplos Resueltos
               </h3>
               {sub.examples.map((ex, i) => (
                 <div key={i} className="example-box mb-3">
                   <p className="text-slate-200 font-medium mb-2">{ex.problem}</p>
-                  <p className="text-slate-400 text-sm">{ex.solution}</p>
+                  <p className="text-slate-400 text-sm leading-relaxed">{ex.solution}</p>
                 </div>
               ))}
             </div>
@@ -91,13 +93,16 @@ export default function TopicContent({ topic }: { topic: Topic }) {
           {/* Tips */}
           {sub.tips.length > 0 && (
             <div className="tip-box">
-              <p className="text-emerald-400 font-semibold text-sm mb-2">
+              <p className="text-emerald-400 font-semibold text-sm mb-3 flex items-center gap-2">
+                <CheckCircleIcon size={16} />
                 Tips para la PAA
               </p>
-              <ul className="space-y-1">
+              <ul className="space-y-1.5">
                 {sub.tips.map((tip, i) => (
-                  <li key={i} className="text-slate-300 text-sm flex items-start gap-2">
-                    <span className="text-emerald-500 mt-1 shrink-0">▸</span>
+                  <li key={i} className="text-slate-300 text-sm flex items-start gap-2 leading-relaxed">
+                    <svg width="6" height="6" viewBox="0 0 6 6" className="mt-2 shrink-0 text-emerald-500">
+                      <circle cx="3" cy="3" r="3" fill="currentColor" />
+                    </svg>
                     {tip}
                   </li>
                 ))}
@@ -107,7 +112,7 @@ export default function TopicContent({ topic }: { topic: Topic }) {
         </div>
       ) : (
         <div className="animate-fade-in" key={`practice-${sub.id}`}>
-          <p className="text-slate-400 mb-6">
+          <p className="text-slate-400 mb-6 leading-relaxed">
             Resuelve los siguientes ejercicios tipo PAA sobre <strong className="text-slate-200">{sub.title}</strong>.
           </p>
           {sub.exercises.map((ex, i) => (

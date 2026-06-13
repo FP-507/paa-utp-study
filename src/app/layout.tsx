@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: "Prepárate PAA — Universidad Tecnológica de Panamá",
   description: "Plataforma de estudio completa para la Prueba de Aptitud Académica (PAA) de la UTP. Matemáticas, comprensión lectora, redacción y simuladores.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -23,8 +28,14 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-amber-500 focus:text-[#081526] focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:text-sm"
+        >
+          Ir al contenido principal
+        </a>
         <Navigation />
-        <main className="flex-1 lg:ml-64 min-h-screen">
+        <main id="main-content" className="flex-1 lg:ml-64 min-h-screen">
           {children}
         </main>
       </body>
